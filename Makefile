@@ -1,10 +1,13 @@
 
 clean:
 	rm -rf _build
+	rm -rf docs
 	jupyter-book clean .
 
 build:
 	jupyter-book build --all .;
+	cp -r _build/html docs
+	touch docs/.nojekyll
 	# make include
 
 rebuild:

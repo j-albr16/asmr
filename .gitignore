@@ -1,5 +1,5 @@
 venv
-_build
 node_modules/
 **/.DS_Store
 asumr_exercises
+_build
