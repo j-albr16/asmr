@@ -1,0 +1,51 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: ASUMR jupyter book
+author: Florian Bohlken und Jan Albrecht
+logo: images/tbot.svg
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: auto
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: asumr.tex
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - colon_fence
+
+exclude_patterns:
+  - venv/*
+  - README.md
+
+# Add a bibtex file so that we can create citations
+# bibtex_bibfiles:
+#   - references.bib
+sphinx:
+  config:
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: true
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/j-albr16/asumr
+  path_to_book: "" # Optional path to your book, relative to the repository root
+  branch: main # Which branch of the repository should be used when creating links (optional)
+
+# jupyter hub
+launch_buttons:
+  notebook_interface: "classic"
+  jupyterhub_url: "https://jupyterhub.uni-muenster.de"
+
+

@@ -1,0 +1,29 @@
+[
+    {
+        "question": "Was sind typische File Endungen für ROS2 Interfaces",
+        "type": "many_choice",
+        "answers": [
+            {"answer": ".msg", "correct": true},
+            {"answer": ".idl", "correct": true},
+            {"answer": ".cpp", "correct": false},
+            {"answer": ".srv", "correct": true},
+            {"answer": ".h", "correct": false},
+            {"answer": ".py", "correct": false},
+            {"answer": ".xml", "correct": false}
+        ]
+    },
+    {
+            
+        "question": "Was ist kein Inahlt eines .srv Files",
+        "type": "many_choice",
+        "answers": [
+            {"answer": "request fields", "correct": false},
+            {"answer": "response fields", "correct": false},
+            {"answer": "Service Implementation", "correct": true},
+            {"answer": "Service Name", "correct": true},
+            {"answer": "constants", "correct": false},
+            {"answer": "Service Definition", "correct": false},
+            {"answer": "andere Interfaces", "correct": false}
+        ]
+    }
+]

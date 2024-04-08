@@ -1,0 +1,80 @@
+[
+    {
+        "question": "Was wird nicht im `package.xml` eines ROS2 Pakets festgelegt?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Hardware-Anforderungen.",
+                "correct": true,
+                "feedback": "Hardware-Anforderungen werden nicht im `package.xml` festgelegt."
+            },
+            {
+                "answer": "Abhängigkeiten des Pakets.",
+                "correct": false,
+                "feedback": "Abhängigkeiten des Pakets werden im `package.xml` festgelegt."
+            },
+            {
+                "answer": "Der Name des Pakets.",
+                "correct": false,
+                "feedback": "Der Name des Pakets wird im `package.xml` festgelegt."
+            },
+            {
+                "answer": "Die Version des Pakets.",
+                "correct": false,
+                "feedback": "Die Version des Pakets wird im `package.xml` festgelegt."
+            }
+        ]
+    },
+    {
+        "question": "Was wird nicht im `setup.py` eines ROS2 Pakets festgelegt?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Abhängigkeiten des Pakets.",
+                "correct": false,
+                "feedback": "Abhängigkeiten des Pakets werden im `setup.py` festgelegt."
+            },
+            {
+                "answer": "Der Name des Pakets.",
+                "correct": false,
+                "feedback": "Der Name des Pakets wird im `setup.py` festgelegt."
+            },
+            {
+                "answer": "Die Version des Pakets.",
+                "correct": false,
+                "feedback": "Die Version des Pakets wird im `setup.py` festgelegt."
+            },
+            {
+                "answer": "Die Hardware-Anforderungen.",
+                "correct": true,
+                "feedback": "Hardware-Anforderungen werden nicht im `setup.py` festgelegt."
+            },
+            {
+                "answer": "Die geteilten Bibliotheken, die das Paket benötigt.",
+                "correct": false,
+                "feedback": "Die geteilten Bibliotheken, die das Paket benötigt, werden im `setup.py` festgelegt."
+            }
+        ]
+    },
+    {
+        "question": "Was wird in einem launch file festgelegt?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Die configuration von Nodes.",
+                "correct": true,
+                "feedback": "In einem launch file können gestartete Nodes über Parameter konfiguriert werden."
+            },
+            {
+                "answer": "Die Paketabhängigkeiten.",
+                "correct": false,
+                "feedback": "Paketabhängigkeiten werden in `package.xml` festgelegt."
+            },
+            {
+                "answer": "Das starten von Nodes.",
+                "correct": true,
+                "feedback": "In einem launch file wird festgelegt, welche Nodes gestartet werden."
+            }
+        ]
+    }
+]

@@ -1,0 +1,70 @@
+[
+    {
+        "question": "Was ist der Hauptzweck von Sensoren in der Robotik?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Um Bewegungen von Robotern zu steuern.",
+                "correct": false,
+                "feedback": "Sensoren dienen dazu, Daten über die Umgebung und den Zustand des Roboters zu erfassen, nicht direkt zur Steuerung von Bewegungen."
+            },
+            {
+                "answer": "Um Informationen über die Umgebung und den Zustand des Roboters zu erfassen.",
+                "correct": true,
+                "feedback": "Richtig! Sensoren in der Robotik dienen hauptsächlich dazu, Daten über die Umgebung und den Zustand des Roboters zu sammeln."
+            },
+            {
+                "answer": "Um die Energieversorgung des Roboters zu regulieren.",
+                "correct": false,
+                "feedback": "Die Energieversorgung wird üblicherweise durch Aktuatoren wie Motoren gesteuert, nicht durch Sensoren."
+            }
+        ]
+    },
+    {
+        "question": "Welche Art von Sensor wird typischerweise verwendet, um Entfernungen in der Robotik zu messen?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Ultraschallsensor",
+                "correct": true,
+                "feedback": "Richtig! Ultraschallsensoren werden häufig verwendet, um Entfernungen in der Robotik zu messen."
+            },
+            {
+                "answer": "LIDAR",
+                "correct": true,
+                "feedback": "Richtig! LIDAR-Sensoren werden häufig verwendet, um Entfernungen in der Robotik zu messen."
+            },
+            {
+                "answer": "Kraftsensor",
+                "correct": false,
+                "feedback": "Kraftsensoren messen normalerweise Kräfte und sind nicht primär für die Messung von Entfernungen ausgelegt."
+            },
+            {
+                "answer": "Temperatursensor",
+                "correct": false,
+                "feedback": "Temperatursensoren messen Temperaturen und sind nicht primär für die Messung von Entfernungen ausgelegt."
+            }
+        ]
+    },
+    {
+        "question": "Wofür werden Beschleunigungssensoren in der Robotik häufig eingesetzt?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Zur Messung der Robotergeschwindigkeit.",
+                "correct": false,
+                "feedback": "Beschleunigungssensoren messen die Änderung der Geschwindigkeit, nicht die Geschwindigkeit selbst."
+            },
+            {
+                "answer": "Zur Erfassung von Bewegungen und Neigungen des Roboters.",
+                "correct": true,
+                "feedback": "Richtig! Beschleunigungssensoren werden oft verwendet, um Bewegungen und Neigungen des Roboters zu erfassen."
+            },
+            {
+                "answer": "Zur Messung der Umgebungstemperatur.",
+                "correct": false,
+                "feedback": "Beschleunigungssensoren sind nicht primär zur Messung der Umgebungstemperatur gedacht."
+            }
+        ]
+    }
+]

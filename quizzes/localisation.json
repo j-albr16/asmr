@@ -1,0 +1,65 @@
+[
+    {
+        "question": "Was versteht man in der Robotik unter Lokalisierung?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Die Bestimmung des Ortes eines Roboters in einem globalen Koordinatensystem.",
+                "correct": true,
+                "feedback": "Richtig! Lokalisierung bezieht sich auf die Bestimmung des Ortes eines Roboters in einem globalen Koordinatensystem."
+            },
+            {
+                "answer": "Die interne Verarbeitung von Sensordaten in einem Roboter.",
+                "correct": false,
+                "feedback": "Dies beschreibt eher den Prozess der Sensorfusion oder der Umwandlung von Rohdaten in verwendbare Informationen."
+            },
+            {
+                "answer": "Die Interaktion eines Roboters mit seiner Umgebung.",
+                "correct": false,
+                "feedback": "Dies bezieht sich eher auf den Akt der Navigation oder des Handelns in der Umgebung als auf die reine Lokalisierung."
+            }
+        ]
+    },
+    {
+        "question": "Welche Art von Sensor wird oft für die Lokalisierung in der Robotik verwendet?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "GPS",
+                "correct": true,
+                "feedback": "Richtig! GPS-Sensoren werden oft für die Lokalisierung von Robotern verwendet, insbesondere im Freien."
+            },
+            {
+                "answer": "Ultraschallsensor",
+                "correct": false,
+                "feedback": "Ultraschallsensoren werden normalerweise für die Abstandsmessung verwendet, nicht unbedingt für die Lokalisierung in einem globalen Koordinatensystem."
+            },
+            {
+                "answer": "Temperatursensor",
+                "correct": false,
+                "feedback": "Temperatursensoren messen die Temperatur und werden normalerweise nicht für die Lokalisierung eines Roboters verwendet."
+            }
+        ]
+    },
+    {
+        "question": "Was ist ein häufig verwendetes Verfahren zur Lokalisierung in der Robotik?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Simultaneous Localization and Mapping (SLAM)",
+                "correct": true,
+                "feedback": "Richtig! SLAM ist ein häufig verwendetes Verfahren zur Lokalisierung von Robotern, bei dem sie gleichzeitig ihre Position bestimmen und eine Karte ihrer Umgebung erstellen."
+            },
+            {
+                "answer": "Künstliche Intelligenz",
+                "correct": false,
+                "feedback": "Künstliche Intelligenz kann in der Robotik für verschiedene Zwecke eingesetzt werden, ist aber kein spezifisches Verfahren zur Lokalisierung."
+            },
+            {
+                "answer": "Rückkopplungsregelung",
+                "correct": false,
+                "feedback": "Rückkopplungsregelung ist ein allgemeines Steuerungskonzept und kein spezifisches Verfahren zur Lokalisierung."
+            }
+        ]
+    }
+]

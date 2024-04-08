@@ -1,0 +1,65 @@
+[
+    {
+        "question": "Was ist die Hauptaufgabe der Forward Kinematik in der Robotik?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Die Berechnung der Endeffektor-Position und -Orientierung aus den Gelenkwinkeln.",
+                "correct": true,
+                "feedback": "Richtig! Die Forward Kinematik berechnet die Endeffektor-Position und -Orientierung aus den Gelenkwinkeln."
+            },
+            {
+                "answer": "Die Bestimmung der Gelenkwinkel, um eine gewünschte Endeffektor-Position und -Orientierung zu erreichen.",
+                "correct": false,
+                "feedback": "Dies beschreibt die Inverse Kinematik, nicht die Forward Kinematik."
+            },
+            {
+                "answer": "Die Optimierung von Roboterbewegungen für Effizienz.",
+                "correct": false,
+                "feedback": "Die Optimierung von Bewegungen für Effizienz ist ein breiteres Anliegen und nicht spezifisch für die Forward Kinematik."
+            }
+        ]
+    },
+    {
+        "question": "Was repräsentiert die Jacobimatrix in der Robotik?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Die Gelenkwinkel des Roboters.",
+                "correct": false,
+                "feedback": "Falsch!"
+            },
+            {
+                "answer": "Die kinematischen Einschränkungen des Roboters.",
+                "correct": false,
+                "feedback": "Falsch!"
+            },
+            {
+                "answer": "Die partiellen Ableitungen der Endeffektor-Position nach den Gelenkwinkeln.",
+                "correct": true,
+                "feedback": "Richtig! Die Jacobimatrix repräsentiert die partiellen Ableitungen der Endeffektor-Position nach den Gelenkwinkeln."
+            }
+        ]
+    },
+    {
+        "question": "Was ist die Hauptaufgabe der Inverse Kinematik in der Robotik?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Die Berechnung der Endeffektor-Position und -Orientierung aus den Gelenkwinkeln.",
+                "correct": false,
+                "feedback": "Dies beschreibt die Forward Kinematik, nicht die Inverse Kinematik."
+            },
+            {
+                "answer": "Die Bestimmung der Gelenkwinkel, um eine gewünschte Endeffektor-Position und -Orientierung zu erreichen.",
+                "correct": true,
+                "feedback": "Richtig! Die Inverse Kinematik bestimmt die Gelenkwinkel, um eine gewünschte Endeffektor-Position und -Orientierung zu erreichen."
+            },
+            {
+                "answer": "Die Optimierung von Roboterbewegungen für Effizienz.",
+                "correct": false,
+                "feedback": "Die Optimierung von Bewegungen für Effizienz ist ein breiteres Anliegen und nicht spezifisch für die Inverse Kinematik."
+            }
+        ]
+    }
+]

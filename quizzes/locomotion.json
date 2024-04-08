@@ -1,0 +1,28 @@
+[
+    {
+        "question": "Welche Vorteile bieten Beine gegenüber Rädern für Roboter?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Beine sind einfacher zu konstruieren und zu steuern als Räder.",
+                "correct": false,
+                "feedback": "Beine können komplexer sein als Räder und erfordern oft fortschrittlichere Steuerungssysteme."
+            },
+            {
+                "answer": "Beine ermöglichen es Robotern, unebenes Gelände zu überwinden und Hindernisse zu überwinden.",
+                "correct": true,
+                "feedback": "Richtig! Beine bieten Robotern die Fähigkeit, unebenes Gelände zu überwinden und Hindernisse zu überwinden, was mit Rädern oft schwieriger ist."
+            },
+            {
+                "answer": "Beine sind schneller und energieeffizienter als Räder.",
+                "correct": false,
+                "feedback": "Beine sind nicht unbedingt schneller oder energieeffizienter als Räder, aber sie bieten andere Vorteile wie die Fähigkeit, unebenes Gelände zu überwinden."
+            },
+            {
+                "answer": "Beine sind weniger anfällig für Verschleiß und Beschädigung als Räder.",
+                "correct": false,
+                "feedback": "Beine können anfälliger für Verschleiß und Beschädigung sein als Räder, da sie oft komplexer sind und mehr bewegliche Teile haben."
+            }
+        ]
+    }
+]

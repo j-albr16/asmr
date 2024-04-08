@@ -1,0 +1,65 @@
+[
+    {
+        "question": "Was versteht man in der Robotik unter einer Roboterarchitektur?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Die physische Struktur eines Roboters.",
+                "correct": false,
+                "feedback": "Die Roboterarchitektur bezieht sich auf die Struktur und Organisation des Software- und Steuerungssystems eines Roboters, nicht auf seine physische Struktur."
+            },
+            {
+                "answer": "Die Software- und Steuerungsstruktur eines Roboters.",
+                "correct": true,
+                "feedback": "Richtig! Die Roboterarchitektur umfasst die Struktur und Organisation des Software- und Steuerungssystems eines Roboters."
+            },
+            {
+                "answer": "Die Interaktion eines Roboters mit seiner Umgebung.",
+                "correct": false,
+                "feedback": "Die Interaktion eines Roboters mit seiner Umgebung betrifft eher das Verhalten des Roboters, nicht seine interne Struktur."
+            }
+        ]
+    },
+    {
+        "question": "Welche Art von Roboterarchitektur verwendet einen zentralen Entscheidungspunkt zur Steuerung des gesamten Systems?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Reaktive Architektur",
+                "correct": false,
+                "feedback": "Reaktive Architekturen reagieren direkt auf Umgebungsreize und erfordern keinen zentralen Entscheidungspunkt."
+            },
+            {
+                "answer": "Hierarchische Architektur",
+                "correct": false,
+                "feedback": "Hierarchische Architekturen organisieren die Steuerung des Systems in verschiedene Ebenen, aber sie können auch reaktive Elemente enthalten."
+            },
+            {
+                "answer": "Zentralisierte Architektur",
+                "correct": true,
+                "feedback": "Richtig! Zentralisierte Architekturen verwenden einen zentralen Entscheidungspunkt zur Steuerung des gesamten Systems."
+            }
+        ]
+    },
+    {
+        "question": "Welche Vorteile bietet eine verteilte Roboterarchitektur?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Höhere Reaktionsschnelligkeit auf Umgebungsänderungen.",
+                "correct": true,
+                "feedback": "Richtig! Verteilte Architekturen können die Reaktionsgeschwindigkeit erhöhen, da Entscheidungen parallel auf mehreren Ebenen getroffen werden können."
+            },
+            {
+                "answer": "Einfachere Implementierung und Wartung.",
+                "correct": false,
+                "feedback": "Verteilte Architekturen können oft komplexer zu implementieren und zu warten sein, aber sie bieten andere Vorteile wie Redundanz und Skalierbarkeit."
+            },
+            {
+                "answer": "Bessere Ressourcennutzung durch zentralisierte Steuerung.",
+                "correct": false,
+                "feedback": "Zentralisierte Steuerung kann zwar Ressourcen effizienter nutzen, aber verteilte Architekturen bieten andere Vorteile wie verbesserte Reaktionsschnelligkeit und Robustheit."
+            }
+        ]
+    }
+]

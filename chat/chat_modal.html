@@ -1,0 +1,28 @@
+<!-- Modal -->
+<div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content h-100">
+      <div class="modal-header bg-info text-white align-items-center p-3 border-bottom-0">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">ASUMR Chat Bot</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-2 bg-grey">
+        <section style="background-color: #eee;" class="h-100">
+          <div class="container h-100">
+            <div class="d-flex flex-column h-100">
+                <div id="chatMessages" class="flex-grow-1 overflow-scroll">
+                </div>
+                <form id="chatForm" class="flex-shrink-1">
+                    <textarea class="form-control" id="chatInput" rows="4" placeholder="hast du eine Frage?"></textarea>
+                    <input type="submit" hidden/>
+                </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/static/chat/chat.js">
+</script>

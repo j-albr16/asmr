@@ -1,0 +1,96 @@
+[
+    {
+        "question": "Was ist der hauptsächline Zweck von ROS 2 Topics?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Um synchrone requests und responses zwischen Nodes auszutauschen.",
+                "correct": false,
+                "feedback": "Dies ist der Zweck von ROS 2 Services, und nicht Topics."
+            },
+            {
+                "answer": "Um asynchrone Daten zwischen Nodes auszutauschen.",
+                "correct": true,
+                "feedback": "Richtig! Topics sind der Hauptmechanismus zum Austausch von asynchronen Daten zwischen ROS 2 Nodes."
+            },
+            {
+                "answer": "Um neue Datenstrukturen zu definieren, die von ROS 2 Nodes verwendet werden.",
+                "correct": false,
+                "feedback": "Dies ist der Zweck von ROS 2 Messages, und nicht Topics."
+            },
+            {
+                "answer": "Um die Ausführungsreihenfolge von ROS 2 Nodes zu steuern.",
+                "correct": false,
+                "feedback": "Dies ist nicht der Zweck von ROS 2 Topics."
+            }
+        ]
+    },
+    {
+        "question": "Was ist die Rolle eines ROS 2 Publishers?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Empfängt Daten von einem ROS 2 Topic.",
+                "correct": false,
+                "feedback": "Das ist die Rolle eines ROS 2 Subscribers, nicht eines Publishers."
+            },
+            {
+                "answer": "Sendet Daten an ein ROS 2 Topic.",
+                "correct": true,
+                "feedback": "Richtig! Publisher senden Daten an ein ROS 2 Topic."
+            },
+            {
+                "answer": "Stellt Daten für einen ROS 2 Service bereit.",
+                "correct": false,
+                "feedback": "Das ist die Rolle eines ROS 2 Service Servers, nicht eines Publishers."
+            }
+        ]
+    },
+    {
+        "question": "Was ist die Rolle eines ROS 2 Subscribers?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Empfängt Daten von einem ROS 2 Topic.",
+                "correct": true,
+                "feedback": "Richtig! Subscribers empfangen Daten von einem ROS 2 Topic."
+            },
+            {
+                "answer": "Sendet Daten an ein ROS 2 Topic.",
+                "correct": false,
+                "feedback": "Das ist die Rolle eines ROS 2 Publishers, nicht eines Subscribers."
+            },
+            {
+                "answer": "Stellt Daten für einen ROS 2 Service bereit.",
+                "correct": false,
+                "feedback": "Das ist die Rolle eines ROS 2 Service Servers, nicht eines Publishers."
+            }
+        ]
+    },
+    {
+        "question": "Welche der folgenden Aussagen über ROS 2 Topics ist/sind korrekt?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Ein ROS 2 Topic kann nur von einem Publisher oder einem Subscriber verwendet werden.",
+                "correct": false,
+                "feedback": "Ein ROS 2 Topic kann von mehreren Publishern und Subscribers verwendet werden."
+            },
+            {
+                "answer": "Ein ROS 2 Topic kann nur von einem Publisher verwendet werden.",
+                "correct": false,
+                "feedback": "Ein ROS 2 Topic kann von mehreren Publishern und Subscribers verwendet werden."
+            },
+            {
+                "answer": "Ein ROS 2 Topic kann nur von einem Subscriber verwendet werden.",
+                "correct": false,
+                "feedback": "Ein ROS 2 Topic kann von mehreren Publishern und Subscribers verwendet werden."
+            },
+            {
+                "answer": "Ein ROS 2 Topic kann von mehreren Publishern und Subscribers verwendet werden.",
+                "correct": true,
+                "feedback": "Richtig! Ein ROS 2 Topic kann von mehreren Publishern und Subscribers verwendet werden."
+            }
+        ]
+    }
+]

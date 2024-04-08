@@ -1,0 +1,55 @@
+[
+    {
+        "question": "Was ist Autonomie in der Robotik?",
+        "type": "many_choice",
+        "answers": [
+            
+            {
+                "answer": "Die Fähigkeit eines Roboters, sich selbst zu reparieren und zu warten.",
+                "correct": false,
+                "feedback": "Die Fähigkeit eines Roboters, sich selbst zu reparieren und zu warten, bezieht sich auf Selbstreparatur und Selbstwartung, nicht auf Autonomie."
+            },
+            {
+                "answer": "Die Fähigkeit eines Roboters, mit anderen Robotern zu kommunizieren.",
+                "correct": false,
+                "feedback": "Die Fähigkeit eines Roboters, mit anderen Robotern zu kommunizieren, bezieht sich auf die Interaktion zwischen Robotern, nicht auf Autonomie."
+            },
+            {
+                "answer": "Die Fähigkeit eines Roboters, eigenständig Entscheidungen zu treffen und Aufgaben auszuführen.",
+                "correct": true,
+                "feedback": "Richtig! Autonomie in der Robotik bezieht sich auf die Fähigkeit eines Roboters, eigenständig Entscheidungen zu treffen und Aufgaben auszuführen, ohne ständige menschliche Kontrolle."
+            },
+            {
+                "answer": "Die Fähigkeit eines Roboters, sich selbst zu programmieren.",
+                "correct": false,
+                "feedback": "Die Fähigkeit eines Roboters, sich selbst zu programmieren, bezieht sich auf Selbstprogrammierung, nicht auf Autonomie."
+            }
+        ]
+    },
+    {
+        "question": "Welches der folgenden Beispiele demonstriert hohe Autonomie in einem Roboter?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Ein Roboter, der programmiert ist, um eine bestimmte Aufgabe auszuführen und keine anderen Entscheidungen treffen kann.",
+                "correct": false,
+                "feedback": "Ein Roboter, der programmiert ist, um eine bestimmte Aufgabe auszuführen und keine anderen Entscheidungen treffen kann, hat eine geringe Autonomie."
+            },
+            {
+                "answer": "Ein Roboter, der in der Lage ist, Hindernisse zu erkennen und auszuweichen, um sein Ziel zu erreichen.",
+                "correct": true,
+                "feedback": "Richtig! Ein Roboter, der in der Lage ist, Hindernisse zu erkennen und auszuweichen, um sein Ziel zu erreichen, zeigt hohe Autonomie."
+            },
+            {
+                "answer": "Ein Roboter, der von einem menschlichen Bediener ferngesteuert wird und keine eigenen Entscheidungen treffen kann.",
+                "correct": false,
+                "feedback": "Ein Roboter, der von einem menschlichen Bediener ferngesteuert wird und keine eigenen Entscheidungen treffen kann, hat eine geringe Autonomie."
+            },
+            {
+                "answer": "Ein Roboter, der in der Lage ist, sich selbst zu reparieren und zu warten.",
+                "correct": false,
+                "feedback": "Ein Roboter, der in der Lage ist, sich selbst zu reparieren und zu warten, hat eine hohe Selbstreparatur- und Selbstwartungsautonomie, aber nicht unbedingt eine hohe Autonomie in Bezug auf Entscheidungsfindung und Aufgabenausführung."
+            }
+        ]
+    }
+]

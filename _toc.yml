@@ -1,0 +1,63 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: Themen
+  chapters:
+  - file: vorlesung/Autonomie
+    sections:
+    - file: vorlesung/Autonomie/quizzes
+  - file: vorlesung/Locomotion
+    sections:
+    - file: vorlesung/Locomotion/quizzes
+  - file: vorlesung/Kinematik
+    sections:
+    - file: vorlesung/Kinematik/quizzes
+  - file: vorlesung/Sensorik
+    sections:
+    - file: vorlesung/Sensorik/quizzes
+  - file: vorlesung/Architekturen
+    sections:
+    - file: vorlesung/Architekturen/quizzes
+  - file: vorlesung/Localisation
+    sections:
+    - file: vorlesung/Localisation/quizzes
+  - file: vorlesung/PathPlanning
+    sections:
+    - file: vorlesung/PathPlanning/quizzes
+- caption: ROS2
+  chapters:
+  - file: ros2/setup
+    sections:
+    - file: ros2/setup/linux
+    - file: ros2/setup/windows
+    - file: ros2/setup/macos
+    - file: ros2/setup/vm
+    - file: ros2/setup/sourcen
+    - file: ros2/setup/gazebo
+  - file: ros2/package
+    sections:
+    - file: ros2/package/create
+    - file: ros2/package/launch
+    - file: ros2/package/quiz
+  - file: ros2/node
+    sections:
+    - file: ros2/node/beispiel
+    - file: ros2/node/quiz
+  - file: ros2/topic
+    sections:
+    - file: ros2/topic/beispiel
+    - file: ros2/topic/quiz
+  - file: ros2/interface
+    sections:
+    - file: ros2/interface/beispiel
+    - file: ros2/interface/quiz
+  - file: ros2/service
+    sections:
+    - file: ros2/service/beispiel
+    - file: ros2/service/quiz
+  - file: ros2/navigation
+    sections:
+    - file: ros2/navigation/example

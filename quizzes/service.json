@@ -1,0 +1,86 @@
+[
+    {
+        "question": "Was ist die Hauptaufgabe eines ROS 2 Service Servers?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Empfängt und verarbeitet Daten von einem ROS 2 Topic.",
+                "correct": false,
+                "feedback": "Das ist die Aufgabe eines ROS 2 Subscribers, nicht eines Service Servers."
+            },
+            {
+                "answer": "Stellt Dienste für andere Knoten im Netzwerk bereit um synchrone Anfragen zu stellen.",
+                "correct": true,
+                "feedback": "Richtig! Service Server sind für die Bereitstellung von Diensten und die Beantwortung von Anfragen zuständig."
+            },
+            {
+                "answer": "Sendet Daten an einen ROS 2 Topic.",
+                "correct": false,
+                "feedback": "Das ist die Aufgabe eines ROS 2 Publishers, nicht eines Service Servers."
+            }
+        ]
+    },
+    {
+        "question": "Was ist die Hauptaufgabe eines ROS 2 Service Clients?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Sendet Daten an einen ROS 2 Topic.",
+                "correct": false,
+                "feedback": "Das ist die Aufgabe eines ROS 2 Publishers, nicht eines Service Clients."
+            },
+            {
+                "answer": "Empfängt und verarbeitet Daten von einem ROS 2 Topic.",
+                "correct": false,
+                "feedback": "Das ist die Aufgabe eines ROS 2 Subscribers, nicht eines Service Clients."
+            },
+            {
+                "answer": "Stellt synchrone Anfragen an einen ROS 2 Service Server und empfängt Antworten.",
+                "correct": true,
+                "feedback": "Richtig! Service Clients stellen Anfragen an Service Server und empfangen Antworten."
+            }
+        ]
+    },
+    {
+        "question": "Welches Kommunikationsmuster beschreibt ROS 2 Services am besten?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "One-to-One",
+                "correct": true,
+                "feedback": "Richtig! Services sind ein One-to-One Kommunikationsmuster."
+            },
+            {
+                "answer": "One-to-Many",
+                "correct": false,
+                "feedback": "One-to-Many beschreibt das Publish/Subscribe Muster."
+            },
+            {
+                "answer": "Many-to-Many",
+                "correct": false,
+                "feedback": "Many-to-Many beschreibt das Publish/Subscribe Muster."
+            }
+        ]
+    },
+    {
+        "question": "Welche der folgenden Aussagen über ROS 2 Services ist korrekt?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Services sind asynchron.",
+                "correct": false,
+                "feedback": "Services sind synchron."
+            },
+            {
+                "answer": "Services sind synchron.",
+                "correct": true,
+                "feedback": "Richtig! Services sind synchron."
+            },
+            {
+                "answer": "Services implementieren das Publish/Subscribe Muster.",
+                "correct": false,
+                "feedback": "Services implementieren das Request/Response Muster."
+            }
+        ]
+    }
+]

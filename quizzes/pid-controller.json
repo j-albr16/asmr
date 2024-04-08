@@ -1,0 +1,65 @@
+[
+    {
+        "question": "What does PID stand for in the context of robotics?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "Proportional, Integral, Derivative",
+                "correct": true,
+                "feedback": "Correct! PID stands for Proportional, Integral, Derivative, which are the three components of a PID controller."
+            },
+            {
+                "answer": "Position, Inertia, Damping",
+                "correct": false,
+                "feedback": "While these terms are relevant in robotics, they do not represent the components of a PID controller."
+            },
+            {
+                "answer": "Precision, Integration, Differentiation",
+                "correct": false,
+                "feedback": "Although these terms relate to control systems, they do not represent the components of a PID controller."
+            }
+        ]
+    },
+    {
+        "question": "What is the purpose of the proportional term in a PID controller?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "To eliminate steady-state error.",
+                "correct": true,
+                "feedback": "Correct! The proportional term acts to reduce the error between the desired and actual values, aiming to eliminate steady-state error."
+            },
+            {
+                "answer": "To reduce oscillations and overshoot.",
+                "correct": false,
+                "feedback": "While the proportional term can help in reducing oscillations, its primary purpose is to reduce steady-state error."
+            },
+            {
+                "answer": "To account for past errors and adjust for future performance.",
+                "correct": false,
+                "feedback": "This description is more aligned with the integral term, which accumulates past errors to adjust the control signal."
+            }
+        ]
+    },
+    {
+        "question": "What role does the derivative term play in a PID controller?",
+        "type": "many_choice",
+        "answers": [
+            {
+                "answer": "To predict future errors based on the current rate of change.",
+                "correct": true,
+                "feedback": "Correct! The derivative term anticipates future errors by considering the rate of change of the error signal."
+            },
+            {
+                "answer": "To eliminate steady-state error.",
+                "correct": false,
+                "feedback": "The derivative term does not directly aim to eliminate steady-state error; it primarily deals with dampening oscillations and improving stability."
+            },
+            {
+                "answer": "To accumulate past errors and adjust for future performance.",
+                "correct": false,
+                "feedback": "This description is more aligned with the integral term, which accumulates past errors to adjust the control signal."
+            }
+        ]
+    }
+]
