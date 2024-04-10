@@ -13,7 +13,7 @@ def url():
     url = input("""
 Enter the path to the .ipynp file you want to open.
 
-    Example: asumr_exercises/01_01_01.ipynb
+    Example: asmr_exercises/01_01_01.ipynb
 
 url:
     """)
@@ -24,7 +24,7 @@ url:
         print('Take care! Added trailing / to url.')
         url = url + '/'
 
-    if not url.startswith('asumr_exercises/'):
+    if not url.startswith('asmr_exercises/'):
         print('Take care! You are not in the asumr_exercises folder.')
 
     # check if string contains .ipynb

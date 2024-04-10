@@ -4,6 +4,9 @@
 format: jb-book
 root: intro
 parts:
+- caption: Einleitung
+  chapters:
+  - file: python_intro
 - caption: Themen
   chapters:
   - file: vorlesung/Autonomie
