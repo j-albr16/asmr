@@ -1,9 +1,9 @@
 import os
 
 
-REPO_URL = 'https://github.com/j-albr16/asumr'
-BRANCH = 'main'
-JUPYTERHUB_URL = 'https://jupyterhub.wwu.de'
+REPO_URL = 'https://github.com/j-albr16/asmr'
+BRANCH = 'public'
+JUPYTERHUB_URL = 'https://jupyterhub.uni-muenster.de'
 
 # jupyterhub_url: https://jupyterhub.wwu.de/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fj-albr16%2Fasumr&branch=main&urlpath=lab%2Ftree%2Fasumr%2Fasumr_exercises%2F
 
@@ -18,7 +18,7 @@ Enter the path to the .ipynp file you want to open.
 url:
     """)
 
-    url = f'lab/tree/asumr/{url}'
+    url = f'lab/tree/asmr/{url}'
 
     if not url.endswith('/'):
         print('Take care! Added trailing / to url.')

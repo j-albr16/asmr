@@ -4,7 +4,7 @@
 format: jb-book
 root: intro
 parts:
-- caption: Einleitung
+- caption: Allgemeines
   chapters:
   - file: python_intro
 - caption: Themen
