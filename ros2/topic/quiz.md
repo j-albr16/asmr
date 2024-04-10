@@ -18,7 +18,7 @@ kernelspec:
 
 from jupyterquiz import display_quiz
 import json, requests
-git_path="https://raw.githubusercontent.com/j-albr16/asumr/main/quizzes/topic.json"
+git_path="https://raw.githubusercontent.com/j-albr16/asmr/main/quizzes/topic.json"
 r = requests.get(git_path)
 display_quiz(r.json())
 ```
