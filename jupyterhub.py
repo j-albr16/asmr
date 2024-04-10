@@ -24,7 +24,7 @@ url:
         print('Take care! Added trailing / to url.')
         url = url + '/'
 
-    if not url.startswith('asumr_exercises/'):
+    if not url.startswith('asmr_exercises/'):
         print('Take care! You are not in the asmr_exercises folder.')
 
     # check if string contains .ipynb
