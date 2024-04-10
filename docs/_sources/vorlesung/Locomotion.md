@@ -1,1 +1,1 @@
-# Locomotaion
+# Locomotion

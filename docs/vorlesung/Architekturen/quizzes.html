@@ -167,13 +167,17 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Themen</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Allgemeines</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../python_intro.html">Python Kompaktanleitung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Themen</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Autonomie.html">Autonomie</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Autonomie/quizzes.html">Quizzes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Locomotion.html">Locomotaion</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Locomotion.html">Locomotion</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Locomotion/quizzes.html">Quizzes</a></li>
 </ul>
 </li>
@@ -294,7 +298,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://jupyterhub.uni-muenster.de/hub/user-redirect/git-pull?repo=https%3A//github.com/j-albr16/asumr&urlpath=tree/asumr/vorlesung/Architekturen/quizzes.md&branch=main" target="_blank"
+      <li><a href="https://jupyterhub.uni-muenster.de/hub/user-redirect/git-pull?repo=https%3A//github.com/j-albr16/asmr&urlpath=tree/asmr/vorlesung/Architekturen/quizzes.md&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +329,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr" target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr/edit/main/vorlesung/Architekturen/quizzes.md" target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr/edit/main/vorlesung/Architekturen/quizzes.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -359,7 +363,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr/issues/new?title=Issue%20on%20page%20%2Fvorlesung/Architekturen/quizzes.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr/issues/new?title=Issue%20on%20page%20%2Fvorlesung/Architekturen/quizzes.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -511,7 +515,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
 <span class="kn">import</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span>
-<span class="n">git_path</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/j-albr16/asumr/main/quizzes/architectures.json&quot;</span>
+<span class="n">git_path</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/j-albr16/asmr/main/quizzes/architectures.json&quot;</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">git_path</span><span class="p">)</span>
 <span class="n">display_quiz</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
 </pre></div>
@@ -519,13 +523,13 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="ChBjDOTIpmav" data-shufflequestions="False"
+<div class="output text_html"><div id="FnHegKqZcucv" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#ChBjDOTIpmav {
+#FnHegKqZcucv {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -695,7 +699,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsChBjDOTIpmav=[{"question": "Was versteht man in der Robotik unter einer Roboterarchitektur?", "type": "many_choice", "answers": [{"answer": "Die physische Struktur eines Roboters.", "correct": false, "feedback": "Die Roboterarchitektur bezieht sich auf die Struktur und Organisation des Software- und Steuerungssystems eines Roboters, nicht auf seine physische Struktur."}, {"answer": "Die Software- und Steuerungsstruktur eines Roboters.", "correct": true, "feedback": "Richtig! Die Roboterarchitektur umfasst die Struktur und Organisation des Software- und Steuerungssystems eines Roboters."}, {"answer": "Die Interaktion eines Roboters mit seiner Umgebung.", "correct": false, "feedback": "Die Interaktion eines Roboters mit seiner Umgebung betrifft eher das Verhalten des Roboters, nicht seine interne Struktur."}]}, {"question": "Welche Art von Roboterarchitektur verwendet einen zentralen Entscheidungspunkt zur Steuerung des gesamten Systems?", "type": "many_choice", "answers": [{"answer": "Reaktive Architektur", "correct": false, "feedback": "Reaktive Architekturen reagieren direkt auf Umgebungsreize und erfordern keinen zentralen Entscheidungspunkt."}, {"answer": "Hierarchische Architektur", "correct": false, "feedback": "Hierarchische Architekturen organisieren die Steuerung des Systems in verschiedene Ebenen, aber sie k\u00f6nnen auch reaktive Elemente enthalten."}, {"answer": "Zentralisierte Architektur", "correct": true, "feedback": "Richtig! Zentralisierte Architekturen verwenden einen zentralen Entscheidungspunkt zur Steuerung des gesamten Systems."}]}, {"question": "Welche Vorteile bietet eine verteilte Roboterarchitektur?", "type": "many_choice", "answers": [{"answer": "H\u00f6here Reaktionsschnelligkeit auf Umgebungs\u00e4nderungen.", "correct": true, "feedback": "Richtig! Verteilte Architekturen k\u00f6nnen die Reaktionsgeschwindigkeit erh\u00f6hen, da Entscheidungen parallel auf mehreren Ebenen getroffen werden k\u00f6nnen."}, {"answer": "Einfachere Implementierung und Wartung.", "correct": false, "feedback": "Verteilte Architekturen k\u00f6nnen oft komplexer zu implementieren und zu warten sein, aber sie bieten andere Vorteile wie Redundanz und Skalierbarkeit."}, {"answer": "Bessere Ressourcennutzung durch zentralisierte Steuerung.", "correct": false, "feedback": "Zentralisierte Steuerung kann zwar Ressourcen effizienter nutzen, aber verteilte Architekturen bieten andere Vorteile wie verbesserte Reaktionsschnelligkeit und Robustheit."}]}];
+</style></div><script type="application/javascript">var questionsFnHegKqZcucv=[{"question": "Was versteht man in der Robotik unter einer Roboterarchitektur?", "type": "many_choice", "answers": [{"answer": "Die physische Struktur eines Roboters.", "correct": false, "feedback": "Die Roboterarchitektur bezieht sich auf die Struktur und Organisation des Software- und Steuerungssystems eines Roboters, nicht auf seine physische Struktur."}, {"answer": "Die Software- und Steuerungsstruktur eines Roboters.", "correct": true, "feedback": "Richtig! Die Roboterarchitektur umfasst die Struktur und Organisation des Software- und Steuerungssystems eines Roboters."}, {"answer": "Die Interaktion eines Roboters mit seiner Umgebung.", "correct": false, "feedback": "Die Interaktion eines Roboters mit seiner Umgebung betrifft eher das Verhalten des Roboters, nicht seine interne Struktur."}]}, {"question": "Welche Art von Roboterarchitektur verwendet einen zentralen Entscheidungspunkt zur Steuerung des gesamten Systems?", "type": "many_choice", "answers": [{"answer": "Reaktive Architektur", "correct": false, "feedback": "Reaktive Architekturen reagieren direkt auf Umgebungsreize und erfordern keinen zentralen Entscheidungspunkt."}, {"answer": "Hierarchische Architektur", "correct": false, "feedback": "Hierarchische Architekturen organisieren die Steuerung des Systems in verschiedene Ebenen, aber sie k\u00f6nnen auch reaktive Elemente enthalten."}, {"answer": "Zentralisierte Architektur", "correct": true, "feedback": "Richtig! Zentralisierte Architekturen verwenden einen zentralen Entscheidungspunkt zur Steuerung des gesamten Systems."}]}, {"question": "Welche Vorteile bietet eine verteilte Roboterarchitektur?", "type": "many_choice", "answers": [{"answer": "H\u00f6here Reaktionsschnelligkeit auf Umgebungs\u00e4nderungen.", "correct": true, "feedback": "Richtig! Verteilte Architekturen k\u00f6nnen die Reaktionsgeschwindigkeit erh\u00f6hen, da Entscheidungen parallel auf mehreren Ebenen getroffen werden k\u00f6nnen."}, {"answer": "Einfachere Implementierung und Wartung.", "correct": false, "feedback": "Verteilte Architekturen k\u00f6nnen oft komplexer zu implementieren und zu warten sein, aber sie bieten andere Vorteile wie Redundanz und Skalierbarkeit."}, {"answer": "Bessere Ressourcennutzung durch zentralisierte Steuerung.", "correct": false, "feedback": "Zentralisierte Steuerung kann zwar Ressourcen effizienter nutzen, aber verteilte Architekturen bieten andere Vorteile wie verbesserte Reaktionsschnelligkeit und Robustheit."}]}];
     // Make a random ID
 function makeid(length) {
     var result = [];
@@ -1444,8 +1448,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("ChBjDOTIpmav")) {
-            show_questions(questionsChBjDOTIpmav,  ChBjDOTIpmav); 
+          if(document.getElementById("FnHegKqZcucv")) {
+            show_questions(questionsFnHegKqZcucv,  FnHegKqZcucv); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1454,8 +1458,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("ChBjDOTIpmav");
-        // console.log(document.getElementById("ChBjDOTIpmav"));
+        //console.log("FnHegKqZcucv");
+        // console.log(document.getElementById("FnHegKqZcucv"));
 
         try_show();
         }

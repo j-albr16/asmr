@@ -65,7 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Autonomie" href="vorlesung/Autonomie.html" />
+    <link rel="next" title="Python Kompaktanleitung" href="python_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -166,13 +166,17 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Themen</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Allgemeines</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="python_intro.html">Python Kompaktanleitung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Themen</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="vorlesung/Autonomie.html">Autonomie</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="vorlesung/Autonomie/quizzes.html">Quizzes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="vorlesung/Locomotion.html">Locomotaion</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="vorlesung/Locomotion.html">Locomotion</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="vorlesung/Locomotion/quizzes.html">Quizzes</a></li>
 </ul>
 </li>
@@ -293,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr" target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -310,7 +314,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr/edit/main/intro.md" target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr/edit/main/intro.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -327,7 +331,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -466,20 +470,26 @@ document.write(`
                   
   <section id="uber-dieses-material">
 <h1>Über dieses Material<a class="headerlink" href="#uber-dieses-material" title="Permalink to this heading">#</a></h1>
+<p>Unser Bestreben ist hier eine gute Übersicht über die für die Vorlesung relevanten Themen auf das Wesentliche zu beschränken, um euch einen möglichst umkomplizierten Einstieg in das Thema ROS zu bieten. Damit habt ihr dann die optimale Grundlage die theoretischen Konzepte der Vorlesung auch durchs “Anfassen” (soweit das in der Programmierung möglich ist) zu Verstehen, zu Festigen und zu Vertiefen.</p>
 <p>Die hier bereitgestellte ROS2 Dokumentation orientiert sich in einigen Teilen stark an den <a class="reference external" href="https://docs.ros.org/en/humble/">offiziellen ROS2 Docs</a>. Diese ist in weiten Teilen bereits eine sehr gute englische Anleitung, welche ihr auch gerne als Wissenserweiterung und Nachschlagewerk nutzen könnt.</p>
-<p>Ansonsten ist unser Bestreben hier eine gute Übersicht über die für die Vorlesung relevanten Themen auf das Wesentliche zu beschränken, um euch einen möglichst umkomplizierten Einstieg in das Thema ROS zu bieten. Damit habt ihr dann die optimale Grundlage die theoretischen Konzepte der Vorlesung auch durchs “Anfassen” (soweit das in der Programmierung möglich ist) zu Verstehen, zu Festigen und zu Vertiefen.</p>
 <section id="aufteilung">
 <h2>Aufteilung<a class="headerlink" href="#aufteilung" title="Permalink to this heading">#</a></h2>
-<p>Das Material dieses Jupyter Books ist in zwei Hauptabschnitte aufgeteilt, welche im Verlaufe der Vorlesung zunehmen parallel nutzen werdet. Zu Beginn jedoch habt ihr hier die Möglichkeit im Abschnitt <strong>Vorlesung</strong> ohne ROS2 Vorkenntnisse die theoretischen Konzepte auszuprobieren. Direkt zu Beginn werdet ihr dann parallel die Gelegenheit haben, die notwendigen Python Grundlagen zu erlernen oder aufzufrischen, die ihr dann folgend zum Bearbeiten der ROS2 Übungen benötigt. Die entsprechende Materialien zur Erarbeitung der <strong>ROS2</strong> Konzepte findet ihr im Gleichnamigen Abschnitt.</p>
+<p>Das Material dieses Jupyter Books ist in zwei Hauptabschnitte aufgeteilt, welche ihr im Verlaufe der Vorlesung zunehmend parallel nutzen werdet. Zu Beginn jedoch habt ihr hier die Möglichkeit im Abschnitt <strong>Vorlesung</strong> ohne ROS2 Vorkenntnisse die theoretischen Konzepte auszuprobieren. Direkt zu Beginn werdet ihr dann parallel die Gelegenheit haben, die notwendigen Python Grundlagen zu erlernen oder aufzufrischen, die ihr dann folgend zum Bearbeiten der ROS2 Übungen benötigt. Die entsprechenden Materialien zur Erarbeitung der <strong>ROS2</strong> Konzepte findet ihr im gleichnamigen Abschnitt.</p>
 </section>
 <section id="sprache">
 <h2>Sprache<a class="headerlink" href="#sprache" title="Permalink to this heading">#</a></h2>
 <p>Diese Dokumente werden zwar in Deutsch verfasst, jedoch werden wir an vielen Stellen die englischen Begriffe verwenden, um euch an die ROS2 Syntax zu gewöhnen. Englische Lehnswörter werden wir im Allgemeinen kursiv kennzeichnen: <em>syntactically totally important word</em>.</p>
 <div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Allgemeines</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="python_intro.html">Python Kompaktanleitung</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Themen</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="vorlesung/Autonomie.html">Autonomie</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vorlesung/Locomotion.html">Locomotaion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vorlesung/Locomotion.html">Locomotion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vorlesung/Kinematik.html">Kinematik</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="vorlesung/Kinematik/quizzes.html">Quizzes</a></li>
 </ul>
@@ -566,11 +576,11 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="right-next"
-       href="vorlesung/Autonomie.html"
+       href="python_intro.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Autonomie</p>
+        <p class="prev-next-title">Python Kompaktanleitung</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

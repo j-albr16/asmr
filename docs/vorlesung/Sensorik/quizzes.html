@@ -167,13 +167,17 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Themen</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Allgemeines</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../python_intro.html">Python Kompaktanleitung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Themen</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Autonomie.html">Autonomie</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Autonomie/quizzes.html">Quizzes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Locomotion.html">Locomotaion</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Locomotion.html">Locomotion</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Locomotion/quizzes.html">Quizzes</a></li>
 </ul>
 </li>
@@ -294,7 +298,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://jupyterhub.uni-muenster.de/hub/user-redirect/git-pull?repo=https%3A//github.com/j-albr16/asumr&urlpath=tree/asumr/vorlesung/Sensorik/quizzes.md&branch=main" target="_blank"
+      <li><a href="https://jupyterhub.uni-muenster.de/hub/user-redirect/git-pull?repo=https%3A//github.com/j-albr16/asmr&urlpath=tree/asmr/vorlesung/Sensorik/quizzes.md&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +329,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr" target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr/edit/main/vorlesung/Sensorik/quizzes.md" target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr/edit/main/vorlesung/Sensorik/quizzes.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -359,7 +363,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr/issues/new?title=Issue%20on%20page%20%2Fvorlesung/Sensorik/quizzes.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr/issues/new?title=Issue%20on%20page%20%2Fvorlesung/Sensorik/quizzes.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -511,7 +515,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
 <span class="kn">import</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span>
-<span class="n">git_path</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/j-albr16/asumr/main/quizzes/sensoren.json&quot;</span>
+<span class="n">git_path</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/j-albr16/asmr/main/quizzes/sensoren.json&quot;</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">git_path</span><span class="p">)</span>
 <span class="n">display_quiz</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
 </pre></div>
@@ -519,13 +523,13 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="jDTetXBWXblV" data-shufflequestions="False"
+<div class="output text_html"><div id="jlmNArKhjYGr" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#jDTetXBWXblV {
+#jlmNArKhjYGr {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -695,7 +699,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsjDTetXBWXblV=[{"question": "Was ist der Hauptzweck von Sensoren in der Robotik?", "type": "many_choice", "answers": [{"answer": "Um Bewegungen von Robotern zu steuern.", "correct": false, "feedback": "Sensoren dienen dazu, Daten \u00fcber die Umgebung und den Zustand des Roboters zu erfassen, nicht direkt zur Steuerung von Bewegungen."}, {"answer": "Um Informationen \u00fcber die Umgebung und den Zustand des Roboters zu erfassen.", "correct": true, "feedback": "Richtig! Sensoren in der Robotik dienen haupts\u00e4chlich dazu, Daten \u00fcber die Umgebung und den Zustand des Roboters zu sammeln."}, {"answer": "Um die Energieversorgung des Roboters zu regulieren.", "correct": false, "feedback": "Die Energieversorgung wird \u00fcblicherweise durch Aktuatoren wie Motoren gesteuert, nicht durch Sensoren."}]}, {"question": "Welche Art von Sensor wird typischerweise verwendet, um Entfernungen in der Robotik zu messen?", "type": "many_choice", "answers": [{"answer": "Ultraschallsensor", "correct": true, "feedback": "Richtig! Ultraschallsensoren werden h\u00e4ufig verwendet, um Entfernungen in der Robotik zu messen."}, {"answer": "LIDAR", "correct": true, "feedback": "Richtig! LIDAR-Sensoren werden h\u00e4ufig verwendet, um Entfernungen in der Robotik zu messen."}, {"answer": "Kraftsensor", "correct": false, "feedback": "Kraftsensoren messen normalerweise Kr\u00e4fte und sind nicht prim\u00e4r f\u00fcr die Messung von Entfernungen ausgelegt."}, {"answer": "Temperatursensor", "correct": false, "feedback": "Temperatursensoren messen Temperaturen und sind nicht prim\u00e4r f\u00fcr die Messung von Entfernungen ausgelegt."}]}, {"question": "Wof\u00fcr werden Beschleunigungssensoren in der Robotik h\u00e4ufig eingesetzt?", "type": "many_choice", "answers": [{"answer": "Zur Messung der Robotergeschwindigkeit.", "correct": false, "feedback": "Beschleunigungssensoren messen die \u00c4nderung der Geschwindigkeit, nicht die Geschwindigkeit selbst."}, {"answer": "Zur Erfassung von Bewegungen und Neigungen des Roboters.", "correct": true, "feedback": "Richtig! Beschleunigungssensoren werden oft verwendet, um Bewegungen und Neigungen des Roboters zu erfassen."}, {"answer": "Zur Messung der Umgebungstemperatur.", "correct": false, "feedback": "Beschleunigungssensoren sind nicht prim\u00e4r zur Messung der Umgebungstemperatur gedacht."}]}];
+</style></div><script type="application/javascript">var questionsjlmNArKhjYGr=[{"question": "Was ist der Hauptzweck von Sensoren in der Robotik?", "type": "many_choice", "answers": [{"answer": "Um Bewegungen von Robotern zu steuern.", "correct": false, "feedback": "Sensoren dienen dazu, Daten \u00fcber die Umgebung und den Zustand des Roboters zu erfassen, nicht direkt zur Steuerung von Bewegungen."}, {"answer": "Um Informationen \u00fcber die Umgebung und den Zustand des Roboters zu erfassen.", "correct": true, "feedback": "Richtig! Sensoren in der Robotik dienen haupts\u00e4chlich dazu, Daten \u00fcber die Umgebung und den Zustand des Roboters zu sammeln."}, {"answer": "Um die Energieversorgung des Roboters zu regulieren.", "correct": false, "feedback": "Die Energieversorgung wird \u00fcblicherweise durch Aktuatoren wie Motoren gesteuert, nicht durch Sensoren."}]}, {"question": "Welche Art von Sensor wird typischerweise verwendet, um Entfernungen in der Robotik zu messen?", "type": "many_choice", "answers": [{"answer": "Ultraschallsensor", "correct": true, "feedback": "Richtig! Ultraschallsensoren werden h\u00e4ufig verwendet, um Entfernungen in der Robotik zu messen."}, {"answer": "LIDAR", "correct": true, "feedback": "Richtig! LIDAR-Sensoren werden h\u00e4ufig verwendet, um Entfernungen in der Robotik zu messen."}, {"answer": "Kraftsensor", "correct": false, "feedback": "Kraftsensoren messen normalerweise Kr\u00e4fte und sind nicht prim\u00e4r f\u00fcr die Messung von Entfernungen ausgelegt."}, {"answer": "Temperatursensor", "correct": false, "feedback": "Temperatursensoren messen Temperaturen und sind nicht prim\u00e4r f\u00fcr die Messung von Entfernungen ausgelegt."}]}, {"question": "Wof\u00fcr werden Beschleunigungssensoren in der Robotik h\u00e4ufig eingesetzt?", "type": "many_choice", "answers": [{"answer": "Zur Messung der Robotergeschwindigkeit.", "correct": false, "feedback": "Beschleunigungssensoren messen die \u00c4nderung der Geschwindigkeit, nicht die Geschwindigkeit selbst."}, {"answer": "Zur Erfassung von Bewegungen und Neigungen des Roboters.", "correct": true, "feedback": "Richtig! Beschleunigungssensoren werden oft verwendet, um Bewegungen und Neigungen des Roboters zu erfassen."}, {"answer": "Zur Messung der Umgebungstemperatur.", "correct": false, "feedback": "Beschleunigungssensoren sind nicht prim\u00e4r zur Messung der Umgebungstemperatur gedacht."}]}];
     // Make a random ID
 function makeid(length) {
     var result = [];
@@ -1444,8 +1448,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("jDTetXBWXblV")) {
-            show_questions(questionsjDTetXBWXblV,  jDTetXBWXblV); 
+          if(document.getElementById("jlmNArKhjYGr")) {
+            show_questions(questionsjlmNArKhjYGr,  jlmNArKhjYGr); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1454,8 +1458,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("jDTetXBWXblV");
-        // console.log(document.getElementById("jDTetXBWXblV"));
+        //console.log("jlmNArKhjYGr");
+        // console.log(document.getElementById("jlmNArKhjYGr"));
 
         try_show();
         }

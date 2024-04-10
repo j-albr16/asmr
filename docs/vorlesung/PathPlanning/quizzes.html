@@ -167,13 +167,17 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Themen</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Allgemeines</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../python_intro.html">Python Kompaktanleitung</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Themen</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Autonomie.html">Autonomie</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Autonomie/quizzes.html">Quizzes</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Locomotion.html">Locomotaion</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Locomotion.html">Locomotion</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Locomotion/quizzes.html">Quizzes</a></li>
 </ul>
 </li>
@@ -294,7 +298,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://jupyterhub.uni-muenster.de/hub/user-redirect/git-pull?repo=https%3A//github.com/j-albr16/asumr&urlpath=tree/asumr/vorlesung/PathPlanning/quizzes.md&branch=main" target="_blank"
+      <li><a href="https://jupyterhub.uni-muenster.de/hub/user-redirect/git-pull?repo=https%3A//github.com/j-albr16/asmr&urlpath=tree/asmr/vorlesung/PathPlanning/quizzes.md&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +329,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr" target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr" target="_blank"
    class="btn btn-sm btn-source-repository-button dropdown-item"
    title="Source repository"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +346,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr/edit/main/vorlesung/PathPlanning/quizzes.md" target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr/edit/main/vorlesung/PathPlanning/quizzes.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -359,7 +363,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/j-albr16/asumr/issues/new?title=Issue%20on%20page%20%2Fvorlesung/PathPlanning/quizzes.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/j-albr16/asmr/issues/new?title=Issue%20on%20page%20%2Fvorlesung/PathPlanning/quizzes.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -511,7 +515,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">jupyterquiz</span> <span class="kn">import</span> <span class="n">display_quiz</span>
 <span class="kn">import</span> <span class="nn">json</span><span class="o">,</span> <span class="nn">requests</span>
-<span class="n">git_path</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/j-albr16/asumr/main/quizzes/path-planning.json&quot;</span>
+<span class="n">git_path</span><span class="o">=</span><span class="s2">&quot;https://raw.githubusercontent.com/j-albr16/asmr/main/quizzes/path-planning.json&quot;</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">git_path</span><span class="p">)</span>
 <span class="n">display_quiz</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
 </pre></div>
@@ -519,13 +523,13 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_html"><div id="XImRUrcpfiOW" data-shufflequestions="False"
+<div class="output text_html"><div id="xJNKwKKvAMhD" data-shufflequestions="False"
                data-shuffleanswers="True"
                data-preserveresponses="false"
                data-numquestions="1000000"
                data-maxwidth="600"
                style="border-radius: 10px; text-align: left"> <style>
-#XImRUrcpfiOW {
+#xJNKwKKvAMhD {
    --jq-multiple-choice-bg: #6f78ffff;
    --jq-mc-button-bg: #fafafa;
    --jq-mc-button-border: #e0e0e0e0;
@@ -695,7 +699,7 @@ document.write(`
         background-color: var(--jq-correct-color);
     }
 }
-</style></div><script type="application/javascript">var questionsXImRUrcpfiOW=[{"question": "Was versteht man in der Robotik unter Pfadplanung?", "type": "many_choice", "answers": [{"answer": "Die Festlegung der physischen Eigenschaften eines Roboters.", "correct": false, "feedback": "Dies beschreibt eher den Prozess des Roboteraufbaus oder der Hardwarekonfiguration."}, {"answer": "Die Auswahl eines geeigneten Weges f\u00fcr einen Roboter, um von einem Startpunkt zu einem Zielpunkt zu gelangen.", "correct": true, "feedback": "Richtig! Pfadplanung bezieht sich auf die Auswahl eines geeigneten Weges f\u00fcr einen Roboter, um von einem Startpunkt zu einem Zielpunkt zu gelangen."}, {"answer": "Die Programmierung von Bewegungsabl\u00e4ufen f\u00fcr einen Roboter.", "correct": false, "feedback": "Die Programmierung von Bewegungsabl\u00e4ufen ist ein Teil der Pfadplanung, aber nicht ihre alleinige Definition."}]}, {"question": "Welches Problem stellt die Pfadplanung f\u00fcr autonome Roboter typischerweise dar?", "type": "many_choice", "answers": [{"answer": "Die Wahl des schnellsten Weges.", "correct": false, "feedback": "Die Wahl des schnellsten Weges ist nur ein Aspekt der Pfadplanung. Andere Faktoren wie Hindernisvermeidung und Sicherheit sind ebenfalls wichtig."}, {"answer": "Die Vermeidung von Kollisionen mit Hindernissen.", "correct": true, "feedback": "Richtig! Ein Hauptproblem bei der Pfadplanung f\u00fcr autonome Roboter ist die Vermeidung von Kollisionen mit Hindernissen entlang des Weges."}, {"answer": "Die Anpassung an unvorhergesehene Umgebungs\u00e4nderungen.", "correct": false, "feedback": "Die Anpassung an Umgebungs\u00e4nderungen ist zwar wichtig, aber nicht unbedingt das Hauptproblem bei der Pfadplanung."}]}, {"question": "Welches Verfahren wird oft zur Pfadplanung f\u00fcr autonome Roboter verwendet?", "type": "many_choice", "answers": [{"answer": "A* Algorithmus", "correct": true, "feedback": "Richtig! Der A*-Algorithmus ist ein h\u00e4ufig verwendetes Verfahren zur Pfadplanung f\u00fcr autonome Roboter."}, {"answer": "Einfache lineare Regelung (PID-Regelung)", "correct": false, "feedback": "PID-Regelung ist ein Verfahren zur Steuerung von Bewegungen, aber nicht speziell zur Pfadplanung."}, {"answer": "Monte Carlo Lokalisierung", "correct": false, "feedback": "Monte Carlo Lokalisierung bezieht sich auf die Lokalisierung eines Roboters, nicht auf die Pfadplanung."}]}];
+</style></div><script type="application/javascript">var questionsxJNKwKKvAMhD=[{"question": "Was versteht man in der Robotik unter Pfadplanung?", "type": "many_choice", "answers": [{"answer": "Die Festlegung der physischen Eigenschaften eines Roboters.", "correct": false, "feedback": "Dies beschreibt eher den Prozess des Roboteraufbaus oder der Hardwarekonfiguration."}, {"answer": "Die Auswahl eines geeigneten Weges f\u00fcr einen Roboter, um von einem Startpunkt zu einem Zielpunkt zu gelangen.", "correct": true, "feedback": "Richtig! Pfadplanung bezieht sich auf die Auswahl eines geeigneten Weges f\u00fcr einen Roboter, um von einem Startpunkt zu einem Zielpunkt zu gelangen."}, {"answer": "Die Programmierung von Bewegungsabl\u00e4ufen f\u00fcr einen Roboter.", "correct": false, "feedback": "Die Programmierung von Bewegungsabl\u00e4ufen ist ein Teil der Pfadplanung, aber nicht ihre alleinige Definition."}]}, {"question": "Welches Problem stellt die Pfadplanung f\u00fcr autonome Roboter typischerweise dar?", "type": "many_choice", "answers": [{"answer": "Die Wahl des schnellsten Weges.", "correct": false, "feedback": "Die Wahl des schnellsten Weges ist nur ein Aspekt der Pfadplanung. Andere Faktoren wie Hindernisvermeidung und Sicherheit sind ebenfalls wichtig."}, {"answer": "Die Vermeidung von Kollisionen mit Hindernissen.", "correct": true, "feedback": "Richtig! Ein Hauptproblem bei der Pfadplanung f\u00fcr autonome Roboter ist die Vermeidung von Kollisionen mit Hindernissen entlang des Weges."}, {"answer": "Die Anpassung an unvorhergesehene Umgebungs\u00e4nderungen.", "correct": false, "feedback": "Die Anpassung an Umgebungs\u00e4nderungen ist zwar wichtig, aber nicht unbedingt das Hauptproblem bei der Pfadplanung."}]}, {"question": "Welches Verfahren wird oft zur Pfadplanung f\u00fcr autonome Roboter verwendet?", "type": "many_choice", "answers": [{"answer": "A* Algorithmus", "correct": true, "feedback": "Richtig! Der A*-Algorithmus ist ein h\u00e4ufig verwendetes Verfahren zur Pfadplanung f\u00fcr autonome Roboter."}, {"answer": "Einfache lineare Regelung (PID-Regelung)", "correct": false, "feedback": "PID-Regelung ist ein Verfahren zur Steuerung von Bewegungen, aber nicht speziell zur Pfadplanung."}, {"answer": "Monte Carlo Lokalisierung", "correct": false, "feedback": "Monte Carlo Lokalisierung bezieht sich auf die Lokalisierung eines Roboters, nicht auf die Pfadplanung."}]}];
     // Make a random ID
 function makeid(length) {
     var result = [];
@@ -1444,8 +1448,8 @@ if (typeof version == 'undefined') {
            Someone more knowledgeable could make this better ;-) */
 
         function try_show() {
-          if(document.getElementById("XImRUrcpfiOW")) {
-            show_questions(questionsXImRUrcpfiOW,  XImRUrcpfiOW); 
+          if(document.getElementById("xJNKwKKvAMhD")) {
+            show_questions(questionsxJNKwKKvAMhD,  xJNKwKKvAMhD); 
           } else {
              setTimeout(try_show, 200);
           }
@@ -1454,8 +1458,8 @@ if (typeof version == 'undefined') {
         {
         // console.log(element);
 
-        //console.log("XImRUrcpfiOW");
-        // console.log(document.getElementById("XImRUrcpfiOW"));
+        //console.log("xJNKwKKvAMhD");
+        // console.log(document.getElementById("xJNKwKKvAMhD"));
 
         try_show();
         }
