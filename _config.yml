@@ -8,7 +8,10 @@ logo: images/tbot.svg
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: auto
+  execute_notebooks: force
+  allow_errors: true
+  exclude_patterns:
+    - 'python_intro*'
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -18,6 +21,7 @@ parse:
   myst_enable_extensions:
     - amsmath
     - colon_fence
+    - deflist
 
 exclude_patterns:
   - venv/*

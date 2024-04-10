@@ -6,7 +6,10 @@ root: intro
 parts:
 - caption: Allgemeines
   chapters:
-  - file: python_intro
+  - file: allgemeines/verwendung
+  - file: allgemeines/python
+    sections:
+    - file: allgemeines/python/python_intro
 - caption: Themen
   chapters:
   - file: vorlesung/Autonomie
