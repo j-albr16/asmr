@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Launch Files &#8212; ASUMR jupyter book</title>
+    <title>Launch Files &#8212; ASMR Jupyter Book</title>
   
   
   
@@ -152,8 +152,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../../_static/tbot.svg" class="logo__image only-light" alt="ASUMR jupyter book - Home"/>
-    <script>document.write(`<img src="../../_static/tbot.svg" class="logo__image only-dark" alt="ASUMR jupyter book - Home"/>`);</script>
+    <img src="../../_static/tbot.svg" class="logo__image only-light" alt="ASMR Jupyter Book - Home"/>
+    <script>document.write(`<img src="../../_static/tbot.svg" class="logo__image only-dark" alt="ASMR Jupyter Book - Home"/>`);</script>
   
   
 </a></div>
@@ -294,37 +294,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<div class="dropdown dropdown-launch-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
-    <i class="fas fa-rocket"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://jupyterhub.uni-muenster.de/hub/user-redirect/git-pull?repo=https%3A//github.com/j-albr16/asmr&urlpath=tree/asmr/ros2/package/launch.md&branch=main" target="_blank"
-   class="btn btn-sm dropdown-item"
-   title="Launch onJupyterHub"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  
-    <img src="../../_static/images/logo_jupyterhub.svg">
-  </span>
-<span class="btn__text-container">JupyterHub</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
 <div class="dropdown dropdown-source-buttons">
   <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
     <i class="fab fa-github"></i>
@@ -394,23 +363,6 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../../_sources/ros2/package/launch.ipynb" target="_blank"
-   class="btn btn-sm btn-download-notebook-button dropdown-item"
-   title="Download notebook file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-code"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</li>
-      
       
       
       
@@ -508,7 +460,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erstelle-ein-launch-file">Erstelle ein Launch File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starte-ein-launch-file">Starte ein Launch File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starte-ein-launch-file">Starte ein <em>Launch File</em></a></li>
 </ul>
             </nav>
         </div>
@@ -525,14 +477,14 @@ document.write(`
 <p>Launch files können verschieden Nodes starten und stoppen, sowie verschiedene Events bearbeiten oder auslösen.</p>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/opt/ros/iron/setup.bash
-mkdir<span class="w"> </span>laumch
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/opt/ros/humble/setup.bash
+mkdir<span class="w"> </span>launch
 </pre></div>
 </div>
 </section>
 <section id="erstelle-ein-launch-file">
 <h2>Erstelle ein Launch File<a class="headerlink" href="#erstelle-ein-launch-file" title="Permalink to this heading">#</a></h2>
-<p>Erstelle folgendes launch file mit dem Namen <code class="docutils literal notranslate"><span class="pre">launch/turtlesim_mimic.py</span></code>:</p>
+<p>Erstelle folgendes <em>launch file</em> mit dem Namen <code class="docutils literal notranslate"><span class="pre">launch/turtlesim_mimic.py</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>from<span class="w"> </span>launch<span class="w"> </span>import<span class="w"> </span>LaunchDescription
 from<span class="w"> </span>launch_ros.actions<span class="w"> </span>import<span class="w"> </span>Node
 
@@ -562,7 +514,7 @@ def<span class="w"> </span>generate_launch_description<span class="o">()</span>:
 <span class="w">    </span><span class="o">])</span>
 </pre></div>
 </div>
-<p>Dieses launch file erstellt 2 turtlesim Nodes wobei auch 2 Turtlesim Fenster gestartet werden. Anschließend wird ebenfalls eine Turtlesim mimic Node erstellt, welche den Pose Topic von turtlesim1 subscribed und den Geschwindigkeitswert and über den /cmd_vel Topic and Turtlesim2 published. Mehr dazu bei dem <a class="reference internal" href="../topic.html"><span class="doc std std-doc">Kapitel zu ROS2 Topics</span></a>.</p>
+<p>Dieses <em>launch file</em> erstellt zwei <em>turtlesim Nodes</em> wobei auch zwei Turtlesim Fenster gestartet werden. Anschließend wird ebenfalls eine <em>Turtlesim mimic Node</em> erstellt, welche den <em>Pose Topic</em> von <code class="docutils literal notranslate"><span class="pre">turtlesim1</span></code> <em>subscribed</em> und den Geschwindigkeitswert über den <code class="docutils literal notranslate"><span class="pre">/cmd_vel</span></code> <em>Topic</em> an Turtlesim2 <em>published</em>. Mehr dazu bei dem <a class="reference internal" href="../topic.html"><span class="doc std std-doc">Kapitel zu ROS2 Topics</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Es muss ebenfalls folgende Zeile zum <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> hinzugefügt werden</p>
@@ -572,8 +524,8 @@ def<span class="w"> </span>generate_launch_description<span class="o">()</span>:
 </div>
 </section>
 <section id="starte-ein-launch-file">
-<h2>Starte ein Launch File<a class="headerlink" href="#starte-ein-launch-file" title="Permalink to this heading">#</a></h2>
-<p>Mit folgendem Befehl startest du ein launch File:</p>
+<h2>Starte ein <em>Launch File</em><a class="headerlink" href="#starte-ein-launch-file" title="Permalink to this heading">#</a></h2>
+<p>Mit folgendem Befehl startest du ein <em>launch File</em>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>launch<span class="w"> </span>&lt;launch_file_path&gt;
 </pre></div>
 </div>
@@ -584,7 +536,7 @@ def<span class="w"> </span>generate_launch_description<span class="o">()</span>:
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>-r<span class="w"> </span><span class="m">1</span><span class="w"> </span>/turtlesim1/turtle1/cmd_vel<span class="w"> </span>geometry_msgs/msg/Twist<span class="w"> </span><span class="s2">&quot;{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -1.8}}&quot;</span>
 </pre></div>
 </div>
-<p>beide turtle sims sollten sich nun im Kreis bewegen.</p>
+<p>Beide <em>turtle sims</em> sollten sich nun im Kreis bewegen.</p>
 </section>
 </section>
 
@@ -653,7 +605,7 @@ def<span class="w"> </span>generate_launch_description<span class="o">()</span>:
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#erstelle-ein-launch-file">Erstelle ein Launch File</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starte-ein-launch-file">Starte ein Launch File</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starte-ein-launch-file">Starte ein <em>Launch File</em></a></li>
 </ul>
   </nav></div>
 
@@ -677,7 +629,7 @@ By Florian Bohlken und Jan Albrecht
     
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2024.
       <br/>
     
   </p>

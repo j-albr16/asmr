@@ -1,25 +1,25 @@
 # Erstelle ein Package
 
-TODO: `colcon` Installation
+## colcon
+
+Um ein Paket zu bauen, benötigst du zunächst `colcon`. Dies installierst du mit:
+
+```bash
+sudo apt install python3-colcon-common-extensions
+```
 
 ## Generell
 
-Zuerst musst du deine ros2 Umgebung sourcem
+Gegebenenfalls musst du nun zunächst wieder deine ROS2 Umgebung [sourcen](../setup/sourcen.md).
 
-Unter Linux nach der gegebenen Anleitung:
-
-```bash
-source /opt/ros/iron/setup.bash
-```
-
-Jetzt kannst du das package erstellen. Beachte, dass das Package in dem aktuellen Ordner erstellt wird.
+Jetzt kannst du das Paket erstellen. Beachte dabei, dass das Paket in dem aktuellen Verzeichnis erstellt wird.
 
 ```bash
 cd ~/ros2_ws/src
 ros2 pkg create --build-type ament_python <package_name> 
 ```
 
-Nachdem dein Package erstellt ist, kannst du es mit folgendem Befehl bauen:
+Nachdem dein Paket erstellt ist, kannst du es mit folgendem Befehl bauen:
 
 ```bash
 cd ~/ros2_ws
@@ -28,10 +28,9 @@ colcon build
 
 ## Hello World Package
 
+Wir erstellen nun ein weiteres Paket, welches einen _Node_ erstellt, um ein `Hello World` Programm zu starten.
 
-Wir erstellen nun ein weiteres package welches ein Node erstellt um ein `Hello World` Programm abzulaufen.
-
-Hierzu geben wir bei dem `ros2 pkg create` command ebenfalls einen Wert für die `--node-name` option an:
+Hierzu geben wir bei dem `ros2 pkg create` Befehl ebenfalls einen Wert für die `--node-name` Option an:
 
 ```bash
 source /opt/ros/iron/setup.bash
@@ -43,14 +42,13 @@ colcon build
 
 ### Ausführen des Hello World Programms
 
-
-Nach dem Bauen kannst du nun deinen lokalen ROS2 Workspace source:
+Nach dem Bauen kannst du nun deinen lokalen ROS2 Workspace sourcen:
 
 ```bash
 source ~/ros2_ws/install/setup.bash
 ```
 
-Anschließend kannst du die erstellte Node mit folgendem Befehl starten:
+Anschließend kannst du den erstellten _Node_ mit folgendem Befehl starten:
 
 ```bash
 ros2 run demo demo_node
@@ -58,9 +56,3 @@ ros2 run demo demo_node
 ```
 
 TODO: Wo kommt die Nachricht her? Da fehlt sicher noch was.
-
-
-
-
-
-

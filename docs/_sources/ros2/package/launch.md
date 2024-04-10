@@ -1,30 +1,17 @@
----
-jupytext:
-  formats: md:myst
-  text_representation:
-    extension: .md
-    format_name: myst
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
----
-
 # Launch Files
 
 Launch files können verschieden Nodes starten und stoppen, sowie verschiedene Events bearbeiten oder auslösen.
 
-
 ## Setup
 
 ```bash
-source /opt/ros/iron/setup.bash
-mkdir laumch
+source /opt/ros/humble/setup.bash
+mkdir launch
 ```
 
 ## Erstelle ein Launch File
 
-Erstelle folgendes launch file mit dem Namen `launch/turtlesim_mimic.py`:
+Erstelle folgendes _launch file_ mit dem Namen `launch/turtlesim_mimic.py`:
 
 ```bash
 from launch import LaunchDescription
@@ -56,23 +43,18 @@ def generate_launch_description():
     ])
 ```
 
-Dieses launch file erstellt 2 turtlesim Nodes wobei auch 2 Turtlesim Fenster gestartet werden. Anschließend wird ebenfalls eine Turtlesim mimic Node erstellt, welche den Pose Topic von turtlesim1 subscribed und den Geschwindigkeitswert and über den /cmd_vel Topic and Turtlesim2 published. Mehr dazu bei dem [Kapitel zu ROS2 Topics](../topic).
+Dieses _launch file_ erstellt zwei _turtlesim Nodes_ wobei auch zwei Turtlesim Fenster gestartet werden. Anschließend wird ebenfalls eine _Turtlesim mimic Node_ erstellt, welche den _Pose Topic_ von `turtlesim1` _subscribed_ und den Geschwindigkeitswert über den `/cmd_vel` _Topic_ an Turtlesim2 _published_. Mehr dazu bei dem [Kapitel zu ROS2 Topics](../topic).
 
 :::{note}
-
 Es muss ebenfalls folgende Zeile zum `package.xml` hinzugefügt werden
 ```xml
 <exec_depend>ros2launch</exec_depend>
 ```
-
 :::
 
+## Starte ein _Launch File_
 
-
-## Starte ein Launch File
-
-
-Mit folgendem Befehl startest du ein launch File:
+Mit folgendem Befehl startest du ein _launch File_:
 
 ```bash
 ros2 launch <launch_file_path>
@@ -88,7 +70,4 @@ Um die Funktionalität zu testen, kannst du mit folgendem Befehl turtle1/sim bew
 ros2 topic pub -r 1 /turtlesim1/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -1.8}}"
 ```
 
-beide turtle sims sollten sich nun im Kreis bewegen.
-
-
-
+Beide _turtle sims_ sollten sich nun im Kreis bewegen.
