@@ -25,7 +25,7 @@ url:
         url = url + '/'
 
     if not url.startswith('asmr_exercises/'):
-        print('Take care! You are not in the asumr_exercises folder.')
+        print('Take care! You are not in the asmr_exercises folder.')
 
     # check if string contains .ipynb
     if not url.find('.ipynb') > 0:
