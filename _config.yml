@@ -1,16 +1,17 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: ASUMR jupyter book
-author: Florian Bohlken und Jan Albrecht
-logo: images/tbot.svg
+title     : ASMR Jupyter Book
+author    : Florian Bohlken und Jan Albrecht
+copyright : "2024"
+logo      : images/tbot.svg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
-  allow_errors: true
-  exclude_patterns:
+  execute_notebooks : auto
+  allow_errors      : true
+  exclude_patterns  :
     - 'python_intro*'
 
 # Define the name of the latex output file for PDF builds
