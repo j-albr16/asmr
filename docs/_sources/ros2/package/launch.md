@@ -1,13 +1,19 @@
 # Launch Files
 
-Launch files können verschieden Nodes starten und stoppen, sowie verschiedene Events bearbeiten oder auslösen.
+Bis zum jetzigen Zeitpunkt haben wir nur einzelne Nodes gestartet. In der Praxis werden jedoch oft mehrere Nodes gleichzeitig gestartet. Dafür gibt es in ROS2 die _Launch Files_. Ein _Launch File_ ist ein python Skript, welches mehrere Nodes startet und konfiguriert. Im folgenden wird erklärt, wie man mehrere Nodes mit einem _Launch File_ startet.
 
 ## Setup
+
+Vorerst muss die ROS2 Umgebung gestartet:
 
 ```bash
 source /opt/ros/humble/setup.bash
 mkdir launch
 ```
+
+## Erstelle ein Package
+
+[Erstelle ein Package](create.md) mit dem Namen `turtlesim_mimic`:
 
 ## Erstelle ein Launch File
 
@@ -52,6 +58,10 @@ Es muss ebenfalls folgende Zeile zum `package.xml` hinzugefügt werden
 ```
 :::
 
+## Build
+
+[Baue das Package](create.md)
+
 ## Starte ein _Launch File_
 
 Mit folgendem Befehl startest du ein _launch File_:
@@ -71,3 +81,14 @@ ros2 topic pub -r 1 /turtlesim1/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear
 ```
 
 Beide _turtle sims_ sollten sich nun im Kreis bewegen.
+
+
+:::{note}
+Das launch File kann alternativ auch mit folgender Syntax gestartet werden:
+
+```bash
+ros2 launch <package_name> <launch_file_name>
+```
+:::
+
+
