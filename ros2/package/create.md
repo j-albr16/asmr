@@ -52,7 +52,6 @@ Anschließend kannst du den erstellten _Node_ mit folgendem Befehl starten:
 
 ```bash
 ros2 run demo demo_node
-> Hi from demo.
+> Hi from demo_node.
 ```
 
-TODO: Wo kommt die Nachricht her? Da fehlt sicher noch was.
