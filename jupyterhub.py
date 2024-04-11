@@ -1,7 +1,7 @@
 import os
 
 
-REPO_URL = 'https://github.com/j-albr16/asumr'
+REPO_URL = 'https://github.com/j-albr16/asmr'
 BRANCH = 'main'
 JUPYTERHUB_URL = 'https://jupyterhub.wwu.de'
 
