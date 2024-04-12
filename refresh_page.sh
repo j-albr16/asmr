@@ -7,3 +7,5 @@ make rebuild
 git add .
 git commit -m "refresh page"
 git push
+git checkout main
+
