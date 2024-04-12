@@ -6,7 +6,7 @@ Die hier bereitgestellte ROS2 Dokumentation orientiert sich in einigen Teilen st
 
 ## Aufteilung
 
-Das Material dieses Jupyter Books ist in zwei Hauptabschnitte aufgeteilt, welche ihr im Verlaufe der Vorlesung zunehmend parallel nutzen werdet. Zu Beginn jedoch habt ihr hier die Möglichkeit im Abschnitt **Vorlesung** ohne ROS2 Vorkenntnisse die theoretischen Konzepte auszuprobieren. Direkt zu Beginn werdet ihr dann parallel die Gelegenheit haben, die notwendigen Python Grundlagen zu erlernen oder aufzufrischen, die ihr dann folgend zum Bearbeiten der ROS2 Übungen benötigt. Die entsprechenden Materialien zur Erarbeitung der **ROS2** Konzepte findet ihr im gleichnamigen Abschnitt.
+Das Material dieses Jupyter Books ist in zwei Hauptabschnitte aufgeteilt, welche ihr im Verlaufe der Vorlesung zunehmend parallel nutzen werdet. Zu Beginn jedoch habt ihr hier die Möglichkeit im Abschnitt **Themen** ohne ROS2 Vorkenntnisse die theoretischen Konzepte aus der Vorlesung auszuprobieren. Direkt zu Beginn werdet ihr dann parallel die Gelegenheit haben, die notwendigen Python Grundlagen zu erlernen oder aufzufrischen, die ihr dann folgend zum Bearbeiten der ROS2 Übungen benötigt. Die entsprechenden Materialien zur Erarbeitung der **ROS2** Konzepte findet ihr im gleichnamigen Abschnitt.
 
 ## Sprache
 
