@@ -16,7 +16,7 @@ Falls bei dir alle Stricke reißen, können wir auch eine vorkonfigurierte virtu
 Das fertig konfigurierte VirtualBox Image `ubuntu-jammy-asumr.ova` befindet sich auf Sciebo und kann von dort aus heruntergeladen werden. Dieser wird am Anfang der Vorlesungen wird mit allen Mitgliedern des Learnweb Kurses geteilt. Sollte der Sciebo-Ordner bei dir nicht angezeigt werden, wende dich bitte an die Betreuer der Übung.
 
 :::{note}
-Natürlich musst du dich schon mal bei Sciebo angemeldet haben, damit wir dich hinzufügen können.
+Natürlich musst du dich schon mal bei [Sciebo](https://www.uni-muenster.de/IT/services/arbeitsplatz/sciebo/index.html) angemeldet haben, damit wir dich hinzufügen können.
 :::
 
 ## Konfiguration
@@ -35,5 +35,5 @@ Nutzername:
 Passwort:
 : asumr
 
-Öffne abschließen am Besten ein Terminal und starte eine _turtlesim node_, um zu überprüfen, ob alles korrekt installiert wurde.
+Öffne abschließen am Besten ein Terminal und starte eine [_turtlesim node_](setup:linux:turtlesim), um zu überprüfen, ob alles korrekt installiert wurde.
 

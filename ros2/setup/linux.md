@@ -104,6 +104,7 @@ Hier werden die Nachrichten nun empfangen und man erhält eine Ausgabe in der fo
 
 Die Prozesse könnt ihr nun mit <kbd>Strg + C</kbd> beenden und bei Bedarf die Terminalausgabe mit `clear` säubern.
 
+(setup:linux:turtlesim)=
 ## Turtlesim
 
 Turtlesim ist ein einfaches ROS-Paket, das eine virtuelle Schildkrötenrobotersimulation bietet. Es dient dazu, grundlegende ROS-Konzepte wie das Veröffentlichen und Abonnieren von Nachrichten sowie die Steuerung von Robotern zu demonstrieren. Im Folgenden bieten wir einen Teaser zur Verwendung von Turtlesim, einschließlich Installation, Ausführung der Simulation und interaktiver Steuerung der virtuellen Schildkröte. Tauche ein und entdecke die Welt der Robotersimulation mit Turtlesim!
