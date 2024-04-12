@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>VM &#8212; ASMR Jupyter Book</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,8 +38,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -76,6 +77,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -136,13 +146,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../../_static/tbot.svg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../_static/tbot.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../../_static/tbot.svg" class="logo__image only-light" alt="ASMR Jupyter Book - Home"/>
+    <script>document.write(`<img src="../../_static/tbot.svg" class="logo__image only-dark" alt="ASMR Jupyter Book - Home"/>`);</script>
   
   
 </a></div>
@@ -409,10 +420,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -420,7 +431,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -467,26 +478,34 @@ document.write(`
   <section id="vm">
 <h1>VM<a class="headerlink" href="#vm" title="Permalink to this heading">#</a></h1>
 <p>Sollten die anderen Anleitung aus welchen Gründen auch immer nicht für dich funktionieren oder du möchtest die Inhalte der Robotikvorlesung einfach etwas strikter von deiner Produktiv-System-Installation trennen, bietet sich auch die Möglichkeit alles in einer virtuellen Maschine zu installieren.</p>
-<p>Hierzu empfehlen wir VirtualBox mit dem du eine isolierte Entwicklungsumgebung aufsetzen kannst. Dadurch kannst du dann ruhigen Gewissens experimentieren, ohne dir Gedanken über potenzielle Auswirkungen auf dein Host-Betriebssystem machen zu müssen.</p>
+<p>Hierzu empfehlen wir VirtualBox, mit dem du eine isolierte Entwicklungsumgebung aufsetzen kannst. Dadurch kannst du dann ruhigen Gewissens experimentieren, ohne dir Gedanken über potenzielle Auswirkungen auf dein Host-Betriebssystem machen zu müssen.</p>
 <p>Die Einrichtung einer VirtualBox mit Ubuntu 22.04 für die ROS2-Entwicklung ist relativ einfach und erfordert nur wenige Schritte.</p>
 </section>
 <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h1>
 <p>Hier können wir die den <a class="reference external" href="https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox">Guide</a> der Ubuntu-Homepage zur Installation in VirtualBox empfehlen.</p>
-<p>Falls bei dir alle Stricke reißen, können wir auch eine vorkonfigurierte virtuelle Maschine zu verfügung stellen, dazu musst du vorher nur <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> installieren.</p>
-<p>Das fertig konfigurierte VirtualBox Image <code class="docutils literal notranslate"><span class="pre">ubuntu-jammy-asumr.ova</span></code> befindet sich auf Sciebo und kann von dort aus heruntergeladen werden. Am Anfang der Vorlesungen wird mit allen Mitgliedern des Learnweb Kurses der Sciebo Ordner geteil, in dem sich das Image befindet. Sollte der Sciebo Ordner nicht angezeigt werden, wende dich bitte an die Betreuer der Übung.</p>
+<p>Falls bei dir alle Stricke reißen, können wir auch eine vorkonfigurierte virtuelle Maschine zur Verfügung stellen. Dafür musst du vorher natürlich ebenso <a class="reference external" href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> installieren.</p>
+<p>Das fertig konfigurierte VirtualBox Image <code class="docutils literal notranslate"><span class="pre">ubuntu-jammy-asumr.ova</span></code> befindet sich auf Sciebo und kann von dort aus heruntergeladen werden. Dieser wird am Anfang der Vorlesungen wird mit allen Mitgliedern des Learnweb Kurses geteilt. Sollte der Sciebo-Ordner bei dir nicht angezeigt werden, wende dich bitte an die Betreuer der Übung.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Natürlich musst du dich schon mal bei Sciebo angemeldet haben, damit wir dich hinzufügen können.</p>
+</div>
 <section id="konfiguration">
 <h2>Konfiguration<a class="headerlink" href="#konfiguration" title="Permalink to this heading">#</a></h2>
-<p>Die Datein kann folgendermaßen in Virtual Box eingespielt werden:</p>
+<p>Die Datei kann folgendermaßen in Virtual Box eingespielt werden:</p>
 <ol class="arabic simple">
 <li><p>Öffne Virtual Box und gehe auf <em>import</em></p></li>
 <li><p>wähle das heruntergeladene <code class="docutils literal notranslate"><span class="pre">ubuntu-jammy-asumr.ova</span></code> File aus.</p></li>
 <li><p>Klicke auf <em>Weiter</em> und <em>Importieren</em></p></li>
 </ol>
 <p>Nachdem die virtuelle Maschine importiert wurde, kannst du sie starten und dich mit den folgenden Anmeldedaten einloggen:</p>
-<p>Nutzername: asumr
-Passwort: asumr</p>
-<p>Öffne ein Terminal und starte eine turtlesim node um zu überprüfen ob alles korrekt installiert wurde.</p>
+<dl class="simple myst">
+<dt>Nutzername:</dt><dd><p>asumr</p>
+</dd>
+<dt>Passwort:</dt><dd><p>asumr</p>
+</dd>
+</dl>
+<p>Öffne abschließen am Besten ein Terminal und starte eine <em>turtlesim node</em>, um zu überprüfen, ob alles korrekt installiert wurde.</p>
 </section>
 </section>
 
@@ -515,11 +534,10 @@ Passwort: asumr</p>
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="macos.html"
@@ -539,10 +557,7 @@ Passwort: asumr</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -610,8 +625,8 @@ By Florian Bohlken und Jan Albrecht
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>
