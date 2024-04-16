@@ -12,19 +12,25 @@ kernelspec:
 
 # Beispiel
 
-Vorerst muss die ROS2 Umgebung geladen werden:
+Im folgenden Guide werden einige Beispiele zur Nutzung und Steuerung von ROS2 *Nodes* über die CLI dargestellt. 
 
-```bash
-source /opt/ros/iron/setup.bash
-```
+:::{note}
+Stelle sicher, dass bevor du die Beispiele ausführst eine ROS2 Umgebung [aktiviert](../package/sourcen.md) ist.
+:::
+
+Als Beispiel Umgebung wird hier das *turtlesim* Paket verwendet. Mehr dazu findest du in [folgendem](../topic/turtlesim.md) Kapitel.
 
 ## Run Nodes
+
+Wie in dem [Kapitel](../package.md) zu packages erklärt ist, enthält jedes ROS2 python *package* eine `setup.py`, in welchem `executables` definiert werden. Diese führen jeweils eine python Funktion aus, die z.B. eine Node startet.
+
+Mit folgendem Befehl kann eine `executable` eines *packages* ausgeführt werden.
 
 ```bash
 ros2 run <package_name> <executable_name>
 ```
 
-Um die Turtlesim Node zu starten muss folgender Befehl ausgeführt werden:
+Als Beispiel kann man die Turtlesim Simulation starten, indem man die `turtlesim_node` executable ausführt.
 
 ```bash
 ros2 run turtlesim turtlesim_node
@@ -32,19 +38,19 @@ ros2 run turtlesim turtlesim_node
 
 ## List Nodes
 
-Führe folgenden Befehl aus um alle laufenden Nodes aufzulisten.
+Mit folgendem Befehl können alle aktiven Nodes aufgelistet werden:
 
 ```bash
 ros2 node list
 ```
 
-Es sollte folgendes zu sehen sein:
+Es sollte folgendes in der Konsole ausgegeben worden sein:
 
 ```bash
 /turtlesim
 ```
 
-In einem neuen Terminal führe folgenden Befehl aus, welcher eine Node startet die das steuern der Turtle ermöglicht:
+In einem neuen Terminal führe folgenden Befehl aus, welcher eine Node startet die das steuern der Schildkröte ermöglicht:
 
 ```bash
 ros2 run turtlesim turtle_teleop_key
@@ -59,13 +65,13 @@ Wenn der befehl `ros2 node list` erneut ausgeführt wird sollte die node ebenfal
 
 ## Node Info
 
-Der `ros2 node info` Befehl gibt weitere informationen wir aktuelle Subscriber, Pubisher etc. aus. Verwendung:
+Der `ros2 node info` Befehl gibt weitere informationen wie aktuelle Subscriber, Pubisher etc. aus. Im allgemeinen sieht der Befehl wie folgt aus:
 
 ```bash
 ros2 node info <node_name>
 ```
 
-Beispiel:
+Du kannst dir nun mit diesem Befehl weitere Informationen über die `turtlesim` Node anzeigen lassen:
 
 
 ```bash
@@ -109,7 +115,11 @@ Es sollte folgende ausgabe zu sehen sein:
 
 ## Erstellen einer Node
 
-Du kannst in einem erstellten Package Nodes in Form von Python Klassen erstellen. Folgender Code beschreibt eine Node, die "Hello World!" im Terminal ausgibt.
+Du kannst in einem erstellten Package Nodes in Form von Python Klassen erstellen. Folgender Code beschreibt eine Node, die "Hello World!" im Terminal ausgibt. 
+
+:::{note}
+Die Nodes werden standardmäßig einem Ordner abgelegt, der den Namen des Packages trägt.
+:::
 
 ```bash
 import rclpy
@@ -132,5 +142,21 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+```
+
+Um die Node dem ROS2 System hinzuzufügen, muss sie in der `setup.py` des Packages hinzugefügt werden. 
+
+```bash
+...
+console_scripts=[
+        'hello_world_node = <package_name>.<file_name>:main',
+    ],
+...
+```
+
+Nun kann die Node mit folgendem Befehl ausgeführt werden:
+
+```bash
+ros2 run <package_name> hello_world_node
 ```
 

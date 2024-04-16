@@ -37,3 +37,7 @@ Passwort:
 
 Öffne abschließen am Besten ein Terminal und starte eine [_turtlesim node_](setup:linux:turtlesim), um zu überprüfen, ob alles korrekt installiert wurde.
 
+:::{note}
+Falls die gazebo Simulation aufgrund von Grafikproblemen nicht startet, kann es helfen, dass du bei der Einstellung der VM die Option `3D-Beschleunigung` aktivierst.
+:::
+
