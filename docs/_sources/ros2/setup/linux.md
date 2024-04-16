@@ -68,6 +68,14 @@ sudo apt install ros-humble-desktop
 
 Nach der Bestätigung kann dies nun etwas länger dauern.
 
+### Entwicklerwerkzeuge
+
+Da ihr später noch selber Pakete erstellt, braucht ihr auch `colcon`. Mit folgendem Befehl installiert ihr unter anderem auch dieses:
+
+```bash
+sudo apt install ros-dev-tools
+```
+
 ## Überprüfung der Installation
 
 Um die Installation zu überprüfen, öffne zwei Terminalfenster und führe die folgenden Befehle aus:

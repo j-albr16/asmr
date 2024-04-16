@@ -449,7 +449,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colcon">colcon</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generell">Generell</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world-package">Hello World Package</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ausfuhren-des-hello-world-programms">Ausführen des Hello World Programms</a></li>
@@ -468,17 +467,13 @@ document.write(`
                   
   <section id="erstelle-ein-package">
 <h1>Erstelle ein Package<a class="headerlink" href="#erstelle-ein-package" title="Permalink to this heading">#</a></h1>
-<section id="colcon">
-<h2>colcon<a class="headerlink" href="#colcon" title="Permalink to this heading">#</a></h2>
-<p>Um ein Paket zu bauen, benötigst du zunächst <code class="docutils literal notranslate"><span class="pre">colcon</span></code>. Dies installierst du mit:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-colcon-common-extensions
-</pre></div>
-</div>
-</section>
 <section id="generell">
 <h2>Generell<a class="headerlink" href="#generell" title="Permalink to this heading">#</a></h2>
-<p>Gegebenenfalls musst du nun zunächst wieder deine ROS2 Umgebung <a class="reference internal" href="../setup/sourcen.html"><span class="doc std std-doc">sourcen</span></a>.</p>
 <p>Jetzt kannst du das Paket erstellen. Beachte dabei, dass das Paket in dem aktuellen Verzeichnis erstellt wird.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Gegebenenfalls musst du nun zunächst wieder deine ROS2 Umgebung <a class="reference internal" href="../setup/sourcen.html"><span class="doc std std-doc">sourcen</span></a>.</p>
+</div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
 ros2<span class="w"> </span>pkg<span class="w"> </span>create<span class="w"> </span>--build-type<span class="w"> </span>ament_python<span class="w"> </span>&lt;package_name&gt;<span class="w"> </span>
 </pre></div>
@@ -493,8 +488,7 @@ colcon<span class="w"> </span>build
 <h2>Hello World Package<a class="headerlink" href="#hello-world-package" title="Permalink to this heading">#</a></h2>
 <p>Wir erstellen nun ein weiteres Paket, welches einen <em>Node</em> erstellt, um ein <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World</span></code> Programm zu starten.</p>
 <p>Hierzu geben wir bei dem <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">pkg</span> <span class="pre">create</span></code> Befehl ebenfalls einen Wert für die <code class="docutils literal notranslate"><span class="pre">--node-name</span></code> Option an:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/opt/ros/iron/setup.bash
-<span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
 ros2<span class="w"> </span>pkg<span class="w"> </span>create<span class="w"> </span>--build-type<span class="w"> </span>ament_python<span class="w"> </span>&lt;package_name&gt;<span class="w"> </span>--node-name<span class="w"> </span>demo_node
 <span class="nb">cd</span><span class="w"> </span>~/ros2_ws
 colcon<span class="w"> </span>build
@@ -507,8 +501,8 @@ colcon<span class="w"> </span>build
 </pre></div>
 </div>
 <p>Anschließend kannst du den erstellten <em>Node</em> mit folgendem Befehl starten:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>demo<span class="w"> </span>demo_node
-&gt;<span class="w"> </span>Hi<span class="w"> </span>from<span class="w"> </span>demo_node.
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>&lt;package_name&gt;<span class="w"> </span>demo_node
+&gt;<span class="w"> </span>Hi<span class="w"> </span>from<span class="w"> </span>&lt;package_name&gt;.
 </pre></div>
 </div>
 </section>
@@ -582,7 +576,6 @@ colcon<span class="w"> </span>build
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#colcon">colcon</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generell">Generell</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hello-world-package">Hello World Package</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ausfuhren-des-hello-world-programms">Ausführen des Hello World Programms</a></li>
