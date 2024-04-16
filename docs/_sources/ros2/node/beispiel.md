@@ -15,7 +15,7 @@ kernelspec:
 Im folgenden Guide werden einige Beispiele zur Nutzung und Steuerung von ROS2 *Nodes* über die CLI dargestellt. 
 
 :::{note}
-Stelle sicher, dass bevor du die Beispiele ausführst eine ROS2 Umgebung [aktiviert](../package/sourcen.md) ist.
+Stelle sicher, dass bevor du die Beispiele ausführst eine ROS2 Umgebung [aktiviert](../setup/sourcen.md) ist.
 :::
 
 Als Beispiel Umgebung wird hier das *turtlesim* Paket verwendet. Mehr dazu findest du in [folgendem](../topic/turtlesim.md) Kapitel.
