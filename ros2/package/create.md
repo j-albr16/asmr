@@ -4,6 +4,11 @@
 
 Jetzt kannst du das Paket erstellen. Beachte dabei, dass das Paket in dem aktuellen Verzeichnis erstellt wird.
 
+
+:::{note}
+Gegebenenfalls musst du nun zunächst wieder deine ROS2 Umgebung [sourcen](../setup/sourcen.md).
+:::
+
 ```bash
 cd ~/ros2_ws/src
 ros2 pkg create --build-type ament_python <package_name> 
@@ -22,7 +27,6 @@ Wir erstellen nun ein weiteres Paket, welches einen _Node_ erstellt, um ein `Hel
 
 Hierzu geben wir bei dem `ros2 pkg create` Befehl ebenfalls einen Wert für die `--node-name` Option an:
 
-Gegebenenfalls musst du nun zunächst wieder deine ROS2 Umgebung [sourcen](../setup/sourcen.md).
 
 ```bash
 cd ~/ros2_ws/src
