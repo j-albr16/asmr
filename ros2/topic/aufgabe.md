@@ -3,7 +3,7 @@
 Lies dir das Kapitel zu [Turtlesim](turtlesim.md) durch und führe die dort beschriebenen Schritte aus. Schreibe anschließend ein Programm, welches die Bewegung der Schildkröte über ROS2 Topics so steuert, dass ein möglichst kreatives Bild in der Simulation entsteht. 
 
 :::{note}
-Diese Aufgabe ist als Übungsaufgabe gedacht, um den Umgang mit ROS2 Topics zu trainieren. Die Ergebnisse müssen nicht abgegeben werden, aber die können gerne in der Übung vorgestellt werden. 
+Diese Aufgabe ist als Übungsaufgabe gedacht, um den Umgang mit ROS2 Topics zu trainieren. Die Ergebnisse müssen nicht abgegeben werden, aber sie können gerne in der Übung vorgestellt werden. 
 :::
 
 :::{admonition} Tip
