@@ -4,20 +4,37 @@ Bis zum jetzigen Zeitpunkt haben wir nur einzelne Nodes gestartet. In der Praxis
 
 ## Setup
 
-Vorerst muss die ROS2 Umgebung gestartet:
+[Erstelle ein Package](create.md) mit dem Namen `turtlesim_mimic` und füge folgende Abhängigkeiten zur `package.xml` hinzu:
 
-```bash
-source /opt/ros/humble/setup.bash
-mkdir launch
+```xml
+<depend>ros2launch</depend>
+<depend>turtlesim</depend>
 ```
 
-## Erstelle ein Package
+Des weiteren muss der `launch` Ordner im Package erstellt werden, und in der `setup.py` Datei hinzugefügt werden:
 
-[Erstelle ein Package](create.md) mit dem Namen `turtlesim_mimic`:
+```python
+from glob import glob
+...
+
+setup(
+    ...
+    data_files=[
+        ...
+        ('share/' + package_name + '/launch', glob('launch/*')),
+    ],
+    ...
+)
+```
+
+:::{note}
+Stelle sicher dass, bevor du die Beispiele ausführst, eine ROS2 Umgebung [aktiviert](../setup/sourcen.md) ist.
+:::
 
 ## Erstelle ein Launch File
 
-Erstelle folgendes _launch file_ mit dem Namen `launch/turtlesim_mimic.py`:
+Erstelle folgendes _launch file_ mit dem Namen `turtlesim_mimic.launch.py`:
+
 
 ```bash
 from launch import LaunchDescription
@@ -49,14 +66,11 @@ def generate_launch_description():
     ])
 ```
 
-Dieses _launch file_ erstellt zwei _turtlesim Nodes_ wobei auch zwei Turtlesim Fenster gestartet werden. Anschließend wird ebenfalls eine _Turtlesim mimic Node_ erstellt, welche den _Pose Topic_ von `turtlesim1` _subscribed_ und den Geschwindigkeitswert über den `/cmd_vel` _Topic_ an Turtlesim2 _published_. Mehr dazu bei dem [Kapitel zu ROS2 Topics](../topic).
-
 :::{note}
-Es muss ebenfalls folgende Zeile zum `package.xml` hinzugefügt werden
-```xml
-<exec_depend>ros2launch</exec_depend>
-```
+launch Files werden in der Regel im `launch` Ordner des Packages abgelegt.
 :::
+
+Dieses _launch file_ erstellt zwei _turtlesim Nodes_ wobei auch zwei Turtlesim Fenster gestartet werden. Anschließend wird ebenfalls eine _Turtlesim mimic Node_ erstellt, welche den _Pose Topic_ von `turtlesim1` _subscribed_ und den Geschwindigkeitswert über den `/cmd_vel` _Topic_ an Turtlesim2 _published_. Mehr dazu bei dem [Kapitel zu ROS2 Topics](../topic).
 
 ## Build
 
@@ -71,10 +85,10 @@ ros2 launch <launch_file_path>
 ```
 
 ```bash
-ros2 launch launch/turtlesim_mimic.py
+ros2 launch launch/turtlesim_mimic.launch.py
 ```
 
-Um die Funktionalität zu testen, kannst du mit folgendem Befehl turtle1/sim bewegen:
+Um die Funktionalität zu testen, kannst du mit folgendem Befehl turtle1 bewegen:
 
 ```bash
 ros2 topic pub -r 1 /turtlesim1/turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -1.8}}"

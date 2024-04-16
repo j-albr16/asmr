@@ -12,27 +12,44 @@ kernelspec:
 
 # Beispiel
 
+Im folgenden werden einige Beispiele zur Verwendung und Steuerung von ROS2 Topics über die ROS2-CLI gezeigt.
+
 ## Setup
 
-### Aktivierung des Environments
+Als Beispielumgebung wird Turtlesim verwendet. Es wird davon ausgegangen, dass Turtlesim bereits [installiert](turtlesim.md) ist. 
+
+## Topic List
+
+Um herauszufinden welche Topics verfügbar sind, kann folgender Befehl ausgeführt werden:
 
 ```bash
-source /opt/ros/iron/setup.bash
+ros2 topic list
 ```
-
-### Turtlesim
-
-Starte turtlesim
 
 ```bash
-ros2 run turtlesim turtlesim_node
+/parameter_events
+/rosout
+/turtle1/cmd_vel
+/turtle1/color_sensor
+/turtle1/pose
 ```
 
-In einem anderen Temrinal starte
+Um zusätzlich den Datentypen der Topics zu sehen, kann folgender Befehl ausgeführt werden:
+
 
 ```bash
-ros2 run turtlesim turtle_teleop_key
+ros2 topic list -t 
 ```
+
+```bash
+/parameter_events [rcl_interfaces/msg/ParameterEvent]
+/rosout [rcl_interfaces/msg/Log]
+/turtle1/cmd_vel [geometry_msgs/msg/Twist]
+/turtle1/color_sensor [turtlesim/msg/Color]
+/turtle1/pose [turtlesim/msg/Pose]
+```
+
+
 
 ## Topic Echo
 
@@ -61,39 +78,9 @@ angular:
   z: 0.0
 ```
 
-
-## Topic List
-
-```bash
-ros2 topic list
-```
-
-```bash
-/parameter_events
-/rosout
-/turtle1/cmd_vel
-/turtle1/color_sensor
-/turtle1/pose
-```
-
-um zusätzlich die interfaces zu bekommen:
-
-
-```bash
-ros2 topic list -t 
-```
-
-```bash
-/parameter_events [rcl_interfaces/msg/ParameterEvent]
-/rosout [rcl_interfaces/msg/Log]
-/turtle1/cmd_vel [geometry_msgs/msg/Twist]
-/turtle1/color_sensor [turtlesim/msg/Color]
-/turtle1/pose [turtlesim/msg/Pose]
-```
-
 ## Topic Info
 
-Um Informationen wir aktuelle Publisher / Subscriber zu erfahren:
+Um Informationen wir aktuelle Publisher / Subscriber zu erfahren, kann folgender Befehl ausgeführt werden:
 
 ```bash
 ros2 topic info /turtle1/cmd_vel
@@ -120,13 +107,13 @@ alternativ:
 rqt
 ```
 
-und dann `Plugins > Introspection > Node Graph`
+Navigiere nun zum Node Graph: `Plugins > Introspection > Node Graph`.
 
 ## Topic Interface
 
 
-Der Datentyp, der von einem Topic verwendet wird, wird von einem Interface festegelgt. 
-Wir haben jetzt schon die Interfaces du Topics erfahren. Um das Interface zu betrachten:
+Der Datentyp, der von einem Topic verwendet wird, wird von einem Interface festgelegt. 
+Wir haben schon die Interfaces zu den einzelnen Topics abgefragt. Wir können nun auch die Struktur eines Interfaces abfragen:
 
 ```bash
 ros2 interface show geometry_msgs/msg/Twist
@@ -145,10 +132,12 @@ ros2 interface show geometry_msgs/msg/Twist
             float64 z
 ```
 
+Mehr dazu findest du in der [Interface Dokumentation](../interface.md).
+
 
 ## Topic Pub
 
-Um daten an einen Topic zu publishen
+Um daten an einen Topic zu publishen, kann folgender Befehl ausgeführt werden:
 
 ```bash
 ros2 topic pub <topic_name> <msg_type> '<args>'
@@ -160,7 +149,6 @@ Um die Schildkröte zu bewegen führen wir folgenden Befehl aus:
 ros2 topic pub --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
 ```
 
-
 ```bash
 publisher: beginning loop
 publishing #1: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=1.8))
@@ -170,7 +158,7 @@ publishing #1: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y
 ros2 topic pub --rate 1 /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
 ```
 
-The difference here is the removal of the --once option and the addition of the --rate 1 option, which tells ros2 topic pub to publish the command in a steady stream at 1 Hz.
+Der Unterschied hier ist die Entfernung der --once Option und das Hinzufügen der --rate 1 Option, welche ros2 topic pub anweist, die Nachrichten mit einer Frequenz von 1 Hz zu veröffentlichen.
 
 - `--once`: einmalige ausführung
 - `--rate 1`: publish kontinuirlich mit einer Frequenz von 1 Hz

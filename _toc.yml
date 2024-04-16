@@ -54,7 +54,9 @@ parts:
     - file: ros2/node/quiz
   - file: ros2/topic
     sections:
+    - file: ros2/topic/turtlesim
     - file: ros2/topic/beispiel
+    - file: ros2/topic/aufgabe
     - file: ros2/topic/quiz
   - file: ros2/interface
     sections:
