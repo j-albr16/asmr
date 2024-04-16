@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Beispiel &#8212; ASMR Jupyter Book</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -65,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'ros2/topic/beispiel';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Quiz" href="quiz.html" />
-    <link rel="prev" title="Topic" href="../topic.html" />
+    <link rel="next" title="Aufgabe" href="aufgabe.html" />
+    <link rel="prev" title="Turtlesim" href="turtlesim.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -77,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -146,14 +136,13 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-  
     
     
       
     
     
-    <img src="../../_static/tbot.svg" class="logo__image only-light" alt="ASMR Jupyter Book - Home"/>
-    <script>document.write(`<img src="../../_static/tbot.svg" class="logo__image only-dark" alt="ASMR Jupyter Book - Home"/>`);</script>
+    <img src="../../_static/tbot.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/tbot.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -230,7 +219,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../topic.html">Topic</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="turtlesim.html">Turtlesim</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Beispiel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aufgabe.html">Aufgabe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quiz.html">Quiz</a></li>
 </ul>
 </li>
@@ -468,10 +459,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
@@ -479,7 +470,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -506,13 +497,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aktivierung-des-environments">Aktivierung des Environments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turtlesim">Turtlesim</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-echo">Topic Echo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-list">Topic List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-echo">Topic Echo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-info">Topic Info</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-rqt">Topic Rqt</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-interface">Topic Interface</a></li>
@@ -530,25 +517,35 @@ document.write(`
                   
   <section id="beispiel">
 <h1>Beispiel<a class="headerlink" href="#beispiel" title="Permalink to this heading">#</a></h1>
+<p>Im folgenden werden einige Beispiele zur Verwendung und Steuerung von ROS2 Topics über die ROS2-CLI gezeigt.</p>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
-<section id="aktivierung-des-environments">
-<h3>Aktivierung des Environments<a class="headerlink" href="#aktivierung-des-environments" title="Permalink to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/opt/ros/iron/setup.bash
-</pre></div>
-</div>
+<p>Als Beispielumgebung wird Turtlesim verwendet. Es wird davon ausgegangen, dass Turtlesim bereits <a class="reference internal" href="turtlesim.html"><span class="doc std std-doc">installiert</span></a> ist.</p>
 </section>
-<section id="turtlesim">
-<h3>Turtlesim<a class="headerlink" href="#turtlesim" title="Permalink to this heading">#</a></h3>
-<p>Starte turtlesim</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>turtlesim<span class="w"> </span>turtlesim_node
+<section id="topic-list">
+<h2>Topic List<a class="headerlink" href="#topic-list" title="Permalink to this heading">#</a></h2>
+<p>Um herauszufinden welche Topics verfügbar sind, kann folgender Befehl ausgeführt werden:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>list
 </pre></div>
 </div>
-<p>In einem anderen Temrinal starte</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>turtlesim<span class="w"> </span>turtle_teleop_key
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/parameter_events
+/rosout
+/turtle1/cmd_vel
+/turtle1/color_sensor
+/turtle1/pose
 </pre></div>
 </div>
-</section>
+<p>Um zusätzlich den Datentypen der Topics zu sehen, kann folgender Befehl ausgeführt werden:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>list<span class="w"> </span>-t<span class="w"> </span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/parameter_events<span class="w"> </span><span class="o">[</span>rcl_interfaces/msg/ParameterEvent<span class="o">]</span>
+/rosout<span class="w"> </span><span class="o">[</span>rcl_interfaces/msg/Log<span class="o">]</span>
+/turtle1/cmd_vel<span class="w"> </span><span class="o">[</span>geometry_msgs/msg/Twist<span class="o">]</span>
+/turtle1/color_sensor<span class="w"> </span><span class="o">[</span>turtlesim/msg/Color<span class="o">]</span>
+/turtle1/pose<span class="w"> </span><span class="o">[</span>turtlesim/msg/Pose<span class="o">]</span>
+</pre></div>
+</div>
 </section>
 <section id="topic-echo">
 <h2>Topic Echo<a class="headerlink" href="#topic-echo" title="Permalink to this heading">#</a></h2>
@@ -572,33 +569,9 @@ angular:
 </pre></div>
 </div>
 </section>
-<section id="topic-list">
-<h2>Topic List<a class="headerlink" href="#topic-list" title="Permalink to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>list
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/parameter_events
-/rosout
-/turtle1/cmd_vel
-/turtle1/color_sensor
-/turtle1/pose
-</pre></div>
-</div>
-<p>um zusätzlich die interfaces zu bekommen:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>list<span class="w"> </span>-t<span class="w"> </span>
-</pre></div>
-</div>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/parameter_events<span class="w"> </span><span class="o">[</span>rcl_interfaces/msg/ParameterEvent<span class="o">]</span>
-/rosout<span class="w"> </span><span class="o">[</span>rcl_interfaces/msg/Log<span class="o">]</span>
-/turtle1/cmd_vel<span class="w"> </span><span class="o">[</span>geometry_msgs/msg/Twist<span class="o">]</span>
-/turtle1/color_sensor<span class="w"> </span><span class="o">[</span>turtlesim/msg/Color<span class="o">]</span>
-/turtle1/pose<span class="w"> </span><span class="o">[</span>turtlesim/msg/Pose<span class="o">]</span>
-</pre></div>
-</div>
-</section>
 <section id="topic-info">
 <h2>Topic Info<a class="headerlink" href="#topic-info" title="Permalink to this heading">#</a></h2>
-<p>Um Informationen wir aktuelle Publisher / Subscriber zu erfahren:</p>
+<p>Um Informationen wir aktuelle Publisher / Subscriber zu erfahren, kann folgender Befehl ausgeführt werden:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>info<span class="w"> </span>/turtle1/cmd_vel
 </pre></div>
 </div>
@@ -618,12 +591,12 @@ Subscription<span class="w"> </span>count:<span class="w"> </span><span class="m
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rqt
 </pre></div>
 </div>
-<p>und dann <code class="docutils literal notranslate"><span class="pre">Plugins</span> <span class="pre">&gt;</span> <span class="pre">Introspection</span> <span class="pre">&gt;</span> <span class="pre">Node</span> <span class="pre">Graph</span></code></p>
+<p>Navigiere nun zum Node Graph: <code class="docutils literal notranslate"><span class="pre">Plugins</span> <span class="pre">&gt;</span> <span class="pre">Introspection</span> <span class="pre">&gt;</span> <span class="pre">Node</span> <span class="pre">Graph</span></code>.</p>
 </section>
 <section id="topic-interface">
 <h2>Topic Interface<a class="headerlink" href="#topic-interface" title="Permalink to this heading">#</a></h2>
-<p>Der Datentyp, der von einem Topic verwendet wird, wird von einem Interface festegelgt.
-Wir haben jetzt schon die Interfaces du Topics erfahren. Um das Interface zu betrachten:</p>
+<p>Der Datentyp, der von einem Topic verwendet wird, wird von einem Interface festgelegt.
+Wir haben schon die Interfaces zu den einzelnen Topics abgefragt. Wir können nun auch die Struktur eines Interfaces abfragen:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>interface<span class="w"> </span>show<span class="w"> </span>geometry_msgs/msg/Twist
 </pre></div>
 </div>
@@ -639,10 +612,11 @@ Wir haben jetzt schon die Interfaces du Topics erfahren. Um das Interface zu bet
 <span class="w">            </span>float64<span class="w"> </span>z
 </pre></div>
 </div>
+<p>Mehr dazu findest du in der <a class="reference internal" href="../interface.html"><span class="doc std std-doc">Interface Dokumentation</span></a>.</p>
 </section>
 <section id="topic-pub">
 <h2>Topic Pub<a class="headerlink" href="#topic-pub" title="Permalink to this heading">#</a></h2>
-<p>Um daten an einen Topic zu publishen</p>
+<p>Um daten an einen Topic zu publishen, kann folgender Befehl ausgeführt werden:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>&lt;topic_name&gt;<span class="w"> </span>&lt;msg_type&gt;<span class="w"> </span><span class="s1">&#39;&lt;args&gt;&#39;</span>
 </pre></div>
 </div>
@@ -657,7 +631,7 @@ publishing<span class="w"> </span><span class="c1">#1: geometry_msgs.msg.Twist(l
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>topic<span class="w"> </span>pub<span class="w"> </span>--rate<span class="w"> </span><span class="m">1</span><span class="w"> </span>/turtle1/cmd_vel<span class="w"> </span>geometry_msgs/msg/Twist<span class="w"> </span><span class="s2">&quot;{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}&quot;</span>
 </pre></div>
 </div>
-<p>The difference here is the removal of the –once option and the addition of the –rate 1 option, which tells ros2 topic pub to publish the command in a steady stream at 1 Hz.</p>
+<p>Der Unterschied hier ist die Entfernung der –once Option und das Hinzufügen der –rate 1 Option, welche ros2 topic pub anweist, die Nachrichten mit einer Frequenz von 1 Hz zu veröffentlichen.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">--once</span></code>: einmalige ausführung</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">--rate</span> <span class="pre">1</span></code>: publish kontinuirlich mit einer Frequenz von 1 Hz</p></li>
@@ -690,30 +664,34 @@ publishing<span class="w"> </span><span class="c1">#1: geometry_msgs.msg.Twist(l
 
               
               
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../topic.html"
+       href="turtlesim.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Topic</p>
+        <p class="prev-next-title">Turtlesim</p>
       </div>
     </a>
     <a class="right-next"
-       href="quiz.html"
+       href="aufgabe.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Quiz</p>
+        <p class="prev-next-title">Aufgabe</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -728,13 +706,9 @@ publishing<span class="w"> </span><span class="c1">#1: geometry_msgs.msg.Twist(l
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aktivierung-des-environments">Aktivierung des Environments</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#turtlesim">Turtlesim</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-echo">Topic Echo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-list">Topic List</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-echo">Topic Echo</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-info">Topic Info</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-rqt">Topic Rqt</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#topic-interface">Topic Interface</a></li>
@@ -786,8 +760,8 @@ By Florian Bohlken und Jan Albrecht
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

@@ -71,7 +71,7 @@ int32[] samples [-200, -100, 0, 100, 200]
 
 ### Konstanten
 
-Konstanten programmatisch nicht mehr verändert werden.
+Konstanten können programmatisch nicht mehr verändert werden.
 
 Eine Konstante kann wie folgt definiert werden:
 
@@ -93,9 +93,9 @@ Services werden in sog. `.srv` files, die sich in einem `srv/` Ordner im ROS2 Pa
 Diese `.srv` bestehen aus einem request und response teil, welche analog zu den `.msg` types definiert werden. Die beiden Teile werden durch das Zeichen `---` getrennt:
 
 ```
-string str
+string request_text
 ---
-string str
+string response_text
 ```
 
 

@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Beispiel &#8212; ASMR Jupyter Book</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -77,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -146,14 +136,13 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-  
     
     
       
     
     
-    <img src="../../_static/tbot.svg" class="logo__image only-light" alt="ASMR Jupyter Book - Home"/>
-    <script>document.write(`<img src="../../_static/tbot.svg" class="logo__image only-dark" alt="ASMR Jupyter Book - Home"/>`);</script>
+    <img src="../../_static/tbot.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/tbot.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -230,7 +219,9 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../topic.html">Topic</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../topic/turtlesim.html">Turtlesim</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../topic/beispiel.html">Beispiel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../topic/aufgabe.html">Aufgabe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../topic/quiz.html">Quiz</a></li>
 </ul>
 </li>
@@ -468,10 +459,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
@@ -479,7 +470,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -523,31 +514,35 @@ document.write(`
                   
   <section id="beispiel">
 <h1>Beispiel<a class="headerlink" href="#beispiel" title="Permalink to this heading">#</a></h1>
-<p>Vorerst muss die ROS2 Umgebung geladen werden:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>/opt/ros/iron/setup.bash
-</pre></div>
+<p>Im folgenden Guide werden einige Beispiele zur Nutzung und Steuerung von ROS2 <em>Nodes</em> über die CLI dargestellt.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Stelle sicher, dass bevor du die Beispiele ausführst eine ROS2 Umgebung <span class="xref myst">aktiviert</span> ist.</p>
 </div>
+<p>Als Beispiel Umgebung wird hier das <em>turtlesim</em> Paket verwendet. Mehr dazu findest du in <a class="reference internal" href="../topic/turtlesim.html"><span class="doc std std-doc">folgendem</span></a> Kapitel.</p>
 <section id="run-nodes">
 <h2>Run Nodes<a class="headerlink" href="#run-nodes" title="Permalink to this heading">#</a></h2>
+<p>Wie in dem <a class="reference internal" href="../package.html"><span class="doc std std-doc">Kapitel</span></a> zu packages erklärt ist, enthält jedes ROS2 python <em>package</em> eine <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>, in welchem <code class="docutils literal notranslate"><span class="pre">executables</span></code> definiert werden. Diese führen jeweils eine python Funktion aus, die z.B. eine Node startet.</p>
+<p>Mit folgendem Befehl kann eine <code class="docutils literal notranslate"><span class="pre">executable</span></code> eines <em>packages</em> ausgeführt werden.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>&lt;package_name&gt;<span class="w"> </span>&lt;executable_name&gt;
 </pre></div>
 </div>
-<p>Um die Turtlesim Node zu starten muss folgender Befehl ausgeführt werden:</p>
+<p>Als Beispiel kann man die Turtlesim Simulation starten, indem man die <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> executable ausführt.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>turtlesim<span class="w"> </span>turtlesim_node
 </pre></div>
 </div>
 </section>
 <section id="list-nodes">
 <h2>List Nodes<a class="headerlink" href="#list-nodes" title="Permalink to this heading">#</a></h2>
-<p>Führe folgenden Befehl aus um alle laufenden Nodes aufzulisten.</p>
+<p>Mit folgendem Befehl können alle aktiven Nodes aufgelistet werden:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>node<span class="w"> </span>list
 </pre></div>
 </div>
-<p>Es sollte folgendes zu sehen sein:</p>
+<p>Es sollte folgendes in der Konsole ausgegeben worden sein:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/turtlesim
 </pre></div>
 </div>
-<p>In einem neuen Terminal führe folgenden Befehl aus, welcher eine Node startet die das steuern der Turtle ermöglicht:</p>
+<p>In einem neuen Terminal führe folgenden Befehl aus, welcher eine Node startet die das steuern der Schildkröte ermöglicht:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>turtlesim<span class="w"> </span>turtle_teleop_key
 </pre></div>
 </div>
@@ -559,11 +554,11 @@ document.write(`
 </section>
 <section id="node-info">
 <h2>Node Info<a class="headerlink" href="#node-info" title="Permalink to this heading">#</a></h2>
-<p>Der <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">info</span></code> Befehl gibt weitere informationen wir aktuelle Subscriber, Pubisher etc. aus. Verwendung:</p>
+<p>Der <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">info</span></code> Befehl gibt weitere informationen wie aktuelle Subscriber, Pubisher etc. aus. Im allgemeinen sieht der Befehl wie folgt aus:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>node<span class="w"> </span>info<span class="w"> </span>&lt;node_name&gt;
 </pre></div>
 </div>
-<p>Beispiel:</p>
+<p>Du kannst dir nun mit diesem Befehl weitere Informationen über die <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> Node anzeigen lassen:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>node<span class="w"> </span>info<span class="w"> </span>/turtlesim
 </pre></div>
 </div>
@@ -603,6 +598,10 @@ document.write(`
 <section id="erstellen-einer-node">
 <h2>Erstellen einer Node<a class="headerlink" href="#erstellen-einer-node" title="Permalink to this heading">#</a></h2>
 <p>Du kannst in einem erstellten Package Nodes in Form von Python Klassen erstellen. Folgender Code beschreibt eine Node, die “Hello World!” im Terminal ausgibt.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Die Nodes werden standardmäßig einem Ordner abgelegt, der den Namen des Packages trägt.</p>
+</div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>import<span class="w"> </span>rclpy
 from<span class="w"> </span>rclpy.node<span class="w"> </span>import<span class="w"> </span>Node
 
@@ -623,6 +622,18 @@ def<span class="w"> </span>main<span class="o">(</span><span class="nv">args</sp
 
 <span class="k">if</span><span class="w"> </span><span class="nv">__name__</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;__main__&#39;</span>:
 <span class="w">    </span>main<span class="o">()</span>
+</pre></div>
+</div>
+<p>Um die Node dem ROS2 System hinzuzufügen, muss sie in der <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> des Packages hinzugefügt werden.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>...
+<span class="nv">console_scripts</span><span class="o">=[</span>
+<span class="w">        </span><span class="s1">&#39;hello_world_node = &lt;package_name&gt;.&lt;file_name&gt;:main&#39;</span>,
+<span class="w">    </span><span class="o">]</span>,
+...
+</pre></div>
+</div>
+<p>Nun kann die Node mit folgendem Befehl ausgeführt werden:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ros2<span class="w"> </span>run<span class="w"> </span>&lt;package_name&gt;<span class="w"> </span>hello_world_node
 </pre></div>
 </div>
 </section>
@@ -653,10 +664,11 @@ def<span class="w"> </span>main<span class="o">(</span><span class="nv">args</sp
 
               
               
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../node.html"
@@ -676,7 +688,10 @@ def<span class="w"> </span>main<span class="o">(</span><span class="nv">args</sp
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -742,8 +757,8 @@ By Florian Bohlken und Jan Albrecht
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>
