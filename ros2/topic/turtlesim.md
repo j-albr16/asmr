@@ -11,7 +11,7 @@ Die Installation von Turtlesim erfolgt über das ROS2-Paket `ros-humble-turtlesi
 sudo apt install ros-humble-turtlesim
 ```
 
-Stelle sicher, dass die ROS2 Umgebung [aktiviert](../package/sourcen.md) ist.
+Stelle sicher, dass die ROS2 Umgebung [aktiviert](../setup/sourcen.md) ist.
 
 Das Turtlesim Paket beinhaltet mehrere `executables`, die genutzt werden können. Diese sind zum Beispiel zuständig würd das starten von Turtlesim oder das steuern von Schildkröten. Die verschiedenen `executables` können mit folgendem Befehl aufgelistet werden:
 
@@ -43,7 +43,7 @@ Es sollte sich ein Fenster mit einer Schildkröte Öffnen.
 Um die Schildkröte zu steuern, kann die `executables` `turtle_teleop_key` genutzt werden. Diese kann mit folgendem Befehl in einem **neuen** Terminal gestartet werden:
 
 :::{note}
-Stelle sicher, dass die ROS2 Umgebung [aktiviert](../package/sourcen.md) ist.
+Stelle sicher, dass die ROS2 Umgebung [aktiviert](../setup/sourcen.md) ist.
 :::
 
 ```bash
