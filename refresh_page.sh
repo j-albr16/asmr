@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # change to the root directory of the repository
-git fetch --all
 git checkout main
+git pull
 
 # check if the virtual environment exists
 if [ ! -d "venv" ]; then
@@ -19,6 +19,7 @@ source venv/bin/activate
 
 # merge the main branch into the gh-pages branch
 git checkout gh-pages
+git pull
 git merge main --no-edit
 
 # rebuild the page
