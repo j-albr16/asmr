@@ -1,7 +1,12 @@
-venv
-_build
-node_modules/
+# mac stuff
 **/.DS_Store
-asmr_exercises
-docs
-orga
+
+# venv and page dirs
+venv/
+_build/
+docs/
+
+# orga stuff - TODO: remove?
+asmr_exercises/
+node_modules/
+orga/
