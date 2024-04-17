@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-venv
-node_modules/
-**/.DS_Store
-_build/
-asmr_exercises
-=======
 # mac stuff
 **/.DS_Store
 
@@ -17,4 +10,3 @@ docs/
 asmr_exercises/
 node_modules/
 orga/
->>>>>>> main
