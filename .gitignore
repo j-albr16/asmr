@@ -1,5 +1,20 @@
+<<<<<<< HEAD
 venv
 node_modules/
 **/.DS_Store
 _build/
 asmr_exercises
+=======
+# mac stuff
+**/.DS_Store
+
+# venv and page dirs
+venv/
+_build/
+docs/
+
+# orga stuff - TODO: remove?
+asmr_exercises/
+node_modules/
+orga/
+>>>>>>> main
