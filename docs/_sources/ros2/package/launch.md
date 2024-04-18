@@ -4,12 +4,16 @@ Bis zum jetzigen Zeitpunkt haben wir nur einzelne Nodes gestartet. In der Praxis
 
 ## Setup
 
-[Erstelle ein Package](create.md) mit dem Namen `turtlesim_mimic` und füge folgende Abhängigkeiten zur `package.xml` (in deinem Paket) hinzu:
+[Erstelle ein Package](create.md) mit dem Namen `turtlesim_mimic` und füge folgende Abhängigkeiten zur `package.xml` hinzu:
 
 ```xml
 <depend>ros2launch</depend>
 <depend>turtlesim</depend>
 ```
+
+:::{note}
+Falls du dir nicht mehr sicher bist, wo sich die `package.xml` befindet, schau nochmal im [Paket](../package.md)-Hauptartikel nach.
+:::
 
 Des weiteren muss der `launch` Ordner im Package erstellt werden, und in der `setup.py` Datei hinzugefügt werden:
 

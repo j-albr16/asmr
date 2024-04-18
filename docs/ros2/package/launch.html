@@ -480,10 +480,14 @@ document.write(`
 <p>Bis zum jetzigen Zeitpunkt haben wir nur einzelne Nodes gestartet. In der Praxis werden jedoch oft mehrere Nodes gleichzeitig gestartet. Dafür gibt es in ROS2 die <em>Launch Files</em>. Ein <em>Launch File</em> ist ein python Skript, welches mehrere Nodes startet und konfiguriert. Im folgenden wird erklärt, wie man mehrere Nodes mit einem <em>Launch File</em> startet.</p>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
-<p><a class="reference internal" href="create.html"><span class="doc std std-doc">Erstelle ein Package</span></a> mit dem Namen <code class="docutils literal notranslate"><span class="pre">turtlesim_mimic</span></code> und füge folgende Abhängigkeiten zur <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> (in deinem Paket) hinzu:</p>
+<p><a class="reference internal" href="create.html"><span class="doc std std-doc">Erstelle ein Package</span></a> mit dem Namen <code class="docutils literal notranslate"><span class="pre">turtlesim_mimic</span></code> und füge folgende Abhängigkeiten zur <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> hinzu:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;depend&gt;</span>ros2launch<span class="nt">&lt;/depend&gt;</span>
 <span class="nt">&lt;depend&gt;</span>turtlesim<span class="nt">&lt;/depend&gt;</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Falls du dir nicht mehr sicher bist, wo sich die <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> befindet, schau nochmal im <a class="reference internal" href="../package.html"><span class="doc std std-doc">Paket</span></a>-Hauptartikel nach.</p>
 </div>
 <p>Des weiteren muss der <code class="docutils literal notranslate"><span class="pre">launch</span></code> Ordner im Package erstellt werden, und in der <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> Datei hinzugefügt werden:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
