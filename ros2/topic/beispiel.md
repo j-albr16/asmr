@@ -164,4 +164,83 @@ Der Unterschied hier ist die Entfernung der --once Option und das Hinzufügen de
 - `--rate 1`: publish kontinuirlich mit einer Frequenz von 1 Hz
 
 
+## Demo Publisher
+
+Im folgenden code Beispiel wollen wir einen Publisher erstellen, der die Schildkröte bewegt. Hierzu schreiben wir eine Python Node mit dem Namen `demo_publisher.py`. Diese Node erstellt beim starten einen Publisher und publisht alle 0.5 Sekunden eine Nachricht an den Topic `/turtle1/cmd_vel`.
+
+:::{note}
+Stelle sicher, dass die turtlesim Node gestartet ist, bevor du die `demo_publisher.py` Node startest.
+:::
+
+```python
+class DemoPublisher(Node):
+    def __init__(self):
+        super().__init__('demo_node')
+
+        self.get_logger().info('Demo Publisher Node Started')
+
+        self.publisher_ = self.create_publisher(Twist, '/turtle1/cmd_vel', 10)
+
+        timer_period = 0.5  # seconds
+        self.timer = self.create_timer(timer_period, self.timer_callback)
+
+    def timer_callback(self):
+        msg = Twist()
+        msg.linear.x = 1.0
+        msg.angular.z = 1.0
+        self.publisher_.publish(msg)
+        self.get_logger().info('Publishing: "%s"' % msg)
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = DemoPublisher()
+    rclpy.spin(node)
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+```
+
+Du kannst die Node nun nach [folgendem](../node/beispiel.md) Guide starten. Die Schildkröte sollte sich nun im Kreis bewegen.
+
+
+## Demo Subscriber
+
+Analog zum vorigen Beispiel können wir auch einen Subscriber erstellen, der die Nachrichten des Topics `/turtle1/pose` empfängt. Hierzu schreiben wir eine Python Node mit dem Namen `demo_subscriber.py`. Diese Node erstellt beim starten einen Subscriber und gibt die empfangenen Nachrichten aus.
+
+```python
+import rclpy
+
+from rclpy.node import Node
+from turtlesim.msg import Pose
+
+class DemoSubscriber(Node):
+    def __init__(self):
+        super().__init__('demo_node')
+
+        self.get_logger().info('Demo Subscriber Node Started')
+
+        self.subscription = self.create_subscription(
+            Pose,
+            '/turtle1/pose',
+            self.listener_callback,
+            10
+        )
+
+    def listener_callback(self, msg: Pose):
+        self.get_logger().info('Received: "%s"' % msg)
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = DemoSubscriber()
+    rclpy.spin(node)
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+```
 
