@@ -40,10 +40,14 @@ sudo add-apt-repository universe
 Füge als nächstes den ROS2-GPG-Schlüssel hinzu:
 
 ```bash
-sudo apt update &&
-sudo apt install curl -y &&
+sudo apt update;
+sudo apt install curl -y
+```
+
+```bash
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 ```
+
 
 Füge das ROS2-Repository deiner Quellenliste hinzu:
 
