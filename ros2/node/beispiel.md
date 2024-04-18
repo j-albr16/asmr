@@ -160,3 +160,17 @@ Nun kann die Node mit folgendem Befehl ausgeführt werden:
 ros2 run <package_name> hello_world_node
 ```
 
+:::{note}
+Alternativ kann die Node auch direkt über den Python Interpreter ausgeführt werden. Hierzu muss das Pyhton Paket `rclpy` installiert sein. Es kann mit folgendem Befehl installiert werden:
+
+```bash
+pip install rclpy
+```
+
+Anschließend kann die Node mit folgendem Befehl ausgeführt werden:
+
+```bash
+python <file_name>.py
+```
+:::
+
