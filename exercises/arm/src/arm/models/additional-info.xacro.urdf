@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <ros2_control name="MyRobot" type="system">
+        <hardware>
+            <plugin>ign_ros2_control/IgnitionSystem</plugin>
+        </hardware>
+        <xacro:macro name="joint" params="number">
+            <joint name="joint_${number}">
+                <command_interface name="position">
+                    <param name="min">{-2*pi}</param>
+                    <param name="max">{2*pi}</param>
+                </command_interface>
+                <state_interface name="position">
+                    <param name="initial_value">0.0</param>
+                </state_interface>
+            </joint>
+        </xacro:macro>
+
+        <xacro:joint number="1"/>
+        <xacro:joint number="2"/>
+        <xacro:joint number="3"/>
+        <xacro:joint number="4"/>
+    </ros2_control>
+
+
+    <gazebo>
+        <plugin filename="ign_ros2_control-system"
+            name="ign_ros2_control::IgnitionROS2ControlPlugin">
+            <parameters>$(find arm)/configs/arm-controller.yaml</parameters>
+            <robot_param>robot_description</robot_param>
+            <robot_param_node>robot_state_publisher</robot_param_node>
+        </plugin>
+    </gazebo>
+
+    <gazebo>
+        <static>false</static>
+        <self_collide>1</self_collide>
+    </gazebo>
+</robot>

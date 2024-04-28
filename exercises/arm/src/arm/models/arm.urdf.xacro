@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ur10">
+    <xacro:include filename="arm.urdf" />
+    <link name="world" />
+    <joint name="base_to_world" type="fixed">
+        <parent link="world" />
+        <child link="link_0" />
+    </joint>
+    <xacro:include filename="additional-info.xacro.urdf" />
+</robot>
+
