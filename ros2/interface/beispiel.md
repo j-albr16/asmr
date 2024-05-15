@@ -12,11 +12,12 @@ kernelspec:
 
 # Beispiel
 
-In ros können eigene Datentypen für Topics und für Services erstellt werden. Diese heißen `Interfaces`. Für Topics werden die Interfaces in ein `.msg` File geschrieben. Diese werden dann in einen `/msg` Ordner im Paket abgelegt. Für Services verwendet man `.srv` Files welche in dem `/srv` Ordner abgelegt werden. Interfaces können nur in c Paketen gebaut werden.
+In ros können eigene Datentypen für Topics und für Services erstellt werden. Diese heißen `Interfaces`. Für Topics werden die Interfaces in ein `.msg` File geschrieben. Diese werden dann in einen `/msg` Ordner im Paket abgelegt. Für Services verwendet man `.srv` Files welche in dem `/srv` Ordner abgelegt werden. Interfaces können **nur in c Paketen** gebaut werden.
 
 ## Erstellung Interface Paket
 
-Es muss folglich ein c ros Paket erstellt werden:
+Um eigene Interfaces implementieren zu können, muss ein eigenes Paket erstellt werden. Dieses Paket muss ein `c` Paket sein.
+Mit folgendem Befehl kann ein neues Paket erstellt werden:
 
 ```
 ros2 pkg create --build-type ament_cmake custom_interfaces
@@ -41,9 +42,13 @@ int8 telnumber
 bool ledig
 ```
 
+:::{note}
+Das `.msg` File muss in einem `msg/` Ordner im ROS2 Package abgelegt werden.
+:::
+
 ### Arrays
 
-Es können ebenfalls arrays erstellt werden:
+Es können ebenfalls Array Typen definiert werden. Diese werden mit einem `[]` am Ende des Typs definiert. Die Größe des Arrays kann zusätzlich definiert werden.
 
 ```bash
 int8[] some_array
@@ -76,7 +81,7 @@ Konstanten können programmatisch nicht mehr verändert werden.
 Eine Konstante kann wie folgt definiert werden:
 
 ```
-constanttype CONStANTNAME=constantvalue
+constanttype CONSTANTNAME=constantvalue
 ```
 
 Beispiel:
@@ -101,7 +106,7 @@ string response_text
 
 ## Abschluss Beispiel
 
-Es können zusätzlich auch andere Interfaces refernziert werden:
+Es können zusätzlich auch andere Interfaces refernziert werden. Somit können komplexe Interfaces erstellt werden, die auf andere Interfaces aufbauen.
 
 ```
 #request constants
@@ -123,14 +128,17 @@ uint32 an_integer
 
 Damit die Interfaces gebaut bzw. zu dem jeweiligen python / c code umgewandelt werden können, müssen folgende Schritte durchgeführt werden:
 
-1. Das `CMakeLists.txt` muss ergänzt für jedes erstellte `.msg` / `.srv` File ergänzt werden:
+**Ergänzung des `CMakeLists.txt` **
 
-Setze die folgenden Zeilen dirket über: `ament_package()`
+Das `CMakeLists.txt` muss jedes erstellte `.msg` / `.srv` File ergänzt werden
 
 Angenommen du hättest die folgende Interfaces erstellt:
   - "msg/Num.msg"
   - "msg/Sphere.msg"
   - "srv/AddThreeInts.srv"
+
+
+Setze die folgenden Zeilen dirket über: `ament_package()`
 
 ```
 find_package(rosidl_default_generators REQUIRED)
@@ -143,7 +151,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 ```
 
 
-2. folgende Abhängigkeiten müssen zum `package.xml` hinzugefügt werden:
+**Ergänzung des `package.xml` Files*
 
 ```xml
 <depend>geometry_msgs</depend>

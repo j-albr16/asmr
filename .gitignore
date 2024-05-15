@@ -10,3 +10,8 @@ docs/
 asmr_exercises/
 node_modules/
 orga/
+
+# build folders
+**/build/
+**/install/
+**/log/
