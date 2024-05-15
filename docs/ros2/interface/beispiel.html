@@ -7,7 +7,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Beispiel &#8212; ASMR Jupyter Book</title>
   
@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -38,9 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -77,15 +76,6 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <div id="pst-scroll-pixel-helper"></div>
-
-  
-  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
-
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -146,14 +136,13 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
-  
     
     
       
     
     
-    <img src="../../_static/tbot.svg" class="logo__image only-light" alt="ASMR Jupyter Book - Home"/>
-    <script>document.write(`<img src="../../_static/tbot.svg" class="logo__image only-dark" alt="ASMR Jupyter Book - Home"/>`);</script>
+    <img src="../../_static/tbot.svg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/tbot.svg" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -243,6 +232,7 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../service.html">Service</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../service/beispiel.html">Beispiel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../service/aufgabe.html">Aufgabe</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../service/quiz.html">Quiz</a></li>
 </ul>
 </li>
@@ -470,10 +460,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
 `);
 </script>
@@ -481,7 +471,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
 `);
 </script>
@@ -532,10 +522,11 @@ document.write(`
                   
   <section id="beispiel">
 <h1>Beispiel<a class="headerlink" href="#beispiel" title="Permalink to this heading">#</a></h1>
-<p>In ros können eigene Datentypen für Topics und für Services erstellt werden. Diese heißen <code class="docutils literal notranslate"><span class="pre">Interfaces</span></code>. Für Topics werden die Interfaces in ein <code class="docutils literal notranslate"><span class="pre">.msg</span></code> File geschrieben. Diese werden dann in einen <code class="docutils literal notranslate"><span class="pre">/msg</span></code> Ordner im Paket abgelegt. Für Services verwendet man <code class="docutils literal notranslate"><span class="pre">.srv</span></code> Files welche in dem <code class="docutils literal notranslate"><span class="pre">/srv</span></code> Ordner abgelegt werden. Interfaces können nur in c Paketen gebaut werden.</p>
+<p>In ros können eigene Datentypen für Topics und für Services erstellt werden. Diese heißen <code class="docutils literal notranslate"><span class="pre">Interfaces</span></code>. Für Topics werden die Interfaces in ein <code class="docutils literal notranslate"><span class="pre">.msg</span></code> File geschrieben. Diese werden dann in einen <code class="docutils literal notranslate"><span class="pre">/msg</span></code> Ordner im Paket abgelegt. Für Services verwendet man <code class="docutils literal notranslate"><span class="pre">.srv</span></code> Files welche in dem <code class="docutils literal notranslate"><span class="pre">/srv</span></code> Ordner abgelegt werden. Interfaces können <strong>nur in c Paketen</strong> gebaut werden.</p>
 <section id="erstellung-interface-paket">
 <h2>Erstellung Interface Paket<a class="headerlink" href="#erstellung-interface-paket" title="Permalink to this heading">#</a></h2>
-<p>Es muss folglich ein c ros Paket erstellt werden:</p>
+<p>Um eigene Interfaces implementieren zu können, muss ein eigenes Paket erstellt werden. Dieses Paket muss ein <code class="docutils literal notranslate"><span class="pre">c</span></code> Paket sein.
+Mit folgendem Befehl kann ein neues Paket erstellt werden:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ros2</span> <span class="n">pkg</span> <span class="n">create</span> <span class="o">--</span><span class="n">build</span><span class="o">-</span><span class="nb">type</span> <span class="n">ament_cmake</span> <span class="n">custom_interfaces</span>
 </pre></div>
 </div>
@@ -554,9 +545,13 @@ fieldtype3<span class="w"> </span>fieldname3
 bool<span class="w"> </span>ledig
 </pre></div>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Das <code class="docutils literal notranslate"><span class="pre">.msg</span></code> File muss in einem <code class="docutils literal notranslate"><span class="pre">msg/</span></code> Ordner im ROS2 Package abgelegt werden.</p>
+</div>
 <section id="arrays">
 <h3>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h3>
-<p>Es können ebenfalls arrays erstellt werden:</p>
+<p>Es können ebenfalls Array Typen definiert werden. Diese werden mit einem <code class="docutils literal notranslate"><span class="pre">[]</span></code> am Ende des Typs definiert. Die Größe des Arrays kann zusätzlich definiert werden.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>int8<span class="o">[]</span><span class="w"> </span>some_array
 int8<span class="o">[</span><span class="m">5</span><span class="o">]</span><span class="w"> </span>5_ints_array
 int8<span class="o">[</span>&lt;<span class="o">=</span><span class="m">5</span><span class="o">]</span><span class="w"> </span>bis_zu_5_ints_array
@@ -583,7 +578,7 @@ string&lt;<span class="o">=</span><span class="m">5</span><span class="w"> </spa
 <h3>Konstanten<a class="headerlink" href="#konstanten" title="Permalink to this heading">#</a></h3>
 <p>Konstanten können programmatisch nicht mehr verändert werden.</p>
 <p>Eine Konstante kann wie folgt definiert werden:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">constanttype</span> <span class="n">CONStANTNAME</span><span class="o">=</span><span class="n">constantvalue</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">constanttype</span> <span class="n">CONSTANTNAME</span><span class="o">=</span><span class="n">constantvalue</span>
 </pre></div>
 </div>
 <p>Beispiel:</p>
@@ -605,7 +600,7 @@ Diese <code class="docutils literal notranslate"><span class="pre">.srv</span></
 </section>
 <section id="abschluss-beispiel">
 <h2>Abschluss Beispiel<a class="headerlink" href="#abschluss-beispiel" title="Permalink to this heading">#</a></h2>
-<p>Es können zusätzlich auch andere Interfaces refernziert werden:</p>
+<p>Es können zusätzlich auch andere Interfaces refernziert werden. Somit können komplexe Interfaces erstellt werden, die auf andere Interfaces aufbauen.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#request constants</span>
 <span class="n">int8</span> <span class="n">FOO</span><span class="o">=</span><span class="mi">1</span>
 <span class="n">int8</span> <span class="n">BAR</span><span class="o">=</span><span class="mi">2</span>
@@ -625,16 +620,15 @@ Diese <code class="docutils literal notranslate"><span class="pre">.srv</span></
 <section id="bauen">
 <h2>Bauen<a class="headerlink" href="#bauen" title="Permalink to this heading">#</a></h2>
 <p>Damit die Interfaces gebaut bzw. zu dem jeweiligen python / c code umgewandelt werden können, müssen folgende Schritte durchgeführt werden:</p>
-<ol class="arabic simple">
-<li><p>Das <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> muss ergänzt für jedes erstellte <code class="docutils literal notranslate"><span class="pre">.msg</span></code> / <code class="docutils literal notranslate"><span class="pre">.srv</span></code> File ergänzt werden:</p></li>
-</ol>
-<p>Setze die folgenden Zeilen dirket über: <code class="docutils literal notranslate"><span class="pre">ament_package()</span></code></p>
+<p>**Ergänzung des <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> **</p>
+<p>Das <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> muss jedes erstellte <code class="docutils literal notranslate"><span class="pre">.msg</span></code> / <code class="docutils literal notranslate"><span class="pre">.srv</span></code> File ergänzt werden</p>
 <p>Angenommen du hättest die folgende Interfaces erstellt:</p>
 <ul class="simple">
 <li><p>“msg/Num.msg”</p></li>
 <li><p>“msg/Sphere.msg”</p></li>
 <li><p>“srv/AddThreeInts.srv”</p></li>
 </ul>
+<p>Setze die folgenden Zeilen dirket über: <code class="docutils literal notranslate"><span class="pre">ament_package()</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
@@ -644,9 +638,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 )
 </pre></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>folgende Abhängigkeiten müssen zum <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> hinzugefügt werden:</p></li>
-</ol>
+<p>*<em>Ergänzung des <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> Files</em></p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;depend&gt;</span>geometry_msgs<span class="nt">&lt;/depend&gt;</span>
 <span class="nt">&lt;buildtool_depend&gt;</span>rosidl_default_generators<span class="nt">&lt;/buildtool_depend&gt;</span>
 <span class="nt">&lt;exec_depend&gt;</span>rosidl_default_runtime<span class="nt">&lt;/exec_depend&gt;</span>
@@ -701,10 +693,11 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
               
               
-              
-              
-                <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../interface.html"
@@ -724,7 +717,10 @@ rosidl_generate_interfaces(${PROJECT_NAME}
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
+</div></div>
+  
 </div>
+
                 </footer>
               
             </div>
@@ -797,8 +793,8 @@ By Florian Bohlken und Jan Albrecht
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
   <footer class="bd-footer">
   </footer>

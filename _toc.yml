@@ -65,6 +65,7 @@ parts:
   - file: ros2/service
     sections:
     - file: ros2/service/beispiel
+    - file: ros2/service/aufgabe
     - file: ros2/service/quiz
   - file: ros2/navigation
     sections:

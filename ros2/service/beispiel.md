@@ -12,28 +12,23 @@ kernelspec:
 
 # Beispiel
 
+Im folgnden werden einige Beispiele für die Verwendung von Services in ROS2 gezeigt.
+
 ## Setup
 
-### Source die ROS2 Umgebung
-
-```bash
-source /opt/ros/iron/setup.bash
-```
+Zunächst muss die Umgebung gestartet werden. Schaue nochmal in [folgendes](../setup/sourcen).
 
 ### Turtlesim
+
+Um die verschiedene Services exemplarisch zu testen eignet sich das turtlesim Paket. Dieses kann mit folgenden Befehlen gestartet werden:
 
 ```bash
 ros2 run turtlesim turtlesim_node
 ```
 
-in einem anderen Terminal:
-
-```bash
-ros2 run turtlesim turtle_teleop_key
-```
-
-
 ## Service Liste
+
+Mit diesem Befehl können zur Verfügung stehende Services abgefragt werden.
 
 Führe folgenden Befehl im Terminal aus um alle Services zu erhalten:
 
@@ -65,7 +60,7 @@ Output:
 /turtlesim/set_parameters_atomically
 ```
 
-Zum erhalt der Services mitsamt Typ führe folgenden Befehl aus:
+Zum erhalt der Services mitsamt des Typs kann folgender Befehl verwendet werden:
 
 ```bash
 ros2 service list -t
@@ -163,11 +158,13 @@ string name
 
 ## Service call
 
-Mit dieser Funktion können wir eine Anfrage an einen Service stellen:
+Mit dieser Funktion können wir eine Anfrage an einen Service stellen. Die allgemeine Syntax ist:
 
 ```bash
 ros2 service call <service_name> <service_type> <arguments>
 ```
+
+Konkret können wir nun den `/clear` Service aufrufen, um die Linien in dem Turtlesim Fenster zu löschen:
 
 ```bash
 ros2 service call /clear std_srvs/srv/Empty
@@ -191,4 +188,104 @@ turtlesim.srv.Spawn_Response(name='turtle2')
 ```
 
 Es sollte eine Neue Schildkröte an der gewünschten Position sichtbar sein.
+
+
+## Implementation in Python
+
+Im folgenden wird die minimale Implementation eines ROS2 Services mit Python gezeigt.
+
+:::{note}
+Es wird davon ausgegangen, dass das `custom_interfaces` Paket bereits erstellt wurde. Dieses besitzt das Interface `AddTwoInts`:
+
+```bash
+int64 a 
+int64 b
+---
+int64 sum
+```
+:::
+
+### Service Server
+
+Der folgende Code zeigt die Implementation eines Service Servers, der zwei Zahlen addiert.
+
+```python
+from custom_interfaces.srv import AddTwoInts
+
+import rclpy
+from rclpy.node import Node
+
+
+class MinimalService(Node):
+
+    def __init__(self):
+        super().__init__('minimal_service')
+        self.srv = self.create_service(AddTwoInts, 'add_two_ints', self.add_two_ints_callback)
+
+    def add_two_ints_callback(self, request, response):
+        response.sum = request.a + request.b
+        self.get_logger().info('Incoming request\na: %d b: %d' % (request.a, request.b))
+
+        return response
+
+
+def main():
+    rclpy.init()
+
+    minimal_service = MinimalService()
+
+    rclpy.spin(minimal_service)
+
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+```
+
+### Service Client
+
+Der folgende Code zeigt die Implementation eines Service Clients, der den Service `add_two_ints` aufruft.
+
+```python
+import sys
+
+from example_interfaces.srv import AddTwoInts
+import rclpy
+from rclpy.node import Node
+
+
+class MinimalClientAsync(Node):
+
+    def __init__(self):
+        super().__init__('minimal_client_async')
+        self.cli = self.create_client(AddTwoInts, 'add_two_ints')
+        while not self.cli.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('service not available, waiting again...')
+        self.req = AddTwoInts.Request()
+
+    def send_request(self, a, b):
+        self.req.a = a
+        self.req.b = b
+        self.future = self.cli.call_async(self.req)
+        rclpy.spin_until_future_complete(self, self.future)
+        return self.future.result()
+
+
+def main():
+    rclpy.init()
+
+    minimal_client = MinimalClientAsync()
+    response = minimal_client.send_request(int(sys.argv[1]), int(sys.argv[2]))
+    minimal_client.get_logger().info(
+        'Result of add_two_ints: for %d + %d = %d' %
+        (int(sys.argv[1]), int(sys.argv[2]), response.sum))
+
+    minimal_client.destroy_node()
+    rclpy.shutdown()
+
+
+if __name__ == '__main__':
+    main()
+```
 
