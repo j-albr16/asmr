@@ -27,11 +27,7 @@ parse:
 exclude_patterns:
   - venv/*
   - README.md
-<<<<<<< HEAD
-  - exercises
-=======
   - exercises/*
->>>>>>> main
 
 # Add a bibtex file so that we can create citations
 # bibtex_bibfiles:

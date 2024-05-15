@@ -12,33 +12,11 @@ kernelspec:
 
 # Beispiel
 
-<<<<<<< HEAD
-Im folgnden werden einige Beispiele für die Verwendung von Services in ROS2 gezeigt.
-
-## Setup
-
-Zunächst muss die Umgebung gestartet werden. Schaue nochmal in [folgendes](../setup/sourcen).
-
-### Turtlesim
-
-Um die verschiedene Services exemplarisch zu testen eignet sich das turtlesim Paket. Dieses kann mit folgenden Befehlen gestartet werden:
-
-```bash
-ros2 run turtlesim turtlesim_node
-```
-
-## Service Liste
-
-Mit diesem Befehl können zur Verfügung stehende Services abgefragt werden.
-
-Führe folgenden Befehl im Terminal aus um alle Services zu erhalten:
-=======
 Im folgenden Text werden einige Beispiele für die Verwendung von Services in ROS2 gezeigt. Als Umgebung hiergür wird das [Turtlesim](../topic/turtlesim.md) Paket verwendet. Zum starten stelle sicher, dass deine ROS2 Umgebung [aktiviert](../setup/sourcen.md) ist und die `turtlesim_node` gestartet ist.
 
 ## Service Liste
 
 Um eine Liste der Services zu erhalten führe folgenden Befehl aus:
->>>>>>> main
 
 ```bash
 ros2 service list
@@ -68,11 +46,7 @@ Output:
 /turtlesim/set_parameters_atomically
 ```
 
-<<<<<<< HEAD
-Zum erhalt der Services mitsamt des Typs kann folgender Befehl verwendet werden:
-=======
 Zusätlich ist es nützlich, die Typen der Services zu kennen. Dies kann mit dem `-t` Flag erreicht werden:
->>>>>>> main
 
 ```bash
 ros2 service list -t
@@ -90,8 +64,6 @@ ros2 service list -t
 ...
 ```
 
-```bash
-```
 
 ## Service Typ
 
@@ -176,11 +148,7 @@ Mit dieser Funktion können wir eine Anfrage an einen Service stellen. Die allge
 ros2 service call <service_name> <service_type> <arguments>
 ```
 
-<<<<<<< HEAD
 Konkret können wir nun den `/clear` Service aufrufen, um die Linien in dem Turtlesim Fenster zu löschen:
-=======
-Mit folgendem Befehl können wir die Linien in der Turtlesim löschen:
->>>>>>> main
 
 ```bash
 ros2 service call /clear std_srvs/srv/Empty
@@ -206,7 +174,6 @@ turtlesim.srv.Spawn_Response(name='turtle2')
 Es sollte eine Neue Schildkröte an der gewünschten Position sichtbar sein.
 
 
-<<<<<<< HEAD
 ## Implementation in Python
 
 Im folgenden wird die minimale Implementation eines ROS2 Services mit Python gezeigt.
@@ -215,34 +182,18 @@ Im folgenden wird die minimale Implementation eines ROS2 Services mit Python gez
 Es wird davon ausgegangen, dass das `custom_interfaces` Paket bereits erstellt wurde. Dieses besitzt das Interface `AddTwoInts`:
 
 ```bash
-int64 a 
-=======
-## Service Implementierung in Python
-
-Im folgenden Beispiel wird eine Service implementiert, der zwei Zahlen addiert. 
-
-:::{note}
-Es wird davon ausgegangen, dass zuvor das interface `AddTwoInts` erstellt wurde. Dieses Interface besitzt folgende Struktur:
-
-```bash
 int64 a
->>>>>>> main
 int64 b
 ---
 int64 sum
 ```
 :::
 
-<<<<<<< HEAD
 ### Service Server
 
 Der folgende Code zeigt die Implementation eines Service Servers, der zwei Zahlen addiert.
 
 ```python
-=======
-### Server
-```python   
->>>>>>> main
 from custom_interfaces.srv import AddTwoInts
 
 import rclpy
@@ -275,18 +226,12 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-<<<<<<< HEAD
 
 ### Service Client
 
 Der folgende Code zeigt die Implementation eines Service Clients, der den Service `add_two_ints` aufruft.
 
-```python
-=======
-### Client
-
 ```python   
->>>>>>> main
 import sys
 
 from example_interfaces.srv import AddTwoInts
@@ -327,7 +272,3 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-<<<<<<< HEAD
-
-=======
->>>>>>> main
