@@ -4,7 +4,6 @@
 # venv and page dirs
 venv/
 _build/
-docs/
 
 # orga stuff - TODO: remove?
 asmr_exercises/
