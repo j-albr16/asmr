@@ -30,7 +30,7 @@ read -p "Do you want to refresh the decker page? (y/n) " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "Refreshing the decker page .."
-    cp -r ../asmr_private/deckes4ex/public/ decker_slides/
+    cp -r ../asmr_private/decks4ex/public/ decker_slides/
 fi
 
 # copy the slides into the jupyterbook folder
