@@ -7,6 +7,7 @@ _build/
 
 # orga stuff - TODO: remove?
 asmr_exercises/
+exercises/
 node_modules/
 orga/
 
