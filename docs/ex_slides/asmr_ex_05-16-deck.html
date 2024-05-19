@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Übungen zur Vorlesung ASMR: Quiz (kinematics), Vorschau Block
+3: Services &amp; Nav2</title>
+
+  <!-- PWA stuff -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="support/pwa/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#84b819" />
+  <link rel="manifest" href="support/pwa/manifest.webmanifest" crossorigin="use-credentials" />
+
+  <link rel="shortcut icon" href="support/icons/favicon.ico">
+
+  <script type="module">
+    /* Store JSON encoded Pandoc meta data in a global variable. */
+    import initializeDecker from "./support/js/decker.js";
+    initializeDecker("ec43bc981.json");
+  </script>
+
+    <!-- Default values for CSS variables can live here. They can be overridden by
+    meta data values. -->
+    <link rel="stylesheet" href="support/css/variables.css">
+
+    <!-- Transfer meta data values from keys `palette.colors` and `css-variables`
+    into a style sheet. Default values can come from `variables.css`. -->
+    <style class="css-declarations">
+      :root {
+                --shade7: #1d1f21;
+                --shade6: #282a2e;
+                --shade5: #4d4d4c;
+                --shade4: #969896;
+                --shade3: #8e908c;
+                --shade2: #d6d6d6;
+                --shade1: #e0e0e0;
+                --shade0: #ffffff;
+                --base0F-fg: #825449;
+                --base0F-ffg: #513733;
+                --base0F-bg: #ceb9b5;
+                --base0F-bbg: #f0ebea;
+                --base0F: #a3685a;
+                --base0E-fg: #6e4887;
+                --base0E-ffg: #453155;
+                --base0E-bg: #c4b5d1;
+                --base0E-bbg: #edeaf1;
+                --base0E: #8959a8;
+                --base0D-fg: #257eb3;
+                --base0D-ffg: #204f6f;
+                --base0D-bg: #acccec;
+                --base0D-bbg: #e8f0f9;
+                --base0D: #2a9ddf;
+                --base0C-fg: #347b80;
+                --base0C-ffg: #264d51;
+                --base0C-bg: #afcacd;
+                --base0C-bbg: #e8eff0;
+                --base0C: #3e999f;
+                --base0B-fg: #6a931c;
+                --base0B-ffg: #435c20;
+                --base0B-bg: #c2d8ab;
+                --base0B-bbg: #edf3e7;
+                --base0B: #84b819;
+                --base0A-fg: #bb9212;
+                --base0A-ffg: #745b1d;
+                --base0A-bg: #f3d8aa;
+                --base0A-bbg: #fbf3e7;
+                --base0A: #eab700;
+                --base09-fg: #c46c20;
+                --base09-ffg: #794521;
+                --base09-bg: #f9c3ab;
+                --base09-bbg: #fdede7;
+                --base09: #f5871f;
+                --base08-fg: #a02526;
+                --base08-ffg: #632123;
+                --base08-bg: #e0acac;
+                --base08-bbg: #f5e8e8;
+                --base08: #c82829;
+                --base07: #1d1f21;
+                --base06: #282a2e;
+                --base05: #4d4d4c;
+                --base04: #969896;
+                --base03: #8e908c;
+                --base02: #d6d6d6;
+                --base01: #e0e0e0;
+                --base00: #ffffff;
+                --accent7-fg: #825449;
+                --accent7-ffg: #513733;
+                --accent7-bg: #ceb9b5;
+                --accent7-bbg: #f0ebea;
+                --accent7: #a3685a;
+                --accent6-fg: #6e4887;
+                --accent6-ffg: #453155;
+                --accent6-bg: #c4b5d1;
+                --accent6-bbg: #edeaf1;
+                --accent6: #8959a8;
+                --accent5-fg: #257eb3;
+                --accent5-ffg: #204f6f;
+                --accent5-bg: #acccec;
+                --accent5-bbg: #e8f0f9;
+                --accent5: #2a9ddf;
+                --accent4-fg: #347b80;
+                --accent4-ffg: #264d51;
+                --accent4-bg: #afcacd;
+                --accent4-bbg: #e8eff0;
+                --accent4: #3e999f;
+                --accent3-fg: #6a931c;
+                --accent3-ffg: #435c20;
+                --accent3-bg: #c2d8ab;
+                --accent3-bbg: #edf3e7;
+                --accent3: #84b819;
+                --accent2-fg: #bb9212;
+                --accent2-ffg: #745b1d;
+                --accent2-bg: #f3d8aa;
+                --accent2-bbg: #fbf3e7;
+                --accent2: #eab700;
+                --accent1-fg: #c46c20;
+                --accent1-ffg: #794521;
+                --accent1-bg: #f9c3ab;
+                --accent1-bbg: #fdede7;
+                --accent1: #f5871f;
+                --accent0-fg: #a02526;
+                --accent0-ffg: #632123;
+                --accent0-bg: #e0acac;
+                --accent0-bbg: #f5e8e8;
+                --accent0: #c82829;
+            }
+      :root.dark {
+                --shade7: #ffffff;
+                --shade6: #e0e0e0;
+                --shade5: #c5c8c6;
+                --shade4: #b4b7b4;
+                --shade3: #969896;
+                --shade2: #373b41;
+                --shade1: #282a2e;
+                --shade0: #1d1f21;
+                --base0F-fg: #ceb9b5;
+                --base0F-ffg: #f0ebea;
+                --base0F-bg: #825449;
+                --base0F-bbg: #513733;
+                --base0F: #a3685a;
+                --base0E-fg: #d5c8da;
+                --base0E-ffg: #f2eff3;
+                --base0E-bg: #8e7796;
+                --base0E-bbg: #594b5e;
+                --base0E: #b294bb;
+                --base0D-fg: #c1cedb;
+                --base0D-ffg: #edf0f4;
+                --base0D-bg: #678298;
+                --base0D-bbg: #42515f;
+                --base0D: #81a2be;
+                --base0C-fg: #c4dbd8;
+                --base0C-ffg: #edf4f3;
+                --base0C-bg: #6e9893;
+                --base0C-bbg: #465f5c;
+                --base0C: #8abeb7;
+                --base0B-fg: #bfd0ac;
+                --base0B-ffg: #ecf1e8;
+                --base0B-bg: #648627;
+                --base0B-bbg: #405423;
+                --base0B: #7da72a;
+                --base0A-fg: #f6dfbc;
+                --base0A-ffg: #fcf5ec;
+                --base0A-bg: #c09f5e;
+                --base0A-bbg: #77633d;
+                --base0A: #f0c674;
+                --base09-fg: #ecc8b6;
+                --base09-ffg: #f9eeea;
+                --base09-bg: #b2764d;
+                --base09-bbg: #6e4a35;
+                --base09: #de935f;
+                --base08-fg: #e2b8b8;
+                --base08-ffg: #f6eaea;
+                --base08-bg: #a35253;
+                --base08-bbg: #653637;
+                --base08: #cc6666;
+                --base07: #ffffff;
+                --base06: #e0e0e0;
+                --base05: #c5c8c6;
+                --base04: #b4b7b4;
+                --base03: #969896;
+                --base02: #373b41;
+                --base01: #282a2e;
+                --base00: #1d1f21;
+                --accent7-fg: #ceb9b5;
+                --accent7-ffg: #f0ebea;
+                --accent7-bg: #825449;
+                --accent7-bbg: #513733;
+                --accent7: #a3685a;
+                --accent6-fg: #d5c8da;
+                --accent6-ffg: #f2eff3;
+                --accent6-bg: #8e7796;
+                --accent6-bbg: #594b5e;
+                --accent6: #b294bb;
+                --accent5-fg: #c1cedb;
+                --accent5-ffg: #edf0f4;
+                --accent5-bg: #678298;
+                --accent5-bbg: #42515f;
+                --accent5: #81a2be;
+                --accent4-fg: #c4dbd8;
+                --accent4-ffg: #edf4f3;
+                --accent4-bg: #6e9893;
+                --accent4-bbg: #465f5c;
+                --accent4: #8abeb7;
+                --accent3-fg: #bfd0ac;
+                --accent3-ffg: #ecf1e8;
+                --accent3-bg: #648627;
+                --accent3-bbg: #405423;
+                --accent3: #7da72a;
+                --accent2-fg: #f6dfbc;
+                --accent2-ffg: #fcf5ec;
+                --accent2-bg: #c09f5e;
+                --accent2-bbg: #77633d;
+                --accent2: #f0c674;
+                --accent1-fg: #ecc8b6;
+                --accent1-ffg: #f9eeea;
+                --accent1-bg: #b2764d;
+                --accent1-bbg: #6e4a35;
+                --accent1: #de935f;
+                --accent0-fg: #e2b8b8;
+                --accent0-ffg: #f6eaea;
+                --accent0-bg: #a35253;
+                --accent0-bbg: #653637;
+                --accent0: #cc6666;
+            }
+      :root {
+            }
+    </style>
+
+    <link rel="stylesheet" href="support/vendor/reveal/dist/reset.css">
+    <link rel="stylesheet" href="support/vendor/reveal/dist/reveal.css">
+    <link rel="stylesheet" href="support/components/components.css">
+    <link rel="stylesheet" href="support/plugins/decker/ui-anchors.css">
+    <link rel="stylesheet" href="support/plugins/whiteboard/whiteboard.css">
+    <link rel="stylesheet" href="support/plugins/menu/menu.css">
+    <link rel="stylesheet" href="support/plugins/feedback/feedback.css">
+    <link rel="stylesheet" href="support/plugins/explain/explain.css">
+      <link rel="stylesheet" href="support/plugins/live-captioning/live-captioning.css">
+      <link rel="stylesheet" href="support/vendor/videojs/video-js.min.css">
+    <link rel="stylesheet" href="support/flyingFocus/flying-focus.css">
+    <link rel="stylesheet" href="support/plugins/quiz-wue/quiz-wue.css">
+    <link rel="stylesheet" href="support/css/deck.css">
+    <link rel="stylesheet" href="support/css/msms-deck.css">
+    <link rel="stylesheet" href="support/plugins/handout/handout.css">
+      
+</head>
+
+<body >
+  <div class="reveal">
+    <div class="slides">
+
+      <section id="title-slide">
+  <div class="decker">
+    <div class="alignment">
+      <header class="background-on-accent">
+        <h1 class="title">Übungen zur Vorlesung ASMR</h1>
+                <h2 class="subtitle">Quiz (kinematics), Vorschau Block
+3: Services &amp; Nav2</h2>
+              </header>
+
+      
+            <div class="authors">
+                <div class="author">
+                  <p>
+                    Jan Albrecht
+                  </p>
+                  </div>
+                <div class="author">
+                  <p>
+                    Florian Bohlken
+                  </p>
+                  </div>
+              </div>
+            
+      
+            <div class="affiliation">
+              <p>
+                Universitat Münster
+              </p>
+              </div>
+      
+      
+      
+      <div class="logos">
+                <div class="logo">
+          <img src="./support/assets/ms-logo-light.svg">
+        </div>
+                        </div>
+            <a class="decker-link" href="https://decker-edu.github.io/decker/">🚀 by Decker</a>
+          </div>
+  </div>
+</section>            
+<section id="allgemeines" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Allgemeines</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Wer Zusatzfunktionen hat, soll uns nochmal für die Bonuspunkte schreiben</li>
+<li class="fragment">Falls ihr Fragen bezüglich eurer Bewertung habt oder euch falsch bewertet fühlt, kommt nochmal auf uns zu</li>
+<li class="fragment">Quizzes zum Teil LLM unterstützt generiert
+<ul class="incremental">
+<li class="fragment">Vorwiegend als Diskussionsanregung gedacht</li>
+<li class="fragment">Zum Lernen primär die Vorlesung verwenden</li>
+</ul></li>
+<li class="fragment">Nun auch beide Dateien von Aufgabe 4 direkt über das Learnweb erreichbar</li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="korrektur" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Korrektur</h1>
+</div>
+</div>
+</section>
+<section id="working-space-ordner" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Working Space Ordner</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">dürfen keine Leerzeichen enthalten</li>
+<li class="fragment"><code>__init__.py</code> im Nodefolder</li>
+<li class="fragment"><code>colcon build</code> nur im WS-Stammverzeichnis ausführen !!</li>
+<li class="fragment">im <code>setup.py</code> File den launch Folder mit hinzufügen nicht vergessen</li>
+<li class="fragment"><code>colcon</code> ist in dev tools enthalten</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="abgaben" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Abgaben</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">zip Format (<code>zip -r &lt;archive.zip&gt; &lt;folder_ws&gt;</code>)
+<ul class="incremental">
+<li class="fragment">erst packen, dann im Explorer bewegen</li>
+</ul></li>
+<li class="fragment">soll bereinigt abgegeben werden (nur <code>src/</code>)
+<ul class="incremental">
+<li class="fragment">alle <code>build/</code>, <code>install/</code> und <code>log/</code> Ordner löschen</li>
+<li class="fragment">insbesondere keine <code>__pycache__</code>, <code>__MACOSX</code> etc</li>
+<li class="fragment">keine leeren Müllordner (wenn wir suchen müssen gibt’s Abzug)</li>
+</ul></li>
+<li class="fragment">Benennung einheitlich
+<ul class="incremental">
+<li class="fragment">(TODO: System ausdenken)</li>
+</ul></li>
+<li class="fragment"><strong>immer</strong> eine <code>README.md</code> anlegen, wie die Abgabe zu verwenden ist
+<ul class="incremental">
+<li class="fragment">auf Eigenheiten eingehen</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="python" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>python</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">ROS Kommentiert keine “Anfänger/Syntaxfehler”
+<ul class="incremental">
+<li class="fragment">IDE ist hier zu empfehlen</li>
+</ul></li>
+<li class="fragment">Methoden mit gleichem Namen überschreiben vorangegangene</li>
+<li class="fragment">Einrückung ist wichtig !!</li>
+<li class="fragment">für gewöhnlich kann man <code>global</code> Variablen vermeiden
+<ul class="incremental">
+<li class="fragment">und sollte das auch</li>
+</ul></li>
+<li class="fragment">statt <code>print</code> (zB bei Hello World)
+<ul class="incremental">
+<li class="fragment"><a href="https://docs.ros.org/en/humble/Tutorials/Demos/Logging-and-logger-configuration.html">logger</a> nutzen - nachher sieht man Konsole kaum noch</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="wenn-etwas-nicht-geht" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Wenn etwas nicht geht</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Beschreiben was nicht geht</li>
+<li class="fragment">Beschreiben was man probiert hat</li>
+<li class="fragment">Auflisten, in welchen Quellen man nach einer Antwort gesucht hat</li>
+<li class="fragment">in die README.md</li>
+<li class="fragment">nicht laufenden Code mit einreichen</li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="zum-aktuellen-zettel" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Zum aktuellen Zettel</h1>
+</div>
+</div>
+</section>
+<section id="arctan2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1><code>arctan2</code></h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">im Gegensatz zum klassischen <span class="math inline">\(\arctan\)</span> können hier konkrete Koordinaten in allen vier Quadranten angegeben werden</li>
+<li class="fragment"><code>arctan2(x,y)</code> gibt dann entsprechend den Winkel <span class="math inline">\(\theta\)</span> zurück, mit dem man vom Ursprung diese Koordinate erreicht.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sympy" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>sympy</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment"><a href="https://sso.uni-muenster.de/LearnWeb/learnweb2/mod/resource/view.php?id=3314365">Jupyternotebook</a> zur Matrizenmultiplikation im Learnweb</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-4a" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Aufgabe 4a)</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Vorgeschlagene Ausgabewerte (Kommentar) in einem Fall falsch</li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="quiz" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Quiz</h1>
+</div>
+</div>
+</section>
+<section id="frage-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 1</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Was versteht man unter direkter Kinematik?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Die Berechnung der gewünschten Gelenkwinkel aus einer gegebenen Endeffektorposition<ul>
+<li>Dies beschreibt die inverse Kinematik.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Die Berechnung der Endeffektorposition und -orientierung aus gegebenen Gelenkwinkeln<ul>
+<li>Richtig, bei der direkten Kinematik wird die Position und Orientierung des Endeffektors basierend auf den Gelenkwinkeln berechnet.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 2</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Warum ist die Lösung der inversen Kinematik oft schwieriger als die der direkten Kinematik?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />Wegen der nichtlinearen Gleichungen und möglichen Mehrdeutigkeiten<ul>
+<li>Genau, die inversen Kinematikprobleme sind oft schwerer zu lösen, da sie komplexe nichtlineare Gleichungen und oft mehrere Lösungsmöglichkeiten umfassen.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Aufgrund der einfachen algebraischen Strukturen<ul>
+<li>Dieses Statement ist falsch, da die inversen Kinematik Probleme oft komplexe, nichtlineare Gleichungen beinhalten.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-3---jacobian-war-noch-nicht---also-vorschau" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 3 - Jacobian war noch nicht - also Vorschau</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Was ist ein typisches Problem bei der Anwendung der Jacobian-Inversion zur Lösung der inversen Kinematik?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Zeitliche Diskretisierung<ul>
+<li>Dies ist eher ein Problem der numerischen Integration und weniger spezifisch zur Jacobian-Inversion.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Diskretisierungsfehler<ul>
+<li>Diese betreffen die numerische Genauigkeit im Allgemeinen, sind aber nicht spezifisch für die Jacobian-Inversion.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Singularitäten<ul>
+<li>Korrekt, Singularitäten treten auf, wenn der Jacobian nicht mehr invertierbar ist, was zu Schwierigkeiten bei der Lösung führen kann.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-4" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 4</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wofür stehen die Elemente in einer homogenen Transformationsmatrix?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />Rotation und Translation des Koordinatensystems<ul>
+<li>Genau, die Elemente beschreiben die Rotation (in den oberen 3x3-Elementen) und die Translation (in den letzten drei Elementen der vierten Spalte).</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Winkel und Längen der Roboterarme<ul>
+<li>Diese Begriffe betreffen eher die Parameter der DH-Notation und beschreiben nicht direkt die Elemente einer homogenen Transformationsmatrix.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-5" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 5</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welche Matrizen werden in der Vorwärtskinematik hauptsächlich verwendet?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Rotationsmatrizen und Translationsmatrizen<ul>
+<li>Das ist ein Teil der richtigen Antwort, aber Rotations- und Translationsmatrizen werden in homogenen Transformationsmatrizen zusammengefasst.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Homogene Transformationsmatrizen<ul>
+<li>Richtig, in der Vorwärtskinematik werden hauptsächlich homogene Transformationsmatrizen verwendet, die sowohl Rotation als auch Translation beinhalten.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-6" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 6</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wie lautet die allgemeine Form einer homogenen Transformationsmatrix <span class="math inline">\(T\)</span>?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" /><span class="math inline">\(T = \begin{bmatrix} R \\ t \end{bmatrix}\)</span><ul>
+<li>Unvollständige Notation, es fehlt die Dimensionserweiterung und der letzte Zeilenvektor.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" /><span class="math inline">\(T = \begin{bmatrix} R &amp; t \\ 0 &amp; 1 \end{bmatrix}\)</span><ul>
+<li>Richtig, hier ist <span class="math inline">\(R\)</span> die 3x3-Rotationsmatrix und <span class="math inline">\(t\)</span> der 3x1-Translationsvektor. Die letzte Zeile ist <span class="math inline">\([0, 0, 0, 1]\)</span> für die homogene Koordinatenerweiterung.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(T = \begin{bmatrix} R &amp; 0 \\ t &amp; 1 \end{bmatrix}\)</span><ul>
+<li>Falsche Notation, die Position der Übersetzung <span class="math inline">\(t\)</span> und der Nullvektor ist vertauscht.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-7" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 7</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wie multipliziert man zwei homogene Transformationsmatrizen <span class="math inline">\(T_1\)</span> und <span class="math inline">\(T_2\)</span>?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />Durch klassische Matrizenmultiplikation<ul>
+<li>Korrekt, zwei homogene Transformationsmatrizen werden durch klassische Matrizenmultiplikation miteinander multipliziert, um die Gesamttransformation zu erhalten.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Durch elementweise Addition<ul>
+<li>Nein, das ist nicht korrekt; Transformationsmatrizen werden nicht elementweise addiert.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Durch die Determinante<ul>
+<li>Falsch, die Determinante spielt bei der Multiplikation von Transformationsmatrizen keine Rolle.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-8" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 8</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Gegeben eine homogene Transformationsmatrix <span class="math display">\[T = \begin{pmatrix} 0 &amp; -1 &amp; 0 &amp; 3 \\ 1 &amp; 0 &amp; 0 &amp; 4 \\ 0 &amp; 0 &amp; 1 &amp; 5 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{pmatrix}.\]</span> Was beschreibt die Translation?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" /><span class="math inline">\((0, 1, 0)\)</span><ul>
+<li>Falsch, das ist ein Teil der Rotationsmatrix, nicht der Translation.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\((0, 0, 1, 1)\)</span><ul>
+<li>Falsch, dies ist keine gültige Beschreibung für die Translation in der Transformationsmatrix.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" /><span class="math inline">\((3, 4, 5)\)</span><ul>
+<li>Richtig, die Translation wird durch die letzte Spalte <span class="math inline">\((3, 4, 5)^\top\)</span> der Matrix beschrieben.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-9" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 9</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wie lautet die Ergebnis-Transformationsmatrix <span class="math inline">\(T\)</span> aus der Multiplikation der beiden Matrizen <span class="math inline">\(T_1 = \begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 2 \\ 0 &amp; 1 &amp; 0 &amp; 3 \\ 0 &amp; 0 &amp; 1 &amp; 4 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span> und <span class="math inline">\(T_2 = \begin{pmatrix} 0 &amp; -1 &amp; 0 &amp; -2 \\ 1 &amp; 0 &amp; 0 &amp; 3 \\ 0 &amp; 0 &amp; 1 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span>?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" /><span class="math inline">\(\begin{pmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 5 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span><ul>
+<li>Dies ist falsch, die Berechnung ist nicht richtig.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" /><span class="math inline">\(\begin{pmatrix} 0 &amp; -1 &amp; 0 &amp; 0 \\ 1 &amp; 0 &amp; 0 &amp; 6 \\ 0 &amp; 0 &amp; 1 &amp; 5 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span><ul>
+<li>Richtig, dies ist das korrekte Ergebnis nach der Multiplikation der beiden Matrizen.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(\begin{pmatrix} 0 &amp; 1 &amp; 0 &amp; -6 \\ -1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; -5 \\ 0 &amp; 0 &amp; 0 &amp; 1 \end{pmatrix}\)</span><ul>
+<li>Falsch, dies ist die inverse Matrix zur korrekten Lösung.</li>
+</ul></li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="vorschau" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Vorschau</h1>
+</div>
+</div>
+</section>
+<section id="ros2-services" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>ROS2-Services</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Abschnitt im Jupyter-Book überarbeitet</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="nav2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Nav2</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Suchmaschinen und Referenzen führen häufig zu <del><a href="https://navigation.ros.org/" class="uri">https://navigation.ros.org/</a></del>
+<ul class="incremental">
+<li class="fragment">zur Zeit offline</li>
+</ul></li>
+<li class="fragment">Erreichbar unter <a href="https://docs.nav2.org/" class="uri">https://docs.nav2.org/</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<code class="sourceCode markdown" style="display:none;"></code>
+
+    </div>
+  </div>
+  
+  <script src="support/vendor/videojs/video.min.js"></script>
+  <script src="support/vendor/chartjs/chart.umd.js"></script>
+  <script type="module" src="support/components/custom-dialog.js"></script>
+  <script type="module" src="./support/js/color-scheme.js"></script>
+
+<script type="module">
+  // import Reveal and all plugins
+  import Reveal from './support/vendor/reveal/dist/reveal.esm.js';
+  import deckerPlugin from './support/plugins/decker/decker.js';
+  import uiAnchorsPlugin from './support/plugins/decker/ui-anchors.js'
+  import mathPlugin from './support/plugins/math/math.js';
+  import whiteboardPlugin from './support/plugins/whiteboard/whiteboard.js';
+  import sagePlugin from './support/plugins/sage/sage.js';
+  import searchPlugin from './support/plugins/search/search.js';
+  import zoomPlugin from './support/plugins/zoom/zoom.js';
+  import printPlugin from './support/plugins/print/print.js';
+  import jinglesPlugin from './support/plugins/jingles/jingles.js';
+  import quizPlugin from './support/plugins/quiz/quiz.js';
+  import quizWuePlugin from './support/plugins/quiz-wue/quiz-wue.js';
+  import explainPlugin from './support/plugins/explain/explain.js';
+  import chartsPlugin from './support/plugins/charts/charts.js';
+  import menuPlugin from './support/plugins/menu/menu.js';
+  import feedbackPlugin from './support/plugins/feedback/feedback.js';
+  import notesPlugin from './support/vendor/reveal/plugin/notes/notes.esm.js';
+    import captionPlugin from './support/plugins/live-captioning/live-captioning.js';
+    import a11yPlugin from './support/plugins/a11y/a11y.js';
+  import handoutPlugin from './support/plugins/handout/handout.js';
+
+  let revealConfig = { 
+    // reveal configuration (see https://revealjs.com/config/)
+    ...Decker.meta.reveal,
+
+    // plugin configuration
+    math: { mathjax: String.raw`support/vendor/mathjax/`, ...Decker.meta.math },
+    chart: Decker.meta.chart,
+    menu: Decker.meta.menu,
+    explain: Decker.meta.explain,
+    feedback: Decker.meta.feedback || Decker.meta["decker-engine"],
+    jingles: Decker.meta.jingles,
+    whiteboard: Decker.meta.whiteboard,
+
+    // list of plugins
+    plugins: [
+      deckerPlugin,
+      uiAnchorsPlugin,
+      sagePlugin,
+      mathPlugin,
+      chartsPlugin,
+      whiteboardPlugin,
+      searchPlugin,
+      zoomPlugin,
+      printPlugin,
+      jinglesPlugin,
+      quizPlugin,
+      quizWuePlugin,
+      explainPlugin,
+      menuPlugin,
+      feedbackPlugin,
+      notesPlugin,
+            captionPlugin,
+            a11yPlugin,
+      handoutPlugin
+    ]
+  };
+
+  Reveal.initialize(revealConfig);
+</script>
+  
+
+</body>
+</html>
