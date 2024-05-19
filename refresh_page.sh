@@ -1,11 +1,10 @@
 #!/bin/bash
 
 # check for arguments
-while getopts f:n: flag
+while getopts d: flag
 do
     case "${flag}" in
-        f) decker="force";;
-        n) decker="none";;
+        d) decker=${OPTARG};;
     esac
 done
 
