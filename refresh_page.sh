@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # check for arguments
-while getopts fd:nd: flag
+while getopts f:n: flag
 do
     case "${flag}" in
-        fd) decker="force";;
-        nd) decker="none";;
+        f) decker="force";;
+        n) decker="none";;
     esac
 done
 
