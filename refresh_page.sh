@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# check for arguments
+while getopts fd:nd: flag
+do
+    case "${flag}" in
+        fd) decker="force";;
+        nd) decker="none";;
+    esac
+done
+
 # change to the root directory of the repository
 git checkout main
 git pull
@@ -25,12 +34,20 @@ git merge main --no-edit
 # rebuild the page
 make rebuild
 
-# ask if decker should be refreshed
-read -p "Do you want to refresh the decker page? (y/n) " -n 1 -r
-echo
-if [[ $REPLY =~ ^[Yy]$ ]]; then
+# check if the decker page should be refreshed
+if [ "$decker" = "force" ]; then
     echo "Refreshing the decker page .."
     cp -r ../asmr_private/decks4ex/public/ decker_slides/
+elif [ "$decker" = "none" ]; then
+    echo "Skipping the decker page refresh .."
+else
+    # ask if decker should be refreshed
+    read -p "Do you want to refresh the decker page? (y/n) " -n 1 -r
+    echo
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        echo "Refreshing the decker page .."
+        cp -r ../asmr_private/decks4ex/public/ decker_slides/
+    fi
 fi
 
 # copy the slides into the jupyterbook folder
