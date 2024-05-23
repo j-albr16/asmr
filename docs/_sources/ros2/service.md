@@ -1,6 +1,6 @@
 # Service
 
-_Services_ (Dienste) sind ein weiteres wichtiges Kommunikationsmittel in ROS2, die es ermöglichen, synchrone Anfragen und Antworten zwischen verschiedenen [Knoten](node.md) auszutauschen. Während [_Topics_](topic.md) verwendet werden, um asynchrone Datenströme zu übertragen, dienen _Services_ zur Verwaltung von synchroner Kommunikation zwischen Knoten.
+_Services_ (Dienste) sind ein weiteres wichtiges Kommunikationsmittel in ROS2, die es ermöglichen, synchrone und asynchrone Anfragen und Antworten zwischen verschiedenen [Knoten](node.md) auszutauschen. Während [_Topics_](topic.md) verwendet werden, um asynchrone Datenströme zu übertragen, dienen _Services_ zur Verwaltung von synchroner Kommunikation zwischen Knoten.
 
 ## Schlüsselkonzepte
 
@@ -15,9 +15,6 @@ _Services_ (Dienste) sind ein weiteres wichtiges Kommunikationsmittel in ROS2, d
 
 ### _Service_-Namen
    Jeder _Service_ hat einen eindeutigen Namen, der innerhalb des ROS2-Systems verwendet wird, um auf den _Service_ zuzugreifen. _Service_-Namen sind ähnlich wie _Topic_-Namen strukturiert, z.B., `/get_distance`.
-
-### Synchrone Kommunikation
-   Im Gegensatz zu _Topics_, bei denen Daten asynchron ausgetauscht werden, sind _Services_ für synchrone Kommunikation konzipiert. Der _Service-Client_ sendet eine Anfrage an den _Service-Server_ und wartet, bis eine Antwort erhalten wird. Dies ermöglicht es, auf Anfragen und Antworten zeitlich genau abgestimmt zu reagieren.
 
 ## Beispiel
 
