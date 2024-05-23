@@ -22,7 +22,7 @@ Um eine Liste der Services zu erhalten führe folgenden Befehl aus:
 ros2 service list
 ```
 
-Output:
+Es sollte folgende Ausgabe erscheinen:
 
 ```bash
 /clear
@@ -52,6 +52,8 @@ Zusätlich ist es nützlich, die Typen der Services zu kennen. Dies kann mit dem
 ros2 service list -t
 ```
 
+Anschließend werden auf dem Terminal die zur verfügung stehenden Services mit ihren Typen angezeigt:
+
 ```bash
 /clear [std_srvs/srv/Empty]
 /kill [turtlesim/srv/Kill]
@@ -75,11 +77,13 @@ Der Typ eines Services gibt an, wie die Request und die Response strukturiert si
 ros2 service type <service_name>
 ```
 
+Im folgenden können wir nun den konkreten Typ des `clear` Services herausfinden:
+
 ```bash
 ros2 service type /clear
 ```
 
-Output:
+Anschließend wird uns der Typ des Services angezeigt:
 
 ```bash
 std_srvs/srv/Empty
@@ -95,11 +99,13 @@ Diese Funktion kann man verwenden um Services mit einem bestimmten Typ zu finden
 ros2 service find <type_name>
 ```
 
+Mit folgendem Befehl suchen wir nun alle Services mit dem Typ `std_srvs/srv/Empty`:
+
 ```bash
-ros2 interface show std_srvs/srv/Empty
+ros2 service find std_srvs/srv/Empty
 ```
 
-Output:
+Es sollte folgende Ausgabe erscheinen:
 
 ```bash
 /clear
@@ -156,7 +162,7 @@ Mit folgendem Befehl können wir die Linien in der Turtlesim löschen:
 ros2 service call /clear std_srvs/srv/Empty
 ```
 
-Es sollten jetzt keine Linien mehr in dem Tutrlesim Fenster zu sehen sein.
+Es sollten jetzt keine Linien mehr in dem Turtlesim Fenster zu sehen sein.
 
 Nun versuchen wir eine Schildkröte an einer Position neue zu setzen:
 
@@ -173,7 +179,7 @@ response:
 turtlesim.srv.Spawn_Response(name='turtle2')
 ```
 
-Es sollte eine Neue Schildkröte an der gewünschten Position sichtbar sein.
+Es sollte eine neue Schildkröte an der gewünschten Position sichtbar sein.
 
 
 ## Service Implementierung in Python
