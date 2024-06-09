@@ -36,6 +36,7 @@ make rebuild
 # check if the decker page should be refreshed
 if [ "$decker" = "force" ]; then
     echo "Refreshing the decker page .."
+    rm -rf decker_slides/
     cp -r ../asmr_private/decks4ex/public/ decker_slides/
 elif [ "$decker" = "none" ]; then
     echo "Skipping the decker page refresh .."
@@ -45,6 +46,7 @@ else
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         echo "Refreshing the decker page .."
+        rm -rf decker_slides/
         cp -r ../asmr_private/decks4ex/public/ decker_slides/
     fi
 fi
