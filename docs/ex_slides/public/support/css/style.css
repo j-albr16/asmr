@@ -1,0 +1,419 @@
+/* Style CSS for slides that is also used in pages and handouts. */
+
+/* Text */
+body {
+  font-family: sans-serif;
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+/* Inline code */
+code {
+  font-family: monospace;
+}
+
+/* Code blocks. */
+span.pre > code,
+pre > code {
+  font-size: 90%;
+  line-height: 1.2;
+}
+
+span.pre.small > code,
+pre.small > code {
+  font-size: 90%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: oblique;
+}
+
+pre {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+
+  margin-top: 0;
+  margin-bottom: var(--vertical-margin);
+}
+
+h2,
+summary {
+  font-size: 1.2em;
+  font-weight: bold;
+
+  margin-top: 0;
+  margin-bottom: var(--vertical-margin);
+}
+
+summary {
+  cursor: pointer;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: var(--vertical-margin);
+}
+
+li {
+  margin-top: 0;
+  margin-bottom: var(--vertical-margin);
+}
+
+ul {
+  margin-top: 0;
+  margin-left: var(--list-indent);
+  list-style: outside disc;
+  margin-bottom: var(--vertical-margin);
+}
+
+ol {
+  margin-top: 0;
+  margin-bottom: var(--vertical-margin);
+  margin-left: var(--list-indent);
+  list-style: outside disc;
+}
+
+ul li ul li {
+  list-style-type: circle;
+}
+
+div.media {
+  margin-bottom: var(--vertical-margin);
+}
+
+/* Add a top margin to nested lists. */
+li > :is(ul, ol) {
+  margin-top: var(--vertical-margin);
+}
+
+/* Move a little closer to the image. */
+figcaption {
+  padding-top: calc(0.5 * var(--vertical-margin));
+}
+
+/* Links */
+a,
+a:visited,
+a:active {
+  color: var(--accent5-fg);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent5);
+  text-decoration: none;
+}
+
+/* Video element background may be visible when poster is used */
+video {
+  background-color: black;
+}
+
+/* Tables */
+table {
+  font-size: 0.9em;
+  margin-bottom: var(--vertical-margin);
+  border-collapse: collapse;
+  overflow-x: auto;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+  margin-bottom: var(--vertical-margin);
+}
+tbody {
+  margin-top: 0.5em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+th {
+  border-top: 1px solid black;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  font-weight: bolder;
+}
+td {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+/* Blocks have some padding and a border to allow for highlighting without
+disturbing the layout. */
+div.block {
+  display: flow-root; /* Prevents margin collapse. Allows negative margin here. */
+  border-radius: var(--block-border-radius);
+  border: var(--block-border-width) solid rgba(0, 0, 0, 0);
+  padding: var(--block-outset);
+  margin-bottom: calc(1 * var(--vertical-margin));
+}
+
+/* No bottom margin for last elements in a stack. */
+:is(h1, p, div, ul, ol, table):last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Align headers with blocks. */
+section h1 {
+  padding: 0 calc(var(--block-border-width) + var(--block-outset));
+}
+
+/* This is ugly */
+/* span.math.display {
+  display: block;
+  margin: 0.25em;
+  padding: 0.25em;
+  background-color: var(--shade1);
+  border-radius: var(--block-border-radius);
+} */
+
+/* Stretch the block header margin to the block border so that highlighting
+works. */
+div.block h2 {
+  padding: var(--block-outset);
+
+  margin-top: calc(-1 * var(--block-outset));
+  margin-left: calc(-1 * var(--block-outset));
+  margin-right: calc(-1 * var(--block-outset));
+
+  border-radius: var(--block-border-radius) var(--block-border-radius) 0 0;
+}
+
+/* Highlight colors and borders. We need three colors for each highlight state:
+text, background and border. */
+div.block.accent0 {
+  background-color: var(--accent0-bbg);
+}
+
+div.block.accent1 {
+  background-color: var(--accent1-bbg);
+}
+
+div.block.accent2 {
+  background-color: var(--accent2-bbg);
+}
+
+div.block.accent3 {
+  background-color: var(--accent3-bbg);
+}
+
+div.block.accent4 {
+  background-color: var(--accent4-bbg);
+}
+
+div.block.accent5 {
+  background-color: var(--accent5-bbg);
+}
+
+div.block.accent6 {
+  background-color: var(--accent6-bbg);
+}
+
+div.block.accent7 {
+  background-color: var(--accent7-bbg);
+}
+
+span:is(.accent0, .accent1, .accent2, .accent3, .accent4, .accent5, .accent6, .accent7) {
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  margin-left: -0.2em;
+  margin-right: -0.2em;
+}
+
+span.accent0 {
+  color: var(--accent0);
+}
+
+span.accent0.bg {
+  color: var(--shade6);
+  background-color: var(--accent0);
+}
+
+span.accent1 {
+  color: var(--accent1);
+}
+
+span.accent1.bg {
+  color: var(--shade6);
+  background-color: var(--accent1);
+}
+
+span.accent2 {
+  color: var(--accent2);
+}
+
+span.accent2.bg {
+  color: var(--shade6);
+  background-color: var(--accent2);
+}
+
+span.accent3 {
+  color: var(--accent3);
+}
+
+span.accent3.bg {
+  color: var(--shade6);
+  background-color: var(--accent3);
+}
+
+span.accent4 {
+  color: var(--accent4);
+}
+
+span.accent4.bg {
+  color: var(--shade6);
+  background-color: var(--accent4);
+}
+
+span.accent5 {
+  color: var(--accent5);
+}
+
+span.accent5.bg {
+  color: var(--shade6);
+  background-color: var(--accent5);
+}
+
+span.accent6 {
+  color: var(--accent6);
+}
+
+span.accent6.bg {
+  color: var(--shade6);
+  background-color: var(--accent6);
+}
+
+span.accent7 {
+  color: var(--accent7);
+}
+
+span.accent7.bg {
+  color: var(--shade6);
+  background-color: var(--accent7);
+}
+
+/* A block with centered text can look good at times. */
+div.block[align="center"] {
+  text-align: center;
+}
+div.block[align="left"] {
+  text-align: left;
+}
+div.block[align="right"] {
+  text-align: right;
+}
+
+/* A slide with centered text can look good at times. */
+section[align="center"] {
+  text-align: center;
+}
+section[align="left"] {
+  text-align: left;
+}
+section[align="right"] {
+  text-align: right;
+}
+
+[align="center"] table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reveal div.css-columns {
+  column-count: 2;
+  column-gap: var(--margin-columns);
+  column-rule-style: none;
+}
+
+/* Source Code */
+
+/* Pandoc wraps div.sourceCode around the pre > code element. Highlightjs does
+not.*/
+
+pre,
+span.pre {
+  background-color: var(--code-background-color);
+}
+
+div.sourceCode > pre {
+  padding: 0 var(--block-outset);
+}
+
+/* Inverse colors */
+section.slide:is(.inverse, .has-dark-background) {
+  color: var(--background-color);
+}
+
+/* Scroll bars */
+/* .reveal ::-webkit-scrollbar {
+  width: 9px;
+}
+.reveal ::-webkit-scrollbar-track {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.reveal ::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.reveal ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+} */
+
+sup,
+.footnoteref {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.footnoteref {
+  font-weight: 900;
+}
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin-bottom: var(--margin-bottom-third);
+  margin-left: var(--border-decoration-width);
+  margin-right: var(--border-decoration-width);
+  padding: calc(var(--spacing-vertical-base) * 0.25);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  font-style: italic;
+}
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block;
+}
+
+/* buttons with font-awesome icons */
+button.fa-button {
+  display: inline-block;
+  position: relative;
+  font-size: calc(var(--icon-size) * 1);
+  width: calc(var(--icon-size) * 2);
+  height: calc(var(--icon-size) * 2);
+  padding: calc(var(--icon-size) * 0.15);
+  margin: calc(var(--icon-size) * 0.15);
+  background: none;
+  font-family: "Font Awesome 5 Free";
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+button.fa-button:focus,
+button.fa-button::-moz-focus-inner {
+  outline: none;
+  border: none;
+}

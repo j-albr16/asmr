@@ -1,0 +1,56 @@
+/* Here be CSS */
+
+@import url("../vendor/fontawesome/css/all.css");
+@import url("./structure.css");
+@import url("./style.css");
+@import url("./media.css");
+
+html {
+  font-size: 16px;
+}
+
+body.page {
+  box-sizing: border-box;
+  max-width: 52em;
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+}
+
+section.slide {
+  margin: 1em 0;
+  padding-top: 1em;
+  border-top: solid 0.05em var(--shade6);
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+code {
+  font-size: 100%;
+}
+
+pre > code {
+  font-size: 90%;
+}
+
+figure {
+  margin: 0;
+}
+
+p {
+  word-wrap: normal;
+}
+
+ul,
+ol {
+  margin: 0;
+}
+
+div.footnotes {
+  font-size: 72%;
+}

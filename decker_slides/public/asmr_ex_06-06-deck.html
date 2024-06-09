@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Übungen zur Vorlesung ASMR: Besprechung Block 2 / Fragen Block
+3</title>
+
+  <!-- PWA stuff -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="support/pwa/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#84b819" />
+  <link rel="manifest" href="support/pwa/manifest.webmanifest" crossorigin="use-credentials" />
+
+  <link rel="shortcut icon" href="support/icons/favicon.ico">
+
+  <script type="module">
+    /* Store JSON encoded Pandoc meta data in a global variable. */
+    import initializeDecker from "./support/js/decker.js";
+    initializeDecker("fe7046076.json");
+  </script>
+
+    <!-- Default values for CSS variables can live here. They can be overridden by
+    meta data values. -->
+    <link rel="stylesheet" href="support/css/variables.css">
+
+    <!-- Transfer meta data values from keys `palette.colors` and `css-variables`
+    into a style sheet. Default values can come from `variables.css`. -->
+    <style class="css-declarations">
+      :root {
+                --shade7: #1d1f21;
+                --shade6: #282a2e;
+                --shade5: #4d4d4c;
+                --shade4: #969896;
+                --shade3: #8e908c;
+                --shade2: #d6d6d6;
+                --shade1: #e0e0e0;
+                --shade0: #ffffff;
+                --base0F-fg: #825449;
+                --base0F-ffg: #513733;
+                --base0F-bg: #ceb9b5;
+                --base0F-bbg: #f0ebea;
+                --base0F: #a3685a;
+                --base0E-fg: #6e4887;
+                --base0E-ffg: #453155;
+                --base0E-bg: #c4b5d1;
+                --base0E-bbg: #edeaf1;
+                --base0E: #8959a8;
+                --base0D-fg: #257eb3;
+                --base0D-ffg: #204f6f;
+                --base0D-bg: #acccec;
+                --base0D-bbg: #e8f0f9;
+                --base0D: #2a9ddf;
+                --base0C-fg: #347b80;
+                --base0C-ffg: #264d51;
+                --base0C-bg: #afcacd;
+                --base0C-bbg: #e8eff0;
+                --base0C: #3e999f;
+                --base0B-fg: #6a931c;
+                --base0B-ffg: #435c20;
+                --base0B-bg: #c2d8ab;
+                --base0B-bbg: #edf3e7;
+                --base0B: #84b819;
+                --base0A-fg: #bb9212;
+                --base0A-ffg: #745b1d;
+                --base0A-bg: #f3d8aa;
+                --base0A-bbg: #fbf3e7;
+                --base0A: #eab700;
+                --base09-fg: #c46c20;
+                --base09-ffg: #794521;
+                --base09-bg: #f9c3ab;
+                --base09-bbg: #fdede7;
+                --base09: #f5871f;
+                --base08-fg: #a02526;
+                --base08-ffg: #632123;
+                --base08-bg: #e0acac;
+                --base08-bbg: #f5e8e8;
+                --base08: #c82829;
+                --base07: #1d1f21;
+                --base06: #282a2e;
+                --base05: #4d4d4c;
+                --base04: #969896;
+                --base03: #8e908c;
+                --base02: #d6d6d6;
+                --base01: #e0e0e0;
+                --base00: #ffffff;
+                --accent7-fg: #825449;
+                --accent7-ffg: #513733;
+                --accent7-bg: #ceb9b5;
+                --accent7-bbg: #f0ebea;
+                --accent7: #a3685a;
+                --accent6-fg: #6e4887;
+                --accent6-ffg: #453155;
+                --accent6-bg: #c4b5d1;
+                --accent6-bbg: #edeaf1;
+                --accent6: #8959a8;
+                --accent5-fg: #257eb3;
+                --accent5-ffg: #204f6f;
+                --accent5-bg: #acccec;
+                --accent5-bbg: #e8f0f9;
+                --accent5: #2a9ddf;
+                --accent4-fg: #347b80;
+                --accent4-ffg: #264d51;
+                --accent4-bg: #afcacd;
+                --accent4-bbg: #e8eff0;
+                --accent4: #3e999f;
+                --accent3-fg: #6a931c;
+                --accent3-ffg: #435c20;
+                --accent3-bg: #c2d8ab;
+                --accent3-bbg: #edf3e7;
+                --accent3: #84b819;
+                --accent2-fg: #bb9212;
+                --accent2-ffg: #745b1d;
+                --accent2-bg: #f3d8aa;
+                --accent2-bbg: #fbf3e7;
+                --accent2: #eab700;
+                --accent1-fg: #c46c20;
+                --accent1-ffg: #794521;
+                --accent1-bg: #f9c3ab;
+                --accent1-bbg: #fdede7;
+                --accent1: #f5871f;
+                --accent0-fg: #a02526;
+                --accent0-ffg: #632123;
+                --accent0-bg: #e0acac;
+                --accent0-bbg: #f5e8e8;
+                --accent0: #c82829;
+            }
+      :root.dark {
+                --shade7: #ffffff;
+                --shade6: #e0e0e0;
+                --shade5: #c5c8c6;
+                --shade4: #b4b7b4;
+                --shade3: #969896;
+                --shade2: #373b41;
+                --shade1: #282a2e;
+                --shade0: #1d1f21;
+                --base0F-fg: #ceb9b5;
+                --base0F-ffg: #f0ebea;
+                --base0F-bg: #825449;
+                --base0F-bbg: #513733;
+                --base0F: #a3685a;
+                --base0E-fg: #d5c8da;
+                --base0E-ffg: #f2eff3;
+                --base0E-bg: #8e7796;
+                --base0E-bbg: #594b5e;
+                --base0E: #b294bb;
+                --base0D-fg: #c1cedb;
+                --base0D-ffg: #edf0f4;
+                --base0D-bg: #678298;
+                --base0D-bbg: #42515f;
+                --base0D: #81a2be;
+                --base0C-fg: #c4dbd8;
+                --base0C-ffg: #edf4f3;
+                --base0C-bg: #6e9893;
+                --base0C-bbg: #465f5c;
+                --base0C: #8abeb7;
+                --base0B-fg: #bfd0ac;
+                --base0B-ffg: #ecf1e8;
+                --base0B-bg: #648627;
+                --base0B-bbg: #405423;
+                --base0B: #7da72a;
+                --base0A-fg: #f6dfbc;
+                --base0A-ffg: #fcf5ec;
+                --base0A-bg: #c09f5e;
+                --base0A-bbg: #77633d;
+                --base0A: #f0c674;
+                --base09-fg: #ecc8b6;
+                --base09-ffg: #f9eeea;
+                --base09-bg: #b2764d;
+                --base09-bbg: #6e4a35;
+                --base09: #de935f;
+                --base08-fg: #e2b8b8;
+                --base08-ffg: #f6eaea;
+                --base08-bg: #a35253;
+                --base08-bbg: #653637;
+                --base08: #cc6666;
+                --base07: #ffffff;
+                --base06: #e0e0e0;
+                --base05: #c5c8c6;
+                --base04: #b4b7b4;
+                --base03: #969896;
+                --base02: #373b41;
+                --base01: #282a2e;
+                --base00: #1d1f21;
+                --accent7-fg: #ceb9b5;
+                --accent7-ffg: #f0ebea;
+                --accent7-bg: #825449;
+                --accent7-bbg: #513733;
+                --accent7: #a3685a;
+                --accent6-fg: #d5c8da;
+                --accent6-ffg: #f2eff3;
+                --accent6-bg: #8e7796;
+                --accent6-bbg: #594b5e;
+                --accent6: #b294bb;
+                --accent5-fg: #c1cedb;
+                --accent5-ffg: #edf0f4;
+                --accent5-bg: #678298;
+                --accent5-bbg: #42515f;
+                --accent5: #81a2be;
+                --accent4-fg: #c4dbd8;
+                --accent4-ffg: #edf4f3;
+                --accent4-bg: #6e9893;
+                --accent4-bbg: #465f5c;
+                --accent4: #8abeb7;
+                --accent3-fg: #bfd0ac;
+                --accent3-ffg: #ecf1e8;
+                --accent3-bg: #648627;
+                --accent3-bbg: #405423;
+                --accent3: #7da72a;
+                --accent2-fg: #f6dfbc;
+                --accent2-ffg: #fcf5ec;
+                --accent2-bg: #c09f5e;
+                --accent2-bbg: #77633d;
+                --accent2: #f0c674;
+                --accent1-fg: #ecc8b6;
+                --accent1-ffg: #f9eeea;
+                --accent1-bg: #b2764d;
+                --accent1-bbg: #6e4a35;
+                --accent1: #de935f;
+                --accent0-fg: #e2b8b8;
+                --accent0-ffg: #f6eaea;
+                --accent0-bg: #a35253;
+                --accent0-bbg: #653637;
+                --accent0: #cc6666;
+            }
+      :root {
+            }
+    </style>
+
+    <link rel="stylesheet" href="support/vendor/reveal/dist/reset.css">
+    <link rel="stylesheet" href="support/vendor/reveal/dist/reveal.css">
+    <link rel="stylesheet" href="support/components/components.css">
+    <link rel="stylesheet" href="support/plugins/decker/ui-anchors.css">
+    <link rel="stylesheet" href="support/plugins/whiteboard/whiteboard.css">
+    <link rel="stylesheet" href="support/plugins/menu/menu.css">
+    <link rel="stylesheet" href="support/plugins/feedback/feedback.css">
+    <link rel="stylesheet" href="support/plugins/explain/explain.css">
+      <link rel="stylesheet" href="support/plugins/live-captioning/live-captioning.css">
+      <link rel="stylesheet" href="support/vendor/videojs/video-js.min.css">
+    <link rel="stylesheet" href="support/flyingFocus/flying-focus.css">
+    <link rel="stylesheet" href="support/plugins/quiz-wue/quiz-wue.css">
+    <link rel="stylesheet" href="support/css/deck.css">
+    <link rel="stylesheet" href="support/css/msms-deck.css">
+    <link rel="stylesheet" href="support/plugins/handout/handout.css">
+      
+</head>
+
+<body >
+  <div class="reveal">
+    <div class="slides">
+
+      <section id="title-slide">
+  <div class="decker">
+    <div class="alignment">
+      <header class="background-on-accent">
+        <h1 class="title">Übungen zur Vorlesung ASMR</h1>
+                <h2 class="subtitle">Besprechung Block 2 / Fragen Block
+3</h2>
+              </header>
+
+      
+            <div class="authors">
+                <div class="author">
+                  <p>
+                    Jan Albrecht
+                  </p>
+                  </div>
+                <div class="author">
+                  <p>
+                    Florian Bohlken
+                  </p>
+                  </div>
+              </div>
+            
+      
+            <div class="affiliation">
+              <p>
+                Universitat Münster
+              </p>
+              </div>
+      
+      
+      
+      <div class="logos">
+                <div class="logo">
+          <img src="./support/assets/ms-logo-light.svg">
+        </div>
+                        </div>
+            <a class="decker-link" href="https://decker-edu.github.io/decker/">🚀 by Decker</a>
+          </div>
+  </div>
+</section>            
+<section id="empty-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<div class="box block">
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</section>
+<section id="aufbau" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Aufbau</h1>
+</div>
+</div>
+</section>
+<section id="aufbau-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Aufbau</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Allgmeines</li>
+<li class="fragment">Abgaben</li>
+<li class="fragment">Block 2</li>
+<li class="fragment">Academic Honesty / Honor Code</li>
+<li class="fragment">Block 3</li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="allgemeines" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Allgemeines</h1>
+</div>
+</div>
+</section>
+<section id="allgemeines-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Allgemeines</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment"><a href="https://docs.ros.org/en/jazzy/index.html">Jazzy</a> (neue LTS) ist raus
+<ul class="incremental">
+<li class="fragment">wir bleiben zunächst bei Humble
+<ul class="incremental">
+<li class="fragment">Support bis 2027</li>
+</ul></li>
+<li class="fragment">Wer sich dafür interessiert
+<ul class="incremental">
+<li class="fragment">parallel Ubuntu 24.04 (LTS) mit Jazzy aufsetzen</li>
+</ul></li>
+</ul></li>
+<li class="fragment">Major Update auch für Humble
+<ul class="incremental">
+<li class="fragment"><code>sudo apt update ; sudo apt upgrade</code></li>
+</ul></li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="abgaben" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Abgaben</h1>
+</div>
+</div>
+</section>
+<section id="abgabeformat" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Abgabeformat</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Paranoid Abgabe checken</li>
+<li class="fragment">Daten in <code>package.xml</code> und <code>setup.py</code> müssen übereinstimmen.</li>
+<li class="fragment"><strong>keinen</strong> Ordner in die zip, der genauso wie die Datei heißt
+<ul class="incremental">
+<li class="fragment">wird die Vorlage befolgt, passiert das sowieso nicht</li>
+</ul></li>
+<li class="fragment">Abzüge für Missachtung der WS Vorgaben
+<ul class="incremental">
+<li class="fragment">unaufgeräumt etc</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="abgabeformat-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Abgabeformat</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Formatierung von Texten
+<ul class="incremental">
+<li class="fragment">Struktur</li>
+<li class="fragment">Gliederung</li>
+<li class="fragment">Thematisch getrennte Bereiche sind auch lokal getrennt</li>
+<li class="fragment">lest eure Texte nach dem schreiben nochmal
+<ul class="incremental">
+<li class="fragment">ist ein Lesefluss möglich</li>
+<li class="fragment">sind noch Rechtschreibfehler vorhanden</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="bewertungen" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Bewertungen</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">4 Punkte heißt nicht unbedingt fehlerlos
+<ul class="incremental">
+<li class="fragment">Teilweise Fehler durch Bonus ausgeglichen</li>
+</ul></li>
+<li class="fragment">Wer detailliertes Feedback möchte, soll nochmal auf uns zukommen</li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="block-2" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Block 2</h1>
+</div>
+</div>
+</section>
+<section id="vorstellung-block-2" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Vorstellung Block 2</h1>
+</div>
+</div>
+</section>
+<section id="aufgabe-3" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Aufgabe 3</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">ausgleich systematisch Fehler durch Integral</li>
+<li class="fragment">BangBang und Overschooting</li>
+<li class="fragment">Windup
+<ul class="incremental">
+<li class="fragment">Warum sollen Oszillation und Instabilität die Folge sein?</li>
+</ul></li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="academic-honesty-honor-code" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Academic Honesty / Honor Code</h1>
+</div>
+</div>
+</section>
+<section id="was-ihr-tun-dürft" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Was ihr tun dürft</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Ansätze, Konzepte und Ideen tauschen</li>
+<li class="fragment">Komilitonen um Rat fragen</li>
+<li class="fragment">Euch gegenseitig Unterstützen</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="was-ihr-nicht-tun-dürft" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Was ihr nicht tun dürft</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Fertige Lösungen teilen
+<ul class="incremental">
+<li class="fragment">komplette Dateien</li>
+<li class="fragment">gesamte Funktionen übernehmen</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="warum-einzeln" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Warum einzeln</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Blöcke haben bewusst übersichtlichen Umfang</li>
+<li class="fragment">jeder soll eine konkrete Implementation der Konzepte vorgenommen haben</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="plagiate-vermeiden" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Plagiate vermeiden</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Nutzung des Fremdwerkes oder Teilen davon (ab vier Worten)
+<ul class="incremental">
+<li class="fragment">Explizit hervorheben - zusätzlich zur Quellenangabe</li>
+</ul></li>
+<li class="fragment">Quellenangaben (wo angemessen)
+<ul class="incremental">
+<li class="fragment">im Quelltext</li>
+<li class="fragment">in der Projektbeschreibung (<code>README.md</code>)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="folgen-bei-plagiarismus" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Folgen bei Plagiarismus</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Der gesamte Block wird für beide <strong>nicht</strong> gewertet</li>
+<li class="fragment">Je nach schwere kann dies auch weitere Folgen haben</li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="block-3" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Block 3</h1>
+</div>
+</div>
+</section>
+<section id="aufgabe-6" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Aufgabe 6</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Hilfreiche Quellen
+<ul class="incremental">
+<li class="fragment"><a href="https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Service-And-Client.html">Simple Service and Client</a></li>
+<li class="fragment"><a href="https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Custom-ROS2-Interfaces.html">Custom Service Messages</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="aufgabe-7" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Aufgabe 7</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Volle Punktzahl nur bei autonomer Lösung</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<code class="sourceCode markdown" style="display:none;"></code>
+
+    </div>
+  </div>
+  
+  <script src="support/vendor/videojs/video.min.js"></script>
+  <script src="support/vendor/chartjs/chart.umd.js"></script>
+  <script type="module" src="support/components/custom-dialog.js"></script>
+  <script type="module" src="./support/js/color-scheme.js"></script>
+
+<script type="module">
+  // import Reveal and all plugins
+  import Reveal from './support/vendor/reveal/dist/reveal.esm.js';
+  import deckerPlugin from './support/plugins/decker/decker.js';
+  import uiAnchorsPlugin from './support/plugins/decker/ui-anchors.js'
+  import mathPlugin from './support/plugins/math/math.js';
+  import whiteboardPlugin from './support/plugins/whiteboard/whiteboard.js';
+  import sagePlugin from './support/plugins/sage/sage.js';
+  import searchPlugin from './support/plugins/search/search.js';
+  import zoomPlugin from './support/plugins/zoom/zoom.js';
+  import printPlugin from './support/plugins/print/print.js';
+  import jinglesPlugin from './support/plugins/jingles/jingles.js';
+  import quizPlugin from './support/plugins/quiz/quiz.js';
+  import quizWuePlugin from './support/plugins/quiz-wue/quiz-wue.js';
+  import explainPlugin from './support/plugins/explain/explain.js';
+  import chartsPlugin from './support/plugins/charts/charts.js';
+  import menuPlugin from './support/plugins/menu/menu.js';
+  import feedbackPlugin from './support/plugins/feedback/feedback.js';
+  import notesPlugin from './support/vendor/reveal/plugin/notes/notes.esm.js';
+    import captionPlugin from './support/plugins/live-captioning/live-captioning.js';
+    import a11yPlugin from './support/plugins/a11y/a11y.js';
+  import handoutPlugin from './support/plugins/handout/handout.js';
+
+  let revealConfig = { 
+    // reveal configuration (see https://revealjs.com/config/)
+    ...Decker.meta.reveal,
+
+    // plugin configuration
+    math: { mathjax: String.raw`support/vendor/mathjax/`, ...Decker.meta.math },
+    chart: Decker.meta.chart,
+    menu: Decker.meta.menu,
+    explain: Decker.meta.explain,
+    feedback: Decker.meta.feedback || Decker.meta["decker-engine"],
+    jingles: Decker.meta.jingles,
+    whiteboard: Decker.meta.whiteboard,
+
+    // list of plugins
+    plugins: [
+      deckerPlugin,
+      uiAnchorsPlugin,
+      sagePlugin,
+      mathPlugin,
+      chartsPlugin,
+      whiteboardPlugin,
+      searchPlugin,
+      zoomPlugin,
+      printPlugin,
+      jinglesPlugin,
+      quizPlugin,
+      quizWuePlugin,
+      explainPlugin,
+      menuPlugin,
+      feedbackPlugin,
+      notesPlugin,
+            captionPlugin,
+            a11yPlugin,
+      handoutPlugin
+    ]
+  };
+
+  Reveal.initialize(revealConfig);
+</script>
+  
+
+</body>
+</html>
