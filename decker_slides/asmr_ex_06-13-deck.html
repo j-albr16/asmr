@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Übungen zur Vorlesung ASMR: Quiz (localisation), Vorschau Block
+4</title>
+
+  <!-- PWA stuff -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="support/pwa/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#84b819" />
+  <link rel="manifest" href="support/pwa/manifest.webmanifest" crossorigin="use-credentials" />
+
+  <link rel="shortcut icon" href="support/icons/favicon.ico">
+
+  <script type="module">
+    /* Store JSON encoded Pandoc meta data in a global variable. */
+    import initializeDecker from "./support/js/decker.js";
+    initializeDecker("1cf0fd9e3.json");
+  </script>
+
+    <!-- Default values for CSS variables can live here. They can be overridden by
+    meta data values. -->
+    <link rel="stylesheet" href="support/css/variables.css">
+
+    <!-- Transfer meta data values from keys `palette.colors` and `css-variables`
+    into a style sheet. Default values can come from `variables.css`. -->
+    <style class="css-declarations">
+      :root {
+                --shade7: #1d1f21;
+                --shade6: #282a2e;
+                --shade5: #4d4d4c;
+                --shade4: #969896;
+                --shade3: #8e908c;
+                --shade2: #d6d6d6;
+                --shade1: #e0e0e0;
+                --shade0: #ffffff;
+                --base0F-fg: #825449;
+                --base0F-ffg: #513733;
+                --base0F-bg: #ceb9b5;
+                --base0F-bbg: #f0ebea;
+                --base0F: #a3685a;
+                --base0E-fg: #6e4887;
+                --base0E-ffg: #453155;
+                --base0E-bg: #c4b5d1;
+                --base0E-bbg: #edeaf1;
+                --base0E: #8959a8;
+                --base0D-fg: #257eb3;
+                --base0D-ffg: #204f6f;
+                --base0D-bg: #acccec;
+                --base0D-bbg: #e8f0f9;
+                --base0D: #2a9ddf;
+                --base0C-fg: #347b80;
+                --base0C-ffg: #264d51;
+                --base0C-bg: #afcacd;
+                --base0C-bbg: #e8eff0;
+                --base0C: #3e999f;
+                --base0B-fg: #6a931c;
+                --base0B-ffg: #435c20;
+                --base0B-bg: #c2d8ab;
+                --base0B-bbg: #edf3e7;
+                --base0B: #84b819;
+                --base0A-fg: #bb9212;
+                --base0A-ffg: #745b1d;
+                --base0A-bg: #f3d8aa;
+                --base0A-bbg: #fbf3e7;
+                --base0A: #eab700;
+                --base09-fg: #c46c20;
+                --base09-ffg: #794521;
+                --base09-bg: #f9c3ab;
+                --base09-bbg: #fdede7;
+                --base09: #f5871f;
+                --base08-fg: #a02526;
+                --base08-ffg: #632123;
+                --base08-bg: #e0acac;
+                --base08-bbg: #f5e8e8;
+                --base08: #c82829;
+                --base07: #1d1f21;
+                --base06: #282a2e;
+                --base05: #4d4d4c;
+                --base04: #969896;
+                --base03: #8e908c;
+                --base02: #d6d6d6;
+                --base01: #e0e0e0;
+                --base00: #ffffff;
+                --accent7-fg: #825449;
+                --accent7-ffg: #513733;
+                --accent7-bg: #ceb9b5;
+                --accent7-bbg: #f0ebea;
+                --accent7: #a3685a;
+                --accent6-fg: #6e4887;
+                --accent6-ffg: #453155;
+                --accent6-bg: #c4b5d1;
+                --accent6-bbg: #edeaf1;
+                --accent6: #8959a8;
+                --accent5-fg: #257eb3;
+                --accent5-ffg: #204f6f;
+                --accent5-bg: #acccec;
+                --accent5-bbg: #e8f0f9;
+                --accent5: #2a9ddf;
+                --accent4-fg: #347b80;
+                --accent4-ffg: #264d51;
+                --accent4-bg: #afcacd;
+                --accent4-bbg: #e8eff0;
+                --accent4: #3e999f;
+                --accent3-fg: #6a931c;
+                --accent3-ffg: #435c20;
+                --accent3-bg: #c2d8ab;
+                --accent3-bbg: #edf3e7;
+                --accent3: #84b819;
+                --accent2-fg: #bb9212;
+                --accent2-ffg: #745b1d;
+                --accent2-bg: #f3d8aa;
+                --accent2-bbg: #fbf3e7;
+                --accent2: #eab700;
+                --accent1-fg: #c46c20;
+                --accent1-ffg: #794521;
+                --accent1-bg: #f9c3ab;
+                --accent1-bbg: #fdede7;
+                --accent1: #f5871f;
+                --accent0-fg: #a02526;
+                --accent0-ffg: #632123;
+                --accent0-bg: #e0acac;
+                --accent0-bbg: #f5e8e8;
+                --accent0: #c82829;
+            }
+      :root.dark {
+                --shade7: #ffffff;
+                --shade6: #e0e0e0;
+                --shade5: #c5c8c6;
+                --shade4: #b4b7b4;
+                --shade3: #969896;
+                --shade2: #373b41;
+                --shade1: #282a2e;
+                --shade0: #1d1f21;
+                --base0F-fg: #ceb9b5;
+                --base0F-ffg: #f0ebea;
+                --base0F-bg: #825449;
+                --base0F-bbg: #513733;
+                --base0F: #a3685a;
+                --base0E-fg: #d5c8da;
+                --base0E-ffg: #f2eff3;
+                --base0E-bg: #8e7796;
+                --base0E-bbg: #594b5e;
+                --base0E: #b294bb;
+                --base0D-fg: #c1cedb;
+                --base0D-ffg: #edf0f4;
+                --base0D-bg: #678298;
+                --base0D-bbg: #42515f;
+                --base0D: #81a2be;
+                --base0C-fg: #c4dbd8;
+                --base0C-ffg: #edf4f3;
+                --base0C-bg: #6e9893;
+                --base0C-bbg: #465f5c;
+                --base0C: #8abeb7;
+                --base0B-fg: #bfd0ac;
+                --base0B-ffg: #ecf1e8;
+                --base0B-bg: #648627;
+                --base0B-bbg: #405423;
+                --base0B: #7da72a;
+                --base0A-fg: #f6dfbc;
+                --base0A-ffg: #fcf5ec;
+                --base0A-bg: #c09f5e;
+                --base0A-bbg: #77633d;
+                --base0A: #f0c674;
+                --base09-fg: #ecc8b6;
+                --base09-ffg: #f9eeea;
+                --base09-bg: #b2764d;
+                --base09-bbg: #6e4a35;
+                --base09: #de935f;
+                --base08-fg: #e2b8b8;
+                --base08-ffg: #f6eaea;
+                --base08-bg: #a35253;
+                --base08-bbg: #653637;
+                --base08: #cc6666;
+                --base07: #ffffff;
+                --base06: #e0e0e0;
+                --base05: #c5c8c6;
+                --base04: #b4b7b4;
+                --base03: #969896;
+                --base02: #373b41;
+                --base01: #282a2e;
+                --base00: #1d1f21;
+                --accent7-fg: #ceb9b5;
+                --accent7-ffg: #f0ebea;
+                --accent7-bg: #825449;
+                --accent7-bbg: #513733;
+                --accent7: #a3685a;
+                --accent6-fg: #d5c8da;
+                --accent6-ffg: #f2eff3;
+                --accent6-bg: #8e7796;
+                --accent6-bbg: #594b5e;
+                --accent6: #b294bb;
+                --accent5-fg: #c1cedb;
+                --accent5-ffg: #edf0f4;
+                --accent5-bg: #678298;
+                --accent5-bbg: #42515f;
+                --accent5: #81a2be;
+                --accent4-fg: #c4dbd8;
+                --accent4-ffg: #edf4f3;
+                --accent4-bg: #6e9893;
+                --accent4-bbg: #465f5c;
+                --accent4: #8abeb7;
+                --accent3-fg: #bfd0ac;
+                --accent3-ffg: #ecf1e8;
+                --accent3-bg: #648627;
+                --accent3-bbg: #405423;
+                --accent3: #7da72a;
+                --accent2-fg: #f6dfbc;
+                --accent2-ffg: #fcf5ec;
+                --accent2-bg: #c09f5e;
+                --accent2-bbg: #77633d;
+                --accent2: #f0c674;
+                --accent1-fg: #ecc8b6;
+                --accent1-ffg: #f9eeea;
+                --accent1-bg: #b2764d;
+                --accent1-bbg: #6e4a35;
+                --accent1: #de935f;
+                --accent0-fg: #e2b8b8;
+                --accent0-ffg: #f6eaea;
+                --accent0-bg: #a35253;
+                --accent0-bbg: #653637;
+                --accent0: #cc6666;
+            }
+      :root {
+            }
+    </style>
+
+    <link rel="stylesheet" href="support/vendor/reveal/dist/reset.css">
+    <link rel="stylesheet" href="support/vendor/reveal/dist/reveal.css">
+    <link rel="stylesheet" href="support/components/components.css">
+    <link rel="stylesheet" href="support/plugins/decker/ui-anchors.css">
+    <link rel="stylesheet" href="support/plugins/whiteboard/whiteboard.css">
+    <link rel="stylesheet" href="support/plugins/menu/menu.css">
+    <link rel="stylesheet" href="support/plugins/feedback/feedback.css">
+    <link rel="stylesheet" href="support/plugins/explain/explain.css">
+      <link rel="stylesheet" href="support/plugins/live-captioning/live-captioning.css">
+      <link rel="stylesheet" href="support/vendor/videojs/video-js.min.css">
+    <link rel="stylesheet" href="support/flyingFocus/flying-focus.css">
+    <link rel="stylesheet" href="support/plugins/quiz-wue/quiz-wue.css">
+    <link rel="stylesheet" href="support/css/deck.css">
+    <link rel="stylesheet" href="support/css/msms-deck.css">
+    <link rel="stylesheet" href="support/plugins/handout/handout.css">
+      
+</head>
+
+<body >
+  <div class="reveal">
+    <div class="slides">
+
+      <section id="title-slide">
+  <div class="decker">
+    <div class="alignment">
+      <header class="background-on-accent">
+        <h1 class="title">Übungen zur Vorlesung ASMR</h1>
+                <h2 class="subtitle">Quiz (localisation), Vorschau Block
+4</h2>
+              </header>
+
+      
+            <div class="authors">
+                <div class="author">
+                  <p>
+                    Jan Albrecht
+                  </p>
+                  </div>
+                <div class="author">
+                  <p>
+                    Florian Bohlken
+                  </p>
+                  </div>
+              </div>
+            
+      
+            <div class="affiliation">
+              <p>
+                Universitat Münster
+              </p>
+              </div>
+      
+      
+      
+      <div class="logos">
+                <div class="logo">
+          <img src="./support/assets/ms-logo-light.svg">
+        </div>
+                        </div>
+            <a class="decker-link" href="https://decker-edu.github.io/decker/">🚀 by Decker</a>
+          </div>
+  </div>
+</section>            
+<section id="empty-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<div class="box block">
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</section>
+<section id="aufbau" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Aufbau</h1>
+</div>
+</div>
+</section>
+<section id="aufbau-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Aufbau</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Block 3</li>
+<li class="fragment">Quiz (Conditional Probability)</li>
+<li class="fragment">Quiz (Joint Probability)</li>
+<li class="fragment">Quiz (Bayes Theorem)</li>
+<li class="fragment">Quiz (Markov)</li>
+<li class="fragment">Vorschau Block 4</li>
+<li class="fragment">3B1B Bayes YT</li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="block-3" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Block 3</h1>
+</div>
+</div>
+</section>
+<section id="futures" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Futures</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<ul>
+<li><a href="https://docs.ros.org/en/iron/p/rclpy/rclpy.task.html">Future</a> Docs</li>
+<li>Teil der ROS Client Library for Python <code>rclpy</code></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="lidar" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>LiDAR</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<ul>
+<li><code>Inf</code> bedeutet, dass die maximale Reichweite erreicht wurde</li>
+</ul>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="quiz---conditional-probability" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Quiz - Conditional Probability</h1>
+</div>
+</div>
+</section>
+<section id="frage-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 1</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Was beschreibt die bedingte Wahrscheinlichkeit $ P(A|B) $?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Die Wahrscheinlichkeit, dass sowohl A als auch B eintreten.<ul>
+<li>Das ist die gemeinsame Wahrscheinlichkeit $ P(A B) $.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Die Wahrscheinlichkeit, dass A eintritt, gegeben dass B bereits eingetreten ist.<ul>
+<li>Diese Definition beschreibt korrekt die bedingte Wahrscheinlichkeit $ P(A|B) $.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Die Wahrscheinlichkeit von A minus die Wahrscheinlichkeit von B.<ul>
+<li>Das ergibt keine bedingte Wahrscheinlichkeit.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Die Wahrscheinlichkeit von A plus die Wahrscheinlichkeit von B.<ul>
+<li>Das ist die Summe der Einzelwahrscheinlichkeiten und hat nichts mit $ P(A|B) $ zu tun.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 2</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wie berechnet man die bedingte Wahrscheinlichkeit $ P(A|B) $, wenn $ P(A B) = 0.2 $ und $ P(B) = 0.5 $?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />$ 0.7 $<ul>
+<li>Dies ist die Summe, jedoch nicht die bedingte Wahrscheinlichkeit.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />$ 0.4 $<ul>
+<li>$ P(A|B) =  =  = 0.4 $.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />$ 0.1 $<ul>
+<li>Dies ergibt sich nicht aus den angegebenen Werten.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />$ 0.6 $<ul>
+<li>Dies ergibt sich nicht aus den angegebenen Werten.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-3" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 3</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welche der folgenden Aussagen ist wahr, wenn $ P(A|B) = P(A) $?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />A und B sind unabhängig.<ul>
+<li>Diese Beziehung ist die Definition von Unabhängigkeit.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />A und B sind disjunkt.<ul>
+<li>Disjunkte Ereignisse haben keine gemeinsame Wahrscheinlichkeit, also $ P(A|B) = 0 $.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />A und B sind identisch.<ul>
+<li>Identische Ereignisse haben $ P(A|B) = 1 $.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />B ist ein Teilmengenereignis von A.<ul>
+<li>Das beschreibt eine bestimmte Beziehung zwischen A und B, aber nicht Unabhängigkeit.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-4" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 4</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wie berechnet man die gemeinsame Wahrscheinlichkeit $ P(A B) $ aus $ P(A|B) $ und $ P(B) $?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />$ P(A|B) + P(B) $<ul>
+<li>Das ist nicht die richtige Beziehung für gemeinsame Wahrscheinlichkeiten.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />$ P(A|B) P(B) $<ul>
+<li>Diese Berechnung basiert auf der Definition der bedingten Wahrscheinlichkeit.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />$ P(A|B) - P(B) $<ul>
+<li>Dies ergibt keine gemeinsame Wahrscheinlichkeit.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />$ P(A|B) / P(B) $<ul>
+<li>Das entspricht nicht der benötigten Berechnung.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-5" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 5</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wenn bekannt ist, dass $ P(A|B) = 0.3 $ und $ P(B) = 0.4 $, wie hoch ist $ P(A B) $?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />$ 0.7 $<ul>
+<li>Dies ist irrelevant zu den gegebenen Informationen.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />$ 0.12 $<ul>
+<li>$ P(A B) = P(A|B) P(B) = 0.3  = 0.12 $.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />$ 0.1 $<ul>
+<li>Das ist nicht das richtige Ergebnis.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />$ 0.3 $<ul>
+<li>Das ist die bedingte Wahrscheinlichkeit, nicht die gemeinsame Wahrscheinlichkeit.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-6" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 6</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wenn $ P(A|B) = 0 $, was kann über die Ereignisse A und B gesagt werden?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />A und B sind disjunkt.<ul>
+<li>Wenn $ P(A|B) = 0 $, dann treten A und B nicht gleichzeitig auf.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />A tritt immer auf, wenn B auftritt.<ul>
+<li>Das Gegenteil ist der Fall.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />A und B sind unabhängig.<ul>
+<li>Unabhängigkeit bedeutet, dass $ P(A|B) = P(A) $.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />B ist eine Teilmenge von A.<ul>
+<li>Dies beschreibt eine andere Beziehung zwischen A und B.</li>
+</ul></li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="quiz---joint-probability" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Quiz - Joint Probability</h1>
+</div>
+</div>
+</section>
+<section id="frage-1-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 1</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Was beschreibt die gemeinsame Wahrscheinlichkeitsverteilung (Joint Probability Distribution) von Zufallsvariablen <span class="math inline">\(X\)</span> und <span class="math inline">\(Y\)</span> in der Wahrscheinlichkeitsrechnung?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Eine Funktion, die die Wahrscheinlichkeit nur einer einzelnen Zufallsvariable angibt.<ul>
+<li>Diese Definition beschreibt die marginale Wahrscheinlichkeit.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Eine Funktion, die die Wahrscheinlichkeit angibt, dass sowohl X als auch Y bestimmte Werte annehmen.<ul>
+<li>Dies ist die korrekte Beschreibung der gemeinsamen Wahrscheinlichkeitsverteilung.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Eine kumulative Verteilungsfunktion.<ul>
+<li>Eine kumulative Verteilungsfunktion beschreibt die Wahrscheinlichkeit, dass eine Zufallsvariable kleiner oder gleich einem bestimmten Wert ist.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Eine Funktion, die die bedingte Wahrscheinlichkeit von Y gegeben X beschreibt.<ul>
+<li>Dies beschreibt die bedingte Wahrscheinlichkeitsfunktion.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-2-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 2</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Gegeben seien zwei Zufallsvariablen X und Y. Wann sind diese beiden Zufallsvariablen als unabhängig zu betrachten?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />Wenn <span class="math inline">\(P(X=x | Y=y) = P(X=x)\)</span> für alle x und y.<ul>
+<li>Dies bedeutet, dass X und Y unabhängig sind, wenn die bedingte Wahrscheinlichkeit von X gegeben Y gleich der unbedingten Wahrscheinlichkeit von X ist.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Wenn P(X=x) + P(Y=y) = P(X=x ∩ Y=y) für alle x und y.<ul>
+<li>Dies ist mathematisch nicht korrekt für die Definition von Unabhängigkeit.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Wenn die gemeinsame Dichtefunktion f(X, Y) = 0 ist.<ul>
+<li>Eine gemeinsame Dichtefunktion von null würde keine sinnvolle Wahrscheinlichkeitsverteilung beschreiben.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Wenn die Summe der Einzelwahrscheinlichkeiten von X und Y gleich eins ist.<ul>
+<li>Dies bezieht sich nicht auf die Unabhängigkeit der Zufallsvariablen.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-3-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 3</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>In welchem Fall kann die gemeinsame Wahrscheinlichkeit P(A ∩ B) größer als die Einzelwahrscheinlichkeit P(A) sein?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />Nie, da P(A ∩ B) immer gleich oder kleiner als P(A) ist.<ul>
+<li>Das ist korrekt, die gemeinsame Wahrscheinlichkeit kann nie größer sein als die Einzelwahrscheinlichkeit.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Wenn A und B disjunkte Ereignisse sind.<ul>
+<li>Für disjunkte Ereignisse ist P(A ∩ B) = 0.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Wenn A ein sehr unwahrscheinliches Ereignis ist.<ul>
+<li>Das beeinflusst nicht die Tatsache, dass P(A ∩ B) ≤ P(A).</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Wenn B ein Teilmengenereignis von A ist.<ul>
+<li>Auch dann gilt immer noch P(A ∩ B) ≤ P(A).</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-4-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 4</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wenn die gemeinsame Wahrscheinlichkeit P(A ∩ B) gleich dem Produkt der Einzelwahrscheinlichkeiten P(A) * P(B) ist, was kann daraus geschlossen werden?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />A und B sind voneinander abhängig.<ul>
+<li>Wenn P(A ∩ B) = P(A) * P(B), sind die Ereignisse unabhängig.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />A und B sind disjunkt.<ul>
+<li>Disjunkte Ereignisse haben keine Schnittmenge, daher P(A ∩ B) = 0.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />A und B sind identisch.<ul>
+<li>Dies zeigt keine Abhängigkeit oder Identität der Ereignisse.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />A und B sind unabhängig.<ul>
+<li>Diese Beziehung ist die Definition von Unabhängigkeit.</li>
+</ul></li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="quiz---bayes-theorem" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Quiz - Bayes Theorem</h1>
+</div>
+</div>
+</section>
+<section id="frage-1-2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 1</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welche Formel beschreibt Bayes’ Theorem?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(B|A) = \frac{P(A|B) P(B)}{P(A|B)}\)</span><ul>
+<li>Diese Formel verwendet (P(A|B)) im Nenner und kürzt (P(A|B)) heraus, was nicht korrekt ist.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" /><span class="math inline">\(P(A|B) = \frac{P(B|A) P(A)}{P(B)}\)</span><ul>
+<li>Dies ist die korrekte Formulierung von Bayes’ Theorem.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(A|B) = \frac{P(A) P(B|A)}{P(B|A)}\)</span><ul>
+<li>Diese Anordnung ist fehlerhaft, weil der Nenner (P(B|A)) wieder gekürzt würde.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(A|B) = P(A) + P(B|A) - P(B)\)</span><ul>
+<li>Diese Beziehung beschreibt nicht Bayes’ Theorem.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-2-2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 2</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welche der folgenden Anwendungen ist typisch für Bayes’ Theorem?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />Aktualisierung der Wahrscheinlichkeit einer Hypothese basierend auf neuen Daten.<ul>
+<li>Bayes’ Theorem wird häufig in der statistischen Inferenz zur Aktualisierung von Wahrscheinlichkeiten genutzt.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Berechnung der Wahrscheinlichkeit eines gemeinsamen Auftretens von zwei Ereignissen.<ul>
+<li>Für die gemeinsame Wahrscheinlichkeit nutzt man <span class="math inline">\(P(A \cap B) = P(A) \cdot P(B|A)\)</span>.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Bestimmung der Wahrscheinlichkeit eines unabhängigen Ereignisses.<ul>
+<li>Dazu benötigt man nicht explizit Bayes’ Theorem.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Bestimmen der Wahrscheinlichkeit eines Ereignisses ohne zusätzliche Informationen.<ul>
+<li>Das erfordert keine bedingte Wahrscheinlichkeit oder Bayes’ Theorem.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-3-2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 3</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Angenommen, wir haben die bedingte Wahrscheinlichkeit <span class="math inline">\(P(B|A)\)</span>, die vorherige Wahrscheinlichkeit <span class="math inline">\(P(A)\)</span>, und die Wahrscheinlichkeit von <span class="math inline">\(P(B)\)</span>. Wie berechnen wir <span class="math inline">\(P(A|B)\)</span>?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(A|B) = \frac{P(A) P(B)}{P(B|A)}\)</span><ul>
+<li>Diese Berechnung ist falsch, da sie die Rolle der bedingten Wahrscheinlichkeit missdeutet.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" /><span class="math inline">\(P(A|B) = \frac{P(A) P(B|A)}{P(B)}\)</span><ul>
+<li>Das ist die korrekte Anwendung von Bayes’ Theorem.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(A|B) = P(A) \cdot P(B)\)</span><ul>
+<li>Diese Formel beschreibt die gemeinsame Wahrscheinlichkeit, aber nicht die bedingte Wahrscheinlichkeit gemäß Bayes’ Theorem.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(A|B) = \frac{P(A|B)}{P(B)}\)</span><ul>
+<li>Diese Gleichung ist zirkulär und fehlerhaft.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-4-2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 4</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wenn <span class="math inline">\(P(B) = 0\)</span>, was sagt uns Bayes’ Theorem über <span class="math inline">\(P(A|B)\)</span>?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" /><span class="math inline">\(P(A|B)\)</span> ist undefiniert.<ul>
+<li>Da <span class="math inline">\(P(B)\)</span> im Nenner von Bayes’ Theorem steht, führt eine Null zu einer undefinierten Bedingung.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(A|B) = 0\)</span><ul>
+<li>Dies bedeutet nicht zwangsläufig <span class="math inline">\(P(A|B) = 0\)</span>, sondern macht die Berechnung undefiniert.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(A|B) = P(A)\)</span><ul>
+<li>Dies impliziert, dass die Ereignisse unabhängig sind, was nicht zwangsläufig der Fall ist.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(A|B)\)</span> ist gleich Eins.<ul>
+<li>Das ergibt keinen Sinn, da es keine Informationen über die relevanten Wahrscheinlichkeiten liefert.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-5-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 5</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wie kann man die Wahrscheinlichkeit <span class="math inline">\(P(B)\)</span> in Bayes’ Theorem ausdrücken, wenn man die Partition der Ereignisse <span class="math inline">\(A_1, A_2, \ldots, A_n\)</span> kennt?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(B) = \frac{P(B|A_1)P(A_1) + P(B|A_2)P(A_2)}{P(A_1) + P(A_2)}\)</span><ul>
+<li>Das ist eine fehlerhafte Berechnung, denn nicht alle Gewichte wurden berücksichtigt.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(B) = \frac{P(A_1)P(A_2)}{P(B|A_1) + P(B|A_2)}\)</span><ul>
+<li>Diese Formel ist ebenfalls fehlerhaft.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(B) = P(A_1 \cup A_2 \cup \ldots \cup A_n)\)</span><ul>
+<li>Das beschreibt die Summe der unterteilten Wahrscheinlichkeiten, aber nicht korrekt.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" /><span class="math inline">\(P(B) = \sum_{i=1}^n P(B|A_i) P(A_i)\)</span><ul>
+<li>Das ist korrekt, da wir die Gesamtheit der Wahrscheinlichkeiten über alle Partitionen aufsummieren.</li>
+</ul></li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="quiz---markov" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Quiz - Markov</h1>
+</div>
+</div>
+</section>
+<section id="frage-1-3" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 1</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Was besagt die Markov-Annahme für eine gegebene Zustandsfolge <span class="math inline">\(\{X_t\}\)</span>?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Der nächste Zustand hängt nur von allen vorherigen Zuständen ab.<ul>
+<li>Nach der Markov-Annahme hängt der nächste Zustand nur vom aktuellen Zustand ab.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Der nächste Zustand hängt nur vom aktuellen Zustand ab.<ul>
+<li>Dies ist die zentrale Idee der Markov-Annahme.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Der nächste Zustand ist unabhängig vom aktuellen Zustand.<ul>
+<li>Dies wäre die Annahme von völliger Unabhängigkeit, nicht die Markov-Annahme.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Der nächste Zustand hängt nur vom Zustand ganz am Anfang der Folge ab.<ul>
+<li>Dies widerspricht der Markov-Annahme, die nur den aktuellen Zustand betrachtet.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-2-3" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 2</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welche Gleichung repräsentiert die Markov-Annahme für die Zustandsfolge <span class="math inline">\(\{X_t\}\)</span>?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(X_t | X_{t-1}, X_{t-2}, \ldots, X_0) = P(X_t)\)</span><ul>
+<li>Diese Gleichung besagt, dass der Zustand unabhängig von allen vorherigen Zuständen ist, was falsch ist.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(X_t | X_{t-1}, X_{t-2}, \ldots, X_0) = P(X_t | X_0)\)</span><ul>
+<li>Diese Gleichung besagt, dass der Zustand nur vom Anfangszustand abhängt, was falsch ist.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" /><span class="math inline">\(P(X_t | X_{t-1}) = P(X_t | X_{t-1}, X_{t-2}, \ldots, X_0)\)</span><ul>
+<li>Diese Gleichung drückt korrekt die Markov-Annahme aus, dass der aktuelle Zustand nur vom vorherigen Zustand abhängt.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" /><span class="math inline">\(P(X_t | X_{t+1}) = P(X_t)\)</span><ul>
+<li>Diese Gleichung besagt, dass der Zustand unabhängig von seinem Folgezustand ist, was nicht der Markov-Annahme entspricht.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-3-3" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 3</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welche der folgenden Aussagen ist eine direkte Konsequenz der Markov-Annahme?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />Die Zukunft ist unabhängig von der Vergangenheit, gegeben der Gegenwart.<ul>
+<li>Dies ist die direkte Konsequenz der Markov-Eigenschaft, die nur die Abhängigkeit vom aktuellen Zustand berücksichtigt.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Die Gegenwart ist unabhängig von der Vergangenheit, gegeben der Zukunft.<ul>
+<li>Dies wäre eine rückwärtsgerichtete Markov-Eigenschaft, die in der klassischen Markov-Annahme nicht berücksichtigt wird.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Die Zukunft hängt nur vom Anfangszustand ab.<ul>
+<li>Dies widerspricht der Markov-Annahme, die nur den direkten vorherigen Zustand betrachtet.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Jeder Zustand der Folge ist unabhängig von allen anderen Zuständen.<ul>
+<li>Dies entspräche einer völligen Unabhängigkeit, nicht der Markov-Annahme.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-4-3" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 4</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>In welchem Anwendungsgebiet spielt die Markov-Annahme eine zentrale Rolle?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />In der Berechnung von integralen Flächeninhalten.<ul>
+<li>Das ist ein typisches Problem der Analysis und Geometrie, nicht der Markov-Prozesse.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />In der Lösung von linearen Gleichungssystemen.<ul>
+<li>Das bezieht sich auf die lineare Algebra und nicht speziell auf Markov-Prozesse.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />In der Modellierung von zeitabhängigen stochastischen Prozessen.<ul>
+<li>Markov-Ketten und Markov-Prozesse sind entscheidend für die Modellierung von zeitabhängigen stochastischen Prozessen.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />In der Optimierung von nichtlinearen Funktionen.<ul>
+<li>Optimierung kann in der Stochastik Anwendung finden, aber nicht speziell auf Basis der Markov-Annahme.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="frage-5-2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Frage 5</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welche Art von Gedächtnis hat ein Prozess, der die Markov-Annahme erfüllt?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Langzeitgedächtnis.<ul>
+<li>Langzeitgedächtnis impliziert Abhängigkeit von vielen vorherigen Zuständen, was der Markov-Annahme widerspricht.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Kein Gedächtnis.<ul>
+<li>Kein Gedächtnis würde bedeuten, dass jeder Zustand unabhängig voneinander ist, was nicht der Markov-Annahme entspricht.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Kurzzeitgedächtnis.<ul>
+<li>Markov-Prozesse haben “Kurzzeitgedächtnis”, da sie nur den letzten Zustand berücksichtigen.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Zufälliges Gedächtnis.<ul>
+<li>Zufälliges Gedächtnis beschreibt keine spezielle Stochastik-Eigenschaft und trifft nicht auf die Markov-Annahme zu.</li>
+</ul></li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="vorschau-block-4" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Vorschau Block 4</h1>
+</div>
+</div>
+</section>
+<section id="vorschau-block-4-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Vorschau Block 4</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Actions</li>
+<li class="fragment">Jupyter Notebooks</li>
+<li class="fragment">Gazebo / Nav2</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="actions" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Actions</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Messages (Publisher / Subscriber)</li>
+<li class="fragment">Services (Service / Client)</li>
+<li class="fragment">Actions (Action Server / Client)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="jupyter-notebooks" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Jupyter Notebooks</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Dijkstra</li>
+<li class="fragment">Markov</li>
+<li class="fragment">MCL (Monte-Carlo-Localization)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="jupyter-notebook-vorgaben" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Jupyter Notebook Vorgaben</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment"><strong>Nur</strong> in angegebene Zellen schreiben / editieren
+<ul class="incremental">
+<li class="fragment">keine neuen Zellen anlegen</li>
+<li class="fragment">keine vorgegebenen Zellen editieren, in denen kein TODO vorhanden ist</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="gazebo-nav2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Gazebo / Nav2</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Welt durch die Navigiert werden soll</li>
+<li class="fragment">Nav2 Bibliothek stellt Tools</li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="bayes" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Bayes</h1>
+</div>
+</div>
+</section>
+<section id="blue-1-brown" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>3 Blue 1 Brown:</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<ul>
+<li><a href="https://www.youtube.com/watch?v=HZGCoVF3YvM&amp;t=475s&amp;ab_channel=3Blue1Brown">Bayes-Theorem</a></li>
+</ul>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<code class="sourceCode markdown" style="display:none;"></code>
+
+    </div>
+  </div>
+  
+  <script src="support/vendor/videojs/video.min.js"></script>
+  <script src="support/vendor/chartjs/chart.umd.js"></script>
+  <script type="module" src="support/components/custom-dialog.js"></script>
+  <script type="module" src="./support/js/color-scheme.js"></script>
+
+<script type="module">
+  // import Reveal and all plugins
+  import Reveal from './support/vendor/reveal/dist/reveal.esm.js';
+  import deckerPlugin from './support/plugins/decker/decker.js';
+  import uiAnchorsPlugin from './support/plugins/decker/ui-anchors.js'
+  import mathPlugin from './support/plugins/math/math.js';
+  import whiteboardPlugin from './support/plugins/whiteboard/whiteboard.js';
+  import sagePlugin from './support/plugins/sage/sage.js';
+  import searchPlugin from './support/plugins/search/search.js';
+  import zoomPlugin from './support/plugins/zoom/zoom.js';
+  import printPlugin from './support/plugins/print/print.js';
+  import jinglesPlugin from './support/plugins/jingles/jingles.js';
+  import quizPlugin from './support/plugins/quiz/quiz.js';
+  import quizWuePlugin from './support/plugins/quiz-wue/quiz-wue.js';
+  import explainPlugin from './support/plugins/explain/explain.js';
+  import chartsPlugin from './support/plugins/charts/charts.js';
+  import menuPlugin from './support/plugins/menu/menu.js';
+  import feedbackPlugin from './support/plugins/feedback/feedback.js';
+  import notesPlugin from './support/vendor/reveal/plugin/notes/notes.esm.js';
+    import captionPlugin from './support/plugins/live-captioning/live-captioning.js';
+    import a11yPlugin from './support/plugins/a11y/a11y.js';
+  import handoutPlugin from './support/plugins/handout/handout.js';
+
+  let revealConfig = { 
+    // reveal configuration (see https://revealjs.com/config/)
+    ...Decker.meta.reveal,
+
+    // plugin configuration
+    math: { mathjax: String.raw`support/vendor/mathjax/`, ...Decker.meta.math },
+    chart: Decker.meta.chart,
+    menu: Decker.meta.menu,
+    explain: Decker.meta.explain,
+    feedback: Decker.meta.feedback || Decker.meta["decker-engine"],
+    jingles: Decker.meta.jingles,
+    whiteboard: Decker.meta.whiteboard,
+
+    // list of plugins
+    plugins: [
+      deckerPlugin,
+      uiAnchorsPlugin,
+      sagePlugin,
+      mathPlugin,
+      chartsPlugin,
+      whiteboardPlugin,
+      searchPlugin,
+      zoomPlugin,
+      printPlugin,
+      jinglesPlugin,
+      quizPlugin,
+      quizWuePlugin,
+      explainPlugin,
+      menuPlugin,
+      feedbackPlugin,
+      notesPlugin,
+            captionPlugin,
+            a11yPlugin,
+      handoutPlugin
+    ]
+  };
+
+  Reveal.initialize(revealConfig);
+</script>
+  
+
+</body>
+</html>

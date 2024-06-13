@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ur10">
+    <xacro:include filename="arm.urdf" />
+    <xacro:include filename="car.urdf" />
+    <joint name="arm_to_car" type="fixed">
+        <parent link="base_link" />
+        <child link="link_0" />
+    </joint>
+    <xacro:include filename="additional-info.xacro.urdf" />
+</robot>
+

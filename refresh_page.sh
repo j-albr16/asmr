@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# use parameters like this:
+# ./refresh_page.sh -d force
+
 # check for arguments
 while getopts d: flag
 do
