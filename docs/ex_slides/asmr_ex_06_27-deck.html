@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Übungen zur Vorlesung ASMR: Quiz (localization)</title>
+
+  <!-- PWA stuff -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="support/pwa/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#84b819" />
+  <link rel="manifest" href="support/pwa/manifest.webmanifest" crossorigin="use-credentials" />
+
+  <link rel="shortcut icon" href="support/icons/favicon.ico">
+
+  <script type="module">
+    /* Store JSON encoded Pandoc meta data in a global variable. */
+    import initializeDecker from "./support/js/decker.js";
+    initializeDecker("db066f736.json");
+  </script>
+
+    <!-- Default values for CSS variables can live here. They can be overridden by
+    meta data values. -->
+    <link rel="stylesheet" href="support/css/variables.css">
+
+    <!-- Transfer meta data values from keys `palette.colors` and `css-variables`
+    into a style sheet. Default values can come from `variables.css`. -->
+    <style class="css-declarations">
+      :root {
+                --shade7: #1d1f21;
+                --shade6: #282a2e;
+                --shade5: #4d4d4c;
+                --shade4: #969896;
+                --shade3: #8e908c;
+                --shade2: #d6d6d6;
+                --shade1: #e0e0e0;
+                --shade0: #ffffff;
+                --base0F-fg: #825449;
+                --base0F-ffg: #513733;
+                --base0F-bg: #ceb9b5;
+                --base0F-bbg: #f0ebea;
+                --base0F: #a3685a;
+                --base0E-fg: #6e4887;
+                --base0E-ffg: #453155;
+                --base0E-bg: #c4b5d1;
+                --base0E-bbg: #edeaf1;
+                --base0E: #8959a8;
+                --base0D-fg: #257eb3;
+                --base0D-ffg: #204f6f;
+                --base0D-bg: #acccec;
+                --base0D-bbg: #e8f0f9;
+                --base0D: #2a9ddf;
+                --base0C-fg: #347b80;
+                --base0C-ffg: #264d51;
+                --base0C-bg: #afcacd;
+                --base0C-bbg: #e8eff0;
+                --base0C: #3e999f;
+                --base0B-fg: #6a931c;
+                --base0B-ffg: #435c20;
+                --base0B-bg: #c2d8ab;
+                --base0B-bbg: #edf3e7;
+                --base0B: #84b819;
+                --base0A-fg: #bb9212;
+                --base0A-ffg: #745b1d;
+                --base0A-bg: #f3d8aa;
+                --base0A-bbg: #fbf3e7;
+                --base0A: #eab700;
+                --base09-fg: #c46c20;
+                --base09-ffg: #794521;
+                --base09-bg: #f9c3ab;
+                --base09-bbg: #fdede7;
+                --base09: #f5871f;
+                --base08-fg: #a02526;
+                --base08-ffg: #632123;
+                --base08-bg: #e0acac;
+                --base08-bbg: #f5e8e8;
+                --base08: #c82829;
+                --base07: #1d1f21;
+                --base06: #282a2e;
+                --base05: #4d4d4c;
+                --base04: #969896;
+                --base03: #8e908c;
+                --base02: #d6d6d6;
+                --base01: #e0e0e0;
+                --base00: #ffffff;
+                --accent7-fg: #825449;
+                --accent7-ffg: #513733;
+                --accent7-bg: #ceb9b5;
+                --accent7-bbg: #f0ebea;
+                --accent7: #a3685a;
+                --accent6-fg: #6e4887;
+                --accent6-ffg: #453155;
+                --accent6-bg: #c4b5d1;
+                --accent6-bbg: #edeaf1;
+                --accent6: #8959a8;
+                --accent5-fg: #257eb3;
+                --accent5-ffg: #204f6f;
+                --accent5-bg: #acccec;
+                --accent5-bbg: #e8f0f9;
+                --accent5: #2a9ddf;
+                --accent4-fg: #347b80;
+                --accent4-ffg: #264d51;
+                --accent4-bg: #afcacd;
+                --accent4-bbg: #e8eff0;
+                --accent4: #3e999f;
+                --accent3-fg: #6a931c;
+                --accent3-ffg: #435c20;
+                --accent3-bg: #c2d8ab;
+                --accent3-bbg: #edf3e7;
+                --accent3: #84b819;
+                --accent2-fg: #bb9212;
+                --accent2-ffg: #745b1d;
+                --accent2-bg: #f3d8aa;
+                --accent2-bbg: #fbf3e7;
+                --accent2: #eab700;
+                --accent1-fg: #c46c20;
+                --accent1-ffg: #794521;
+                --accent1-bg: #f9c3ab;
+                --accent1-bbg: #fdede7;
+                --accent1: #f5871f;
+                --accent0-fg: #a02526;
+                --accent0-ffg: #632123;
+                --accent0-bg: #e0acac;
+                --accent0-bbg: #f5e8e8;
+                --accent0: #c82829;
+            }
+      :root.dark {
+                --shade7: #ffffff;
+                --shade6: #e0e0e0;
+                --shade5: #c5c8c6;
+                --shade4: #b4b7b4;
+                --shade3: #969896;
+                --shade2: #373b41;
+                --shade1: #282a2e;
+                --shade0: #1d1f21;
+                --base0F-fg: #ceb9b5;
+                --base0F-ffg: #f0ebea;
+                --base0F-bg: #825449;
+                --base0F-bbg: #513733;
+                --base0F: #a3685a;
+                --base0E-fg: #d5c8da;
+                --base0E-ffg: #f2eff3;
+                --base0E-bg: #8e7796;
+                --base0E-bbg: #594b5e;
+                --base0E: #b294bb;
+                --base0D-fg: #c1cedb;
+                --base0D-ffg: #edf0f4;
+                --base0D-bg: #678298;
+                --base0D-bbg: #42515f;
+                --base0D: #81a2be;
+                --base0C-fg: #c4dbd8;
+                --base0C-ffg: #edf4f3;
+                --base0C-bg: #6e9893;
+                --base0C-bbg: #465f5c;
+                --base0C: #8abeb7;
+                --base0B-fg: #bfd0ac;
+                --base0B-ffg: #ecf1e8;
+                --base0B-bg: #648627;
+                --base0B-bbg: #405423;
+                --base0B: #7da72a;
+                --base0A-fg: #f6dfbc;
+                --base0A-ffg: #fcf5ec;
+                --base0A-bg: #c09f5e;
+                --base0A-bbg: #77633d;
+                --base0A: #f0c674;
+                --base09-fg: #ecc8b6;
+                --base09-ffg: #f9eeea;
+                --base09-bg: #b2764d;
+                --base09-bbg: #6e4a35;
+                --base09: #de935f;
+                --base08-fg: #e2b8b8;
+                --base08-ffg: #f6eaea;
+                --base08-bg: #a35253;
+                --base08-bbg: #653637;
+                --base08: #cc6666;
+                --base07: #ffffff;
+                --base06: #e0e0e0;
+                --base05: #c5c8c6;
+                --base04: #b4b7b4;
+                --base03: #969896;
+                --base02: #373b41;
+                --base01: #282a2e;
+                --base00: #1d1f21;
+                --accent7-fg: #ceb9b5;
+                --accent7-ffg: #f0ebea;
+                --accent7-bg: #825449;
+                --accent7-bbg: #513733;
+                --accent7: #a3685a;
+                --accent6-fg: #d5c8da;
+                --accent6-ffg: #f2eff3;
+                --accent6-bg: #8e7796;
+                --accent6-bbg: #594b5e;
+                --accent6: #b294bb;
+                --accent5-fg: #c1cedb;
+                --accent5-ffg: #edf0f4;
+                --accent5-bg: #678298;
+                --accent5-bbg: #42515f;
+                --accent5: #81a2be;
+                --accent4-fg: #c4dbd8;
+                --accent4-ffg: #edf4f3;
+                --accent4-bg: #6e9893;
+                --accent4-bbg: #465f5c;
+                --accent4: #8abeb7;
+                --accent3-fg: #bfd0ac;
+                --accent3-ffg: #ecf1e8;
+                --accent3-bg: #648627;
+                --accent3-bbg: #405423;
+                --accent3: #7da72a;
+                --accent2-fg: #f6dfbc;
+                --accent2-ffg: #fcf5ec;
+                --accent2-bg: #c09f5e;
+                --accent2-bbg: #77633d;
+                --accent2: #f0c674;
+                --accent1-fg: #ecc8b6;
+                --accent1-ffg: #f9eeea;
+                --accent1-bg: #b2764d;
+                --accent1-bbg: #6e4a35;
+                --accent1: #de935f;
+                --accent0-fg: #e2b8b8;
+                --accent0-ffg: #f6eaea;
+                --accent0-bg: #a35253;
+                --accent0-bbg: #653637;
+                --accent0: #cc6666;
+            }
+      :root {
+            }
+    </style>
+
+    <link rel="stylesheet" href="support/vendor/reveal/dist/reset.css">
+    <link rel="stylesheet" href="support/vendor/reveal/dist/reveal.css">
+    <link rel="stylesheet" href="support/components/components.css">
+    <link rel="stylesheet" href="support/plugins/decker/ui-anchors.css">
+    <link rel="stylesheet" href="support/plugins/whiteboard/whiteboard.css">
+    <link rel="stylesheet" href="support/plugins/menu/menu.css">
+    <link rel="stylesheet" href="support/plugins/feedback/feedback.css">
+    <link rel="stylesheet" href="support/plugins/explain/explain.css">
+      <link rel="stylesheet" href="support/plugins/live-captioning/live-captioning.css">
+      <link rel="stylesheet" href="support/vendor/videojs/video-js.min.css">
+    <link rel="stylesheet" href="support/flyingFocus/flying-focus.css">
+    <link rel="stylesheet" href="support/plugins/quiz-wue/quiz-wue.css">
+    <link rel="stylesheet" href="support/css/deck.css">
+    <link rel="stylesheet" href="support/css/msms-deck.css">
+    <link rel="stylesheet" href="support/plugins/handout/handout.css">
+      
+</head>
+
+<body >
+  <div class="reveal">
+    <div class="slides">
+
+      <section id="title-slide">
+  <div class="decker">
+    <div class="alignment">
+      <header class="background-on-accent">
+        <h1 class="title">Übungen zur Vorlesung ASMR</h1>
+                <h2 class="subtitle">Quiz (localization)</h2>
+              </header>
+
+      
+            <div class="authors">
+                <div class="author">
+                  <p>
+                    Jan Albrecht
+                  </p>
+                  </div>
+                <div class="author">
+                  <p>
+                    Florian Bohlken
+                  </p>
+                  </div>
+              </div>
+            
+      
+            <div class="affiliation">
+              <p>
+                Universitat Münster
+              </p>
+              </div>
+      
+      
+      
+      <div class="logos">
+                <div class="logo">
+          <img src="./support/assets/ms-logo-light.svg">
+        </div>
+                        </div>
+            <a class="decker-link" href="https://decker-edu.github.io/decker/">🚀 by Decker</a>
+          </div>
+  </div>
+</section>            
+<section id="empty-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<div class="box block">
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</section>
+<section id="aufbau" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Aufbau</h1>
+</div>
+</div>
+</section>
+<section id="aufbau-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Aufbau</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">Organisatorisches</li>
+<li class="fragment">Besprechung Zusatz-Block</li>
+<li class="fragment">Quiz (localization)</li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="organisatorisches" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Organisatorisches</h1>
+</div>
+</div>
+</section>
+<section id="organisatorisches-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Organisatorisches</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="incremental">
+<ul class="incremental">
+<li class="fragment">entgültige Punkte für Block 2 sind im Learnweb</li>
+<li class="fragment">kommt auf uns zu bei Nachfragen zu
+<ul class="incremental">
+<li class="fragment">Punkten</li>
+<li class="fragment">Feedback</li>
+</ul></li>
+<li class="fragment">Fragen zur Klausurvorbereitungs-Stunde bis 9.7. 12 Uhr einsenden</li>
+</ul>
+</div>
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="besprechung-zusatz-block" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Besprechung Zusatz-Block</h1>
+</div>
+</div>
+</section>
+<section id="vorstellung-des-zusatz-blocks" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Vorstellung des Zusatz-Blocks</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<!----------------------------------------------------------------->
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="quiz" class="section slide level1" data-background-color="#6A931C">
+<div class="decker">
+<div class="alignment">
+<h1>Quiz</h1>
+</div>
+</div>
+</section>
+<section id="odometry" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Odometry</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Was beschreibt die Odometry in einem mobilen Roboter?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Die Steuerung der Motoren<ul>
+<li>Odometry bezieht sich auf die Schätzung der Position und Orientierung, nicht auf die Motorsteuerung.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Die Erkennung von Hindernissen<ul>
+<li>Die Erkennung von Hindernissen ist eine separate Funktion. und Orientierung zu schätzen.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Die Planung der Route<ul>
+<li>Routenplanung ist ein Teil der Navigation, nicht der Odometry.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Die Schätzung der Position und Orientierung<ul>
+<li>Odometry verwendet Sensoren wie Encoder und Gyroskope, um die Position</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="slam" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>SLAM</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wofür steht die Abkürzung SLAM?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Synchronisierte Lokalisierungs- und Anpassungsmethode<ul>
+<li>Diese Antwort ist irreführend und falsch.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Systematische Lokalisierungs- und Analysemethode<ul>
+<li>Diese Antwort ist nicht korrekt.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Simultane Lokalisierung und Kartierung<ul>
+<li>SLAM steht für Simultaneous Localization and Mapping.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Spezialisierte Lern- und Adaptionsmethode<ul>
+<li>Diese Antwort hat nichts mit SLAM zu tun.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="breadth-first-search" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Breadth-First Search</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wie funktioniert der Breadth-First Search (BFS)?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Er durchsucht den Graphen in zufälliger Reihenfolge<ul>
+<li>BFS durchsucht den Graphen systematisch Ebene für Ebene.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Er durchsucht den Graphen Ebene für Ebene<ul>
+<li>BFS durchsucht den Graphen Ebene für Ebene, beginnend mit dem Startknoten.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Er durchsucht den Graphen Pfad für Pfad<ul>
+<li>Diese Beschreibung passt besser zu Depth-First Search.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Er verwendet heuristische Schätzungen zur Knotenwahl<ul>
+<li>BFS verwendet keine Heuristiken.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="depth-first-search" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Depth-First Search</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Wie funktioniert der Depth-First Search (DFS)?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />Er durchsucht den Graphen so tief wie möglich entlang jedes Zweigs<ul>
+<li>DFS geht so tief wie möglich entlang jedes Zweigs, bevor er zurückgeht.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Er durchsucht den Graphen Ebene für Ebene<ul>
+<li>Diese Beschreibung trifft auf Breadth-First Search zu.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Er verwendet eine Warteschlange zur Verwaltung der Knoten<ul>
+<li>DFS verwendet einen Stapel, keine Warteschlange.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Er bevorzugt Knoten mit geringem Gewicht<ul>
+<li>DFS basiert nicht auf Gewichten.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="heuristic-search" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Heuristic Search</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Was zeichnet einen heuristischen Suchalgorithmus aus?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Er verwendet keine Kostenfunktion<ul>
+<li>Heuristische Suchalgorithmen berücksichtigen oft Kostenfunktionen.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Er nutzt Schätzungen zur Führung der Suche<ul>
+<li>Heuristische Suchalgorithmen verwenden Schätzungen (Heuristiken), um die Suche effizienter zu gestalten.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Er garantiert immer die optimale Lösung<ul>
+<li>Heuristische Suchalgorithmen garantieren nicht immer die optimale Lösung.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="odometry-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Odometry</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welche Sensoren werden typischerweise in der Odometry verwendet?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" checked="" />Encoder und Gyroskope<ul>
+<li>Encoder und Gyroskope sind die gängigsten Sensoren für Odometry.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Kameras und Mikrofone<ul>
+<li>Kameras können verwendet werden, aber Mikrofone sind unüblich in der Odometry.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />GPS und Barometer<ul>
+<li>GPS wird oft verwendet, aber Barometer sind unüblich für Odometry.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Thermometer und Hygrometer<ul>
+<li>Diese Sensoren haben nichts mit Odometry zu tun.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="suchalgorithmen" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Suchalgorithmen</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welcher Suchalgorithmus garantiert die kürzeste Lösung in einem ungewichteten Graphen?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Depth-First Search<ul>
+<li>DFS garantiert nicht die kürzeste Lösung.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Heuristic Search<ul>
+<li>Heuristische Suche garantiert nicht unbedingt die kürzeste Lösung.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Breadth-First Search<ul>
+<li>BFS garantiert die kürzeste Lösung in einem ungewichteten Graphen.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Random Search<ul>
+<li>Zufällige Suche garantiert keine Lösungen.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="depth-first-search-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Depth-First Search</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welche Datenstruktur wird typischerweise von Depth-First Search verwendet?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Warteschlange<ul>
+<li>Warteschlangen werden von Breadth-First Search verwendet.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Stapel<ul>
+<li>DFS verwendet einen Stapel zur Verwaltung der Knoten.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Prioritätswarteschlange<ul>
+<li>Prioritätswarteschlangen werden von Heuristischen Suchalgorithmen verwendet.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Baum<ul>
+<li>Bäume sind keine Datenstruktur, die spezifisch für DFS verwendet wird.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="odometry-2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Odometry</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Was ist ein Nachteil der Odometry?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Hohe Genauigkeit über lange Strecken<ul>
+<li>Odometry verliert an Genauigkeit über lange Strecken.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Unabhängigkeit von Sensoren<ul>
+<li>Odometry ist stark von Sensoren abhängig.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Fehlerakkumulation über Zeit<ul>
+<li>Ein Hauptnachteil der Odometry ist die Fehlerakkumulation über Zeit.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Hohe Kosten<ul>
+<li>Die Kosten sind im Allgemeinen nicht der Hauptnachteil.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="breadth-first-search-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Breadth-First Search</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Was ist ein Nachteil von Breadth-First Search?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Kann keine kürzesten Wege finden<ul>
+<li>BFS findet in ungewichteten Graphen immer die kürzesten Wege.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Verwendet heuristische Schätzungen<ul>
+<li>BFS verwendet keine Heuristiken.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Ist ineffizient in ungewichteten Graphen<ul>
+<li>BFS ist effizient in ungewichteten Graphen.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Hoher Speicherbedarf<ul>
+<li>BFS kann viel Speicher erfordern, besonders bei großen Graphen.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="depth-first-search-2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Depth-First Search</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Was ist ein Vorteil von Depth-First Search?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Garantiert die kürzeste Lösung<ul>
+<li>DFS garantiert nicht immer die kürzeste Lösung.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Kann mit wenig Speicher arbeiten<ul>
+<li>DFS benötigt oft weniger Speicher als BFS, da es tief in den Graphen geht.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Verwendet Prioritätswarteschlangen<ul>
+<li>DFS verwendet keine Prioritätswarteschlangen, sondern einen Stapel.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Ist optimal für alle Graphen<ul>
+<li>DFS ist nicht immer optimal, besonders bei ungewichteten Graphen.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="heuristic-search-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Heuristic Search</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Was ist ein Beispiel für einen heuristischen Suchalgorithmus?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Dijkstra<ul>
+<li>Dijkstra’s Algorithmus ist kein heuristischer Suchalgorithmus, da er keine Heuristiken verwendet und nur die tatsächlichen Kosten zur Bestimmung des kürzesten Weges nutzt.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />MCL<ul>
+<li>Monte Carlo Lokalisierung (MCL) ist ein Verfahren zur Zustandsschätzung und Lokalisierung, das auf Partikel-Filtern basiert und keine Heuristiken verwendet.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Wavefront<ul>
+<li>Der Wavefront-Algorithmus ist ein Gitter-basierter Planungsalgorithmus, der keine heuristischen Schätzungen zur Steuerung der Suche verwendet.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />A*-Algorithmus<ul>
+<li>Der A*-Algorithmus ist ein typisches Beispiel für einen heuristischen Suchalgorithmus, der Heuristiken verwendet, um die Suche effizienter zu gestalten und die beste Route zu finden.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="slam-1" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>SLAM</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welche mathematische Methode wird häufig in SLAM verwendet, um Unsicherheiten zu modellieren?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Lineare Regression<ul>
+<li>Lineare Regression ist eine Technik zur Vorhersage, aber nicht spezifisch für Unsicherheitsmodellierung in SLAM.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Bayessche Filterung<ul>
+<li>Bayessche Filterung, wie der Kalman-Filter oder der Partikel-Filter, wird häufig in SLAM verwendet, um Unsicherheiten zu modellieren.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Hauptkomponentenanalyse (PCA)<ul>
+<li>PCA wird zur Dimensionsreduktion verwendet, aber nicht speziell zur Modellierung von Unsicherheiten in SLAM.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Monte-Carlo-Simulation<ul>
+<li>Monte-Carlo-Simulationen können verwendet werden, aber Bayessche Filter sind üblicher.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="slam-2" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>SLAM</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Warum ist die Schleifenschließung (Loop Closure) im SLAM wichtig?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Um die Geschwindigkeit des Roboters zu erhöhen<ul>
+<li>Schleifenschließung hat keinen direkten Einfluss auf die Geschwindigkeit des Roboters.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Um die Kosten der Sensoren zu reduzieren<ul>
+<li>Schleifenschließung reduziert keine Sensorkosten.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Um Fehler in der Karte zu korrigieren und die Position des Roboters zu präzisieren<ul>
+<li>Schleifenschließung hilft, Kartenfehler zu korrigieren und die Positionsgenauigkeit zu verbessern, indem frühere Positionen wiedererkannt werden.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Um die Rechenleistung zu verringern<ul>
+<li>Schleifenschließung kann die Rechenleistung erhöhen, da zusätzliche Berechnungen erforderlich sind.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="greedy-search" class="slide level1">
+<div class="decker">
+<div class="alignment">
+<h1>Greedy Search</h1>
+<div class="layout">
+<div class="area">
+<div class="box block">
+<div class="quiz">
+<p>Welches ist ein Hauptmerkmal des Greedy Search Algorithmus?</p>
+<ul class="task-list">
+<li><input type="checkbox" disabled="" />Er garantiert immer die optimale Lösung<ul>
+<li>Greedy Search garantiert nicht immer die optimale Lösung, da er in jedem Schritt die lokal beste Entscheidung trifft.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Er berücksichtigt zukünftige Kosten bei der Entscheidung<ul>
+<li>Greedy Search berücksichtigt nur die unmittelbaren, aktuellen Kosten und nicht die zukünftigen Kosten.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" />Er verwendet eine Warteschlange zur Verwaltung der Knoten<ul>
+<li>Greedy Search verwendet oft eine Prioritätswarteschlange, aber das Hauptmerkmal ist die Auswahl des besten aktuellen Schritts.</li>
+</ul></li>
+<li><input type="checkbox" disabled="" checked="" />Er wählt in jedem Schritt die lokal beste Option basierend auf einer Heuristik<ul>
+<li>Greedy Search wählt in jedem Schritt die Option, die nach der verwendeten Heuristik am besten erscheint, ohne Rücksicht auf zukünftige Konsequenzen.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<code class="sourceCode markdown" style="display:none;"></code>
+
+    </div>
+  </div>
+  
+  <script src="support/vendor/videojs/video.min.js"></script>
+  <script src="support/vendor/chartjs/chart.umd.js"></script>
+  <script type="module" src="support/components/custom-dialog.js"></script>
+  <script type="module" src="./support/js/color-scheme.js"></script>
+
+<script type="module">
+  // import Reveal and all plugins
+  import Reveal from './support/vendor/reveal/dist/reveal.esm.js';
+  import deckerPlugin from './support/plugins/decker/decker.js';
+  import uiAnchorsPlugin from './support/plugins/decker/ui-anchors.js'
+  import mathPlugin from './support/plugins/math/math.js';
+  import whiteboardPlugin from './support/plugins/whiteboard/whiteboard.js';
+  import sagePlugin from './support/plugins/sage/sage.js';
+  import searchPlugin from './support/plugins/search/search.js';
+  import zoomPlugin from './support/plugins/zoom/zoom.js';
+  import printPlugin from './support/plugins/print/print.js';
+  import jinglesPlugin from './support/plugins/jingles/jingles.js';
+  import quizPlugin from './support/plugins/quiz/quiz.js';
+  import quizWuePlugin from './support/plugins/quiz-wue/quiz-wue.js';
+  import explainPlugin from './support/plugins/explain/explain.js';
+  import chartsPlugin from './support/plugins/charts/charts.js';
+  import menuPlugin from './support/plugins/menu/menu.js';
+  import feedbackPlugin from './support/plugins/feedback/feedback.js';
+  import notesPlugin from './support/vendor/reveal/plugin/notes/notes.esm.js';
+    import captionPlugin from './support/plugins/live-captioning/live-captioning.js';
+    import a11yPlugin from './support/plugins/a11y/a11y.js';
+  import handoutPlugin from './support/plugins/handout/handout.js';
+
+  let revealConfig = { 
+    // reveal configuration (see https://revealjs.com/config/)
+    ...Decker.meta.reveal,
+
+    // plugin configuration
+    math: { mathjax: String.raw`support/vendor/mathjax/`, ...Decker.meta.math },
+    chart: Decker.meta.chart,
+    menu: Decker.meta.menu,
+    explain: Decker.meta.explain,
+    feedback: Decker.meta.feedback || Decker.meta["decker-engine"],
+    jingles: Decker.meta.jingles,
+    whiteboard: Decker.meta.whiteboard,
+
+    // list of plugins
+    plugins: [
+      deckerPlugin,
+      uiAnchorsPlugin,
+      sagePlugin,
+      mathPlugin,
+      chartsPlugin,
+      whiteboardPlugin,
+      searchPlugin,
+      zoomPlugin,
+      printPlugin,
+      jinglesPlugin,
+      quizPlugin,
+      quizWuePlugin,
+      explainPlugin,
+      menuPlugin,
+      feedbackPlugin,
+      notesPlugin,
+            captionPlugin,
+            a11yPlugin,
+      handoutPlugin
+    ]
+  };
+
+  Reveal.initialize(revealConfig);
+</script>
+  
+
+</body>
+</html>
